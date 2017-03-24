@@ -3736,6 +3736,11 @@ case "$target" in
             echo "0:1324800 1:0 2:0 3:0 4:0 5:0 6:2169600 7:0" > /sys/module/cpu_boost/parameters/powerkey_input_boost_freq
             echo 400 > /sys/module/cpu_boost/parameters/powerkey_input_boost_ms
 
+            # Configure default schedTune value for foreground/top-app
+            echo 1 > /dev/stune/foreground/schedtune.prefer_idle
+            echo 10 > /dev/stune/top-app/schedtune.boost
+            echo 1 > /dev/stune/top-app/schedtune.prefer_idle
+
             # Set Memory parameters
             configure_memory_parameters
 
