@@ -79,4 +79,7 @@
     <!-- Configure wifi tcp buffersizes in the form:
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
     <string name="config_wifi_tcp_buffers" translatable="false">524288,1048576,8808040,262144,524288,6710886</string>
+
+    <!-- Do not translate. Default access point SSID used for tethering -->
+    <string name="wifi_tether_configure_ssid_default" translatable="false">Redmi Note 10 Pro</string>
 </resources>
