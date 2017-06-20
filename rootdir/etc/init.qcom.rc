@@ -48,6 +48,9 @@ on early-init
 
     write /sys/module/drm/parameters/vblankoffdelay -1
 
+    # turn off vblank irq immediately after turning off
+    write /sys/module/drm/parameters/vblankoffdelay -1
+
 on init
     # Loading kernel modules in background
     start insmod_sh
