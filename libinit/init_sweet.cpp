@@ -66,6 +66,44 @@ void full_property_override(const std::string &prop, const char value[], const b
     }
 }
 
+/* From Magisk@jni/magiskhide/hide_utils.c */
+static const char *cts_prop_key[] = {
+	"ro.boot.verifiedbootstate",
+	"ro.boot.flash.locked",
+	"ro.boot.selinux",
+	"ro.boot.veritymode",
+	"ro.boot.warranty_bit",
+	"ro.warranty_bit",
+	"ro.debuggable",
+	"ro.secure",
+	"ro.build.type",
+	"ro.build.tags",
+	"ro.build.selinux",
+	NULL
+};
+
+static const char *cts_prop_value[] = {
+	"green",
+	"1",
+	"enforcing",
+	"enforcing",
+	"0",
+	"0",
+	"0",
+	"1",
+	"user",
+	"release-keys",
+	"1",
+	NULL
+};
+
+static void workaround_cts_properties() {
+	// Hide all sensitive props
+	for (int i = 0; cts_prop_key[i]; ++i) {
+		property_override(cts_prop_key[i], cts_prop_value[i]);
+	}
+}
+
 void vendor_load_properties() {
     const bool is_global = (GetProperty("ro.boot.hwc", "UNKNOWN") == "GLOBAL");
     const bool is_pro = (GetProperty("ro.boot.product.hardware.sku", "UNKNOWN") != "std");
@@ -83,6 +121,9 @@ void vendor_load_properties() {
 
     property_override("ro.product.marketname", marketname.c_str());
     property_override("ro.product.mod_device", mod_device.c_str());
+
+    /* Workaround CTS */
+    workaround_cts_properties();
 
     // Enable UI blur
     property_override("ro.surface_flinger.supports_background_blur", "1");
