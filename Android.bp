@@ -1,5 +1,9 @@
 soong_namespace {
-    imports: ["hardware/qcom-caf/common/fwk-detect"],
+    imports: [
+        "hardware/qcom-caf/common/fwk-detect",
+        "hardware/google/interfaces",
+        "hardware/google/pixel"
+    ],
 }
 
 cc_library_shared {
