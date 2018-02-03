@@ -371,10 +371,6 @@ persist.vendor.data.iwlan.enable=true
 PRODUCT_PRODUCT_PROPERTIES += \
 sys.fflag.override.settings_enable_monitor_phantom_procs=false
 
-# Perf
-PRODUCT_VENDOR_PROPERTIES += \
-ro.vendor.extension_library=libqti-perfd-client.so
-
 # Radio/RIL
 PRODUCT_VENDOR_PROPERTIES += \
 persist.radio.multisim.config=dsds \
