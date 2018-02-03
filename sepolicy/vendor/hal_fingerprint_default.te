@@ -12,7 +12,6 @@ allow hal_fingerprint_default self:netlink_kobject_uevent_socket create_socket_p
 allow hal_fingerprint_default tee_device:chr_file rw_file_perms;
 
 add_hwservice(hal_fingerprint_default, hal_fingerprint_hwservice_xiaomi)
-allow hal_fingerprint_default vendor_hal_perf_hwservice:hwservice_manager find;
 
 # Allow access to fp props
 get_prop(hal_fingerprint_default, vendor_fp_prop)

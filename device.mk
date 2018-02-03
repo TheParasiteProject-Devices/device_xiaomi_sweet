@@ -379,20 +379,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FrameworksParaiteResSweet
 
-# Perf
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.perf@2.2.vendor
-
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/perf/,$(TARGET_COPY_OUT_VENDOR)/etc/perf)
-
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service-qti \
     android.hardware.power@1.2.vendor
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
 # Properties
 include $(LOCAL_PATH)/properties.mk

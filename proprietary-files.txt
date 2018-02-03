@@ -768,22 +768,6 @@ vendor/lib64/unnhal-acc-hvx.so
 # NFC
 vendor/lib/libpn553_fw.so
 
-# Perf
-vendor/bin/hw/vendor.qti.hardware.perf@2.2-service
-vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc
-vendor/lib/libperfconfig.so
-vendor/lib/libperfgluelayer.so
-vendor/lib/libperfioctl.so
-vendor/lib/libqti-perfd-client.so
-vendor/lib/libqti-perfd.so
-vendor/lib/libqti-util.so
-vendor/lib64/libperfconfig.so
-vendor/lib64/libperfgluelayer.so
-vendor/lib64/libperfioctl.so
-vendor/lib64/libqti-perfd-client.so
-vendor/lib64/libqti-perfd.so
-vendor/lib64/libqti-util.so
-
 # Peripheral
 vendor/bin/pm-proxy
 vendor/bin/pm-service
