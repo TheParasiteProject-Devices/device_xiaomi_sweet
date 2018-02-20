@@ -602,6 +602,10 @@ $(call inherit-product-if-exists, vendor/qcom/opensource/power/power-vendor-prod
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.xiaomi_sm6150
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service-sdm
+
 # Power Stats
 PRODUCT_PACKAGES += \
     android.hardware.power.stats
