@@ -22,6 +22,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
+import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.haptic.HapticUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
@@ -37,6 +38,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             return;
         }
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
+        DiracUtils.initialize(context);
         DozeUtils.checkDozeService(context);
         HapticUtils.restoreLevel(context);
         ThermalUtils.startService(context);
