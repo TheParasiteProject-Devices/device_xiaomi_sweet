@@ -150,6 +150,11 @@ ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg \
 ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg \
 ro.vendor.display.sensortype=2
 
+# Display (color mode)
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.sys.sf.color_saturation=1.1 \
+persist.sys.sf.native_mode=0
+
 # Factory Reset Protection
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
