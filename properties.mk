@@ -189,6 +189,7 @@ vendor.display.disable_ui_3d_tonemap=1 \
 vendor.display.enable_force_split=1 \
 vendor.display.enable_null_display=0 \
 vendor.display.enable_optimize_refresh=1 \
+vendor.display.qdcm.mode_combine=1 \
 vendor.gralloc.disable_ubwc=0
 
 # Incremental FS
