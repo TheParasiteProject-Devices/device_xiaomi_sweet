@@ -303,6 +303,9 @@ PRODUCT_PACKAGES += \
     TelephonyResSweet \
     WifiResSweet
 
+PRODUCT_PACKAGES += \
+    NotchBarKiller
+
 # Perf
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2.vendor
