@@ -264,8 +264,8 @@
       "Name": "PMQoSCpuDmaLatency",
       "Path": "/dev/cpu_dma_latency",
       "Values": [
-        "44",
-        "100"
+        "0x00000043",
+        "0x00000064"
       ],
       "HoldFd": true
     },
@@ -473,7 +473,7 @@
       "PowerHint": "AUDIO_LAUNCH",
       "Node": "PMQoSCpuDmaLatency",
       "Duration": 2000,
-      "Value": "44"
+      "Value": "0x00000043"
     },
     {
       "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
@@ -485,7 +485,7 @@
       "PowerHint": "AUDIO_STREAMING_LOW_LATENCY",
       "Node": "PMQoSCpuDmaLatency",
       "Duration": 0,
-      "Value": "44"
+      "Value": "0x00000043"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
@@ -509,7 +509,7 @@
       "PowerHint": "ML_ACC",
       "Node": "PMQoSCpuDmaLatency",
       "Duration": 2000,
-      "Value": "44"
+      "Value": "0x00000043"
     },
     {
       "PowerHint": "DISPLAY_INACTIVE",
