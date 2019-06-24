@@ -42,6 +42,7 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/properties/vendor.prop
 TARGET_SCREEN_DENSITY := 440
 
 # Vendor security patch level
+BOOT_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 VENDOR_SECURITY_PATCH := 2023-11-01
 
 # Inherit from proprietary files
