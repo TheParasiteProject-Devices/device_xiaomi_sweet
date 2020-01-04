@@ -1,1 +1,2 @@
 dontaudit hal_wifi_default self:capability sys_module;
+dontaudit vendor_thermal-engine self:capability dac_override;
