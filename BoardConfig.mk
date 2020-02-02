@@ -71,6 +71,9 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/manifests/device_fr
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifests/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/manifests/compatibility_matrix.xml
 
+# Media
+TARGET_DISABLED_UBWC := true
+
 # Partitions
 BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := \
