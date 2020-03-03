@@ -1,3 +1,6 @@
+# Audio
+type vendor_audio_socket, file_type;
+
 # Display
 type touchfeature_device, dev_type;
 
