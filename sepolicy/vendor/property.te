@@ -1,2 +1,5 @@
 # Fingerprint
 vendor_public_prop(vendor_fp_prop);
+
+# Power HAL
+vendor_internal_prop(power_prop);

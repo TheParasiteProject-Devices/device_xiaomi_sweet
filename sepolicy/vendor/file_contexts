@@ -18,6 +18,9 @@
 # Persist subsystem
 /mnt/vendor/persist/subsys(/.*)?                                                                u:object_r:persist_subsys_file:s0
 
+# Power
+/vendor/bin/hw/android\.hardware\.power-service\.sweet-libperfmgr                               u:object_r:hal_power_default_exec:s0
+
 # sysfs (wakeup)
 /sys/devices/platform/soc/[0-9a-f]+.qcom,spmi/spmi-[0-9]+/spmi[0-9]+-[0-9]+/[0-9a-f]+.qcom,spmi:qcom,pm[0-9]+@[0-9]+:qcom,pm[0-9]+_rtc/rtc/rtc[0-9]+/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
 /sys/devices/platform/soc/c440000.qcom,spmi/spmi-[0-9]+/spmi[0-9]+-[0-9]+/c440000.qcom,spmi:qcom,pm[0-9]+[a-z]?@[0-9]+:qcom,qpnp-smb[0-9]+/power_supply/(battery|dc|main|pc_port|usb|wireless)/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
