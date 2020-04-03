@@ -89,6 +89,8 @@ TARGET_KERNEL_CONFIG := sweet_user_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sweet
 TARGET_KERNEL_ARCH := arm64
 
+KERNEL_LD := LD=ld.lld
+
 # Manifest
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/manifests/device_framework_matrix.xml \
