@@ -45,6 +45,10 @@ PRODUCT_PACKAGES += \
     libtinycompress.vendor \
     libvolumelistener
 
+PRODUCT_PACKAGES += \
+    android.hardware.soundtrigger@2.3-impl \
+    android.hardware.soundtrigger@2.3-service
+
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc) \
     $(LOCAL_PATH)/configs/audio/audio_tuning_mixer_tavil.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt
