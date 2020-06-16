@@ -8,7 +8,7 @@ ro.boot.fpsensor                                         u:object_r:vendor_fp_pr
 vendor.fps_hal.restartimes                               u:object_r:vendor_fp_prop:s0
 
 # Power HAL
-vendor.powerhal.				         u:object_r:power_prop:s0
+vendor.powerhal.				         u:object_r:vendor_power_prop:s0
 
 # Xiaomi thermal daemon
 vendor.sys.thermal.                                      u:object_r:vendor_thermal_normal_prop:s0
