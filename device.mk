@@ -379,6 +379,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FrameworksParaiteResSweet
 
+# Perf
+PRODUCT_PACKAGES += \
+    libqti-perfd-client
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.sweet-libperfmgr \
