@@ -129,6 +129,9 @@ void vendor_load_properties() {
 	}
     full_property_override("build.product", "sweet", false);
 
+    // Set hardware revision
+    property_override("ro.boot.hardware.revision", GetProperty("ro.boot.hwversion", "").c_str());
+
     /* Workaround CTS */
     workaround_cts_properties();
 
