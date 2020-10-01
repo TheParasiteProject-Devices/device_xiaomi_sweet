@@ -35,9 +35,11 @@ LOCAL_SRC_FILES := \
     service.cpp \
     InteractionHandler.cpp \
     Power.cpp \
-    PowerExt.cpp
+    PowerExt.cpp \
+    power-mode.cpp
 
 LOCAL_CFLAGS := -Wno-unused-parameter -Wno-unused-variable
+LOCAL_CFLAGS += -DMODE_EXT
 
 LOCAL_MODULE := android.hardware.power-service.sweet-libperfmgr
 LOCAL_INIT_RC := android.hardware.power-service.sweet-libperfmgr.rc

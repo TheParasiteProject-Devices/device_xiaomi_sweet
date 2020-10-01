@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 The LineageOS Project
+ * Copyright (C) 2020-2021 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,10 +29,11 @@
 #define TOUCH_IOC_SETMODE TOUCH_MAGIC + SET_CUR_VALUE
 
 namespace aidl {
-namespace android {
+namespace google {
 namespace hardware {
 namespace power {
 namespace impl {
+namespace pixel {
 
 using ::aidl::android::hardware::power::Mode;
 
@@ -60,8 +61,9 @@ bool setDeviceSpecificMode(Mode type, bool enabled) {
     }
 }
 
+}  // namespace pixel
 }  // namespace impl
 }  // namespace power
 }  // namespace hardware
-}  // namespace android
+}  // namespace google
 }  // namespace aidl
