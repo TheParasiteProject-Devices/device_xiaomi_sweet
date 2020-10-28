@@ -365,3 +365,7 @@ wifi.aware.interface=wifi-aware0
 PRODUCT_SYSTEM_PROPERTIES += \
 persist.debug.wfd.enable=1 \
 #persist.sys.wfd.virtual=0
+
+# Zygote
+PRODUCT_PROPERTY_OVERRIDES += \
+zygote.critical_window.minute=10
