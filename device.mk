@@ -478,3 +478,8 @@ PRODUCT_COPY_FILES += \
 
 # Dolby
 $(call inherit-product-if-exists, vendor/dolby/config.mk)
+
+# Disable touch video heatmap to reduce latency, motion jitter, and CPU usage
+# on supported devices with Deep Press input classifier HALs and models
+PRODUCT_PRODUCT_PROPERTIES += \
+	ro.input.video_enabled=false
