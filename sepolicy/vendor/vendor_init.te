@@ -1,0 +1,2 @@
+# Allow vendor init to set power HAL property
+set_prop(vendor_init, vendor_power_prop)
