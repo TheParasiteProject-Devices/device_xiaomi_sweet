@@ -226,6 +226,13 @@ persist.vendor.radio.sib16_support=1 \
 ro.telephony.default_cdma_sub=0 \
 ro.telephony.iwlan_operation_mode=legacy
 
+# Radio (IMS)
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.vendor.ims.disableADBLogs=1 \
+persist.vendor.ims.disableDebugLogs=1 \
+persist.vendor.ims.disableIMSLogs=1 \
+persist.vendor.ims.disableQXDMLogs=1
+
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.sensors.enable.mag_filter=true
