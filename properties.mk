@@ -222,6 +222,10 @@ persist.vendor.qti.inputopts.enable=true \
 persist.vendor.qti.inputopts.movetouchslop=0.6 \
 ro.qcom.adreno.qgl.ShaderStorageImageExtendedFormats=0
 
+# FUSE
+PRODUCT_SYSTEM_PROPERTIES += \
+persist.sys.fuse.passthrough.enable=true
+
 # Fwk detect
 PRODUCT_ODM_PROPERTIES += \
 ro.vendor.qti.va_odm.support=1
