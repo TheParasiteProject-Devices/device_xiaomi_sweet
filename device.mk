@@ -32,8 +32,8 @@ PRODUCT_PACKAGES += \
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
-    android.hardware.audio.effect@6.0-impl \
-    android.hardware.audio@6.0-impl
+    android.hardware.audio.effect@7.0-impl \
+    android.hardware.audio@7.0-impl
 
 PRODUCT_PACKAGES += \
     audio.r_submix.default \
