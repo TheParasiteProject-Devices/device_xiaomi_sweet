@@ -134,6 +134,11 @@ camera.disable_zsl_mode=1
 PRODUCT_PRODUCT_PROPERTIES += \
 ro.charger.enable_suspend=true
 
+# Chipset
+PRODUCT_VENDOR_PROPERTIES += \
+ro.soc.manufacturer=QTI \
+ro.soc.model=SM7150
+
 # Crypto
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.crypto.volume.filenames_mode=aes-256-cts
