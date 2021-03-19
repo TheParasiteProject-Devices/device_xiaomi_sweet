@@ -151,6 +151,10 @@ drm.service.enabled=true
 PRODUCT_SYSTEM_PROPERTIES += \
 dalvik.vm.dex2oat64.enabled=true
 
+# Disable MTE Async for system server
+PRODUCT_SYSTEM_PROPERTIES += \
+arm64.memtag.process.system_server=off
+
 # Display (AD)
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.vendor.display.ad=1 \
