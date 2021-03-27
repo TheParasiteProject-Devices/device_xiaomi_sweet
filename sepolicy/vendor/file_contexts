@@ -25,7 +25,7 @@
 /vendor/bin/hw/android\.hardware\.lights-service\.sweet                                         u:object_r:hal_light_default_exec:s0
 
 # Live Display
-/vendor/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.xiaomi_sm6150    u:object_r:hal_lineage_livedisplay_qti_exec:s0
+/vendor/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.xiaomi_sm6150    u:object_r:hal_lineage_livedisplay_qti_exec:s0
 
 # Persist subsystem
 /mnt/vendor/persist/subsys(/.*)?                                                                u:object_r:persist_subsys_file:s0
