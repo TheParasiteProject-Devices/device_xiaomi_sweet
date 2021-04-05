@@ -466,6 +466,9 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 # Enable Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Project ID Quota
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
+
 # Inherit vendor
 $(call inherit-product, vendor/xiaomi/sweet/sweet-vendor.mk)
 
