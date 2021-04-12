@@ -81,8 +81,10 @@ public final class ThermalUtils {
     }
 
     public static void startService(Context context) {
-        context.startServiceAsUser(new Intent(context, ThermalService.class),
-                UserHandle.CURRENT);
+        if (FileUtils.fileExists(THERMAL_SCONFIG)) {
+            context.startServiceAsUser(new Intent(context, ThermalService.class),
+                    UserHandle.CURRENT);
+        }
     }
 
     private void writeValue(String profiles) {

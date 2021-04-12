@@ -22,15 +22,20 @@ import android.view.MenuItem;
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 import com.android.settingslib.collapsingtoolbar.R;
 
+import org.lineageos.settings.utils.FileUtils;
+
 public class ThermalActivity extends CollapsingToolbarBaseActivity {
 
     private static final String TAG_THERMAL = "thermal";
+    private static final String THERMAL_SCONFIG = "/sys/class/thermal/thermal_message/sconfig";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getFragmentManager().beginTransaction().replace(R.id.content_frame,
-                new ThermalSettingsFragment(), TAG_THERMAL).commit();
+        if (FileUtils.fileExists(THERMAL_SCONFIG)) {
+            getFragmentManager().beginTransaction().replace(R.id.content_frame,
+                    new ThermalSettingsFragment(), TAG_THERMAL).commit();
+        }
     }
 
     @Override
