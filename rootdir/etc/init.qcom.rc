@@ -254,6 +254,12 @@ on boot
     # limit discard size to 128MB in order to avoid long IO latency
     write /sys/block/sda/queue/discard_max_bytes 134217728
 
+    # Enable qcrild and data services on boot so process starts in main
+    enable vendor.qcrild
+    enable vendor.qcrild2
+    enable vendor.dataqti
+    enable vendor.dataadpl
+
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
@@ -438,11 +444,6 @@ on post-fs-data
 
     #Create dir for dolby
     mkdir /data/vendor/dolby 0770 media media
-
-    start vendor.qcrild
-    start vendor.qcrild2
-    start vendor.dataqti
-    start vendor.dataadpl
 
 service nqnfcinfo /system/vendor/bin/nqnfcinfo
     class late_start
