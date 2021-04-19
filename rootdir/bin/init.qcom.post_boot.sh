@@ -3612,19 +3612,11 @@ case "$target" in
       echo 8 > /sys/devices/system/cpu/cpu0/core_ctl/task_thres
       echo 0 > /sys/devices/system/cpu/cpu6/core_ctl/enable
 
-
       # Setting b.L scheduler parameters
-      # default sched up and down migrate values are 90 and 85
-      echo 65 > /proc/sys/kernel/sched_downmigrate
-      echo 71 > /proc/sys/kernel/sched_upmigrate
-      # default sched up and down migrate values are 100 and 95
-      echo 85 > /proc/sys/kernel/sched_group_downmigrate
-      echo 100 > /proc/sys/kernel/sched_group_upmigrate
-      echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
-
-      # colocation v3 settings
-      echo 740000 > /proc/sys/kernel/sched_little_cluster_coloc_fmin_khz
-
+      echo 25 > /proc/sys/kernel/sched_downmigrate_boosted
+      echo 25 > /proc/sys/kernel/sched_upmigrate_boosted
+      echo 85 > /proc/sys/kernel/sched_downmigrate
+      echo 95 > /proc/sys/kernel/sched_upmigrate
 
       # configure governor settings for little cluster
       echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
@@ -3720,16 +3712,10 @@ case "$target" in
             echo 0 > /sys/devices/system/cpu/cpu6/core_ctl/enable
 
             # Setting b.L scheduler parameters
-            # default sched up and down migrate values are 71 and 65
-            echo 65 > /proc/sys/kernel/sched_downmigrate
-            echo 71 > /proc/sys/kernel/sched_upmigrate
-            # default sched up and down migrate values are 100 and 95
-            echo 85 > /proc/sys/kernel/sched_group_downmigrate
-            echo 100 > /proc/sys/kernel/sched_group_upmigrate
-            echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
-
-            #colocation v3 settings
-            echo 740000 > /proc/sys/kernel/sched_little_cluster_coloc_fmin_khz
+            echo 25 > /proc/sys/kernel/sched_downmigrate_boosted
+            echo 25 > /proc/sys/kernel/sched_upmigrate_boosted
+            echo 85 > /proc/sys/kernel/sched_downmigrate
+            echo 95 > /proc/sys/kernel/sched_upmigrate
 
             # configure governor settings for little cluster
             echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
@@ -3744,11 +3730,6 @@ case "$target" in
             echo 20000 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/down_rate_limit_us
             # echo 1324600 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_freq
             echo 652800 > /sys/devices/system/cpu/cpu6/cpufreq/scaling_min_freq
-
-            # sched_load_boost as -6 is equivalent to target load as 85. It is per cpu tunable.
-            echo -6 >  /sys/devices/system/cpu/cpu6/sched_load_boost
-            echo -6 >  /sys/devices/system/cpu/cpu7/sched_load_boost
-            echo 85 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_load
 
             echo "0:1324800" > /sys/module/cpu_boost/parameters/input_boost_freq
             echo 120 > /sys/module/cpu_boost/parameters/input_boost_ms
