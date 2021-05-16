@@ -30,6 +30,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 -->
 <resources>
+    <!-- the padding on the top of the statusbar (usually 0) -->
+    <dimen name="status_bar_padding_top">26px</dimen>
+
     <!-- Enable doze mode -->
     <bool name="doze_display_state_supported">true</bool>
 
