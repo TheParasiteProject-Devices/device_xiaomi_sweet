@@ -49,3 +49,7 @@ allow xiaomiparts_app user_profile_root_file:dir search;
 # ro.input.resampling
 # viewroot.profile_rendering
 dontaudit xiaomiparts_app default_prop:file read;
+
+# Allow xiaomiparts_app to adjust haptic level
+allow xiaomiparts_app sysfs_vibrator:dir search;
+allow xiaomiparts_app sysfs_vibrator:file rw_file_perms;

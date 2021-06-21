@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2020 The LineageOS Project
+     Copyright (C) 2022 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -19,4 +19,8 @@
     <integer name="smoothness_default">0</integer>
     <integer name="smoothness_min">0</integer>
     <integer name="smoothness_max">3</integer>
+
+    <!-- Haptic Feedback Levels -->
+   <integer name="haptic_level_default">80</integer>
+   <integer name="haptic_level_max">100</integer>
 </resources>
