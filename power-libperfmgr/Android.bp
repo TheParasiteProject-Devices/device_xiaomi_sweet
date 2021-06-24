@@ -50,4 +50,12 @@ cc_binary {
     vendor: true,
     vintf_fragments: ["android.hardware.power-service.sweet.xml"],
 
+    required: ["powerhint_sweet.json"],
+}
+
+prebuilt_etc {
+    name: "powerhint_sweet.json",
+    filename: "powerhint.json",
+    src: "configs/powerhint_sweet.json",
+    vendor: true,
 }
