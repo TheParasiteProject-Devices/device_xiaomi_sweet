@@ -1,0 +1,2 @@
+# Allow power HAL to r&w /dev/xiaomi-touch for DT2W
+allow hal_power_default touchfeature_device:chr_file rw_file_perms;
