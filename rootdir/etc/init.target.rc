@@ -153,6 +153,10 @@ on boot
     setprop persist.vendor.cp.support_qc3p5 0
     write /sys/block/sda/queue/wbt_lat_usec 75000
 
+    # Set xiaomi touch permissions
+    chown system system /dev/xiaomi-touch
+    chmod 0660 /dev/xiaomi-touch
+
 # Add a cpuset for the camera daemon
 # We want all cores for camera
     mkdir /dev/cpuset/camera-daemon
