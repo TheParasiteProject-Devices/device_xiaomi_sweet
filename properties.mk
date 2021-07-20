@@ -147,6 +147,10 @@ persist.vendor.dpmhalservice.enable=1
 PRODUCT_PROPERTY_OVERRIDES += \
 drm.service.enabled=true
 
+# Dalvik
+PRODUCT_SYSTEM_PROPERTIES += \
+dalvik.vm.dex2oat64.enabled=true
+
 # Display (AD)
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.vendor.display.ad=1 \
