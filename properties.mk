@@ -386,8 +386,7 @@ persist.vendor.radio.manual_nw_rej_ct=1 \
 persist.vendor.radio.procedure_bytes=SKIP \
 persist.vendor.radio.rat_on=combine \
 persist.vendor.radio.sib16_support=1 \
-ro.telephony.default_cdma_sub=0 \
-ro.telephony.iwlan_operation_mode=legacy
+ro.telephony.default_cdma_sub=0
 
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
 ro.telephony.sim_slots.count=2 \
