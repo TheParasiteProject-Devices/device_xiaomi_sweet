@@ -450,6 +450,12 @@
       "Value": "1459200000"
     },
     {
+      "PowerHint": "LAUNCH",
+      "Node": "TASchedtuneHighCap",
+      "Duration": 3000,
+      "Value": "1"
+    },
+    {
       "PowerHint": "AUDIO_LAUNCH",
       "Node": "PMQoSCpuDmaLatency",
       "Duration": 2000,
