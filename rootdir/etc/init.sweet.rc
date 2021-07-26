@@ -61,3 +61,13 @@ on boot
     chown system system /sys/class/leds/blue/pause_lo_count
     chown system system /sys/class/leds/blue/lut_pattern
     chown system system /sys/class/leds/blue/lo_idx
+
+service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
+    override
+    class hal
+    user nfc
+    group nfc
+    disabled
+
+on boot && property:ro.boot.product.hardware.sku=nfc
+    enable vendor.nfc_hal_service
