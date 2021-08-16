@@ -178,10 +178,26 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    libsensorndkbridge
+    android.hardware.gnss@2.1.vendor \
+    android.hardware.gnss@2.1-impl-qti \
+    android.hardware.gnss@2.1-service-qti
 
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1.vendor
+    gps.conf \
+    flp.conf \
+    gnss_antenna_info.conf \
+    libloc_pla_headers \
+    liblocation_api_headers \
+    libgps.utils_headers \
+    liblocation_api \
+    libgps.utils \
+    libbatching \
+    libgeofencing \
+    libloc_core \
+    libgnss
+
+PRODUCT_PACKAGES += \
+    libsensorndkbridge
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/gps/,$(TARGET_COPY_OUT_VENDOR)/etc)
