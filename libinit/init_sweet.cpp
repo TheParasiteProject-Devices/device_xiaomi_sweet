@@ -66,41 +66,34 @@ void full_property_override(const std::string &prop, const char value[], const b
     }
 }
 
-/* From Magisk@jni/magiskhide/hide_utils.c */
-static const char *cts_prop_key[] = {
-	"ro.boot.verifiedbootstate",
-	"ro.boot.flash.locked",
-	"ro.boot.selinux",
-	"ro.boot.veritymode",
-	"ro.boot.warranty_bit",
-	"ro.warranty_bit",
-	"ro.debuggable",
-	"ro.secure",
-	"ro.build.type",
-	"ro.build.tags",
-	"ro.build.selinux",
-	NULL
-};
+/* From Magisk@native/jni/magiskhide/hide_utils.c */
+static const char *cts_prop_key[] =
+        { "ro.boot.vbmeta.device_state", "ro.boot.verifiedbootstate", "ro.boot.flash.locked",
+          "ro.boot.veritymode", "ro.boot.warranty_bit", "ro.warranty_bit",
+          "ro.debuggable", "ro.secure", "ro.build.type", "ro.build.tags",
+          "ro.vendor.boot.warranty_bit", "ro.vendor.warranty_bit",
+          "vendor.boot.vbmeta.device_state", nullptr };
 
-static const char *cts_prop_value[] = {
-	"green",
-	"1",
-	"enforcing",
-	"enforcing",
-	"0",
-	"0",
-	"0",
-	"1",
-	"user",
-	"release-keys",
-	"1",
-	NULL
-};
+static const char *cts_prop_val[] =
+        { "locked", "green", "1",
+          "enforcing", "0", "0",
+          "0", "1", "user", "release-keys",
+          "0", "0",
+          "locked", nullptr };
+
+static const char *cts_late_prop_key[] =
+        { "vendor.boot.verifiedbootstate", nullptr };
+
+static const char *cts_late_prop_val[] =
+        { "green", nullptr };
 
 static void workaround_cts_properties() {
 	// Hide all sensitive props
 	for (int i = 0; cts_prop_key[i]; ++i) {
-		property_override(cts_prop_key[i], cts_prop_value[i]);
+		property_override(cts_prop_key[i], cts_prop_val[i]);
+	}
+	for (int i = 0; cts_late_prop_key[i]; ++i) {
+		property_override(cts_late_prop_key[i], cts_late_prop_val[i]);
 	}
 }
 
