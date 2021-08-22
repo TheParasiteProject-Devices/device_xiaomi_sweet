@@ -500,3 +500,5 @@ dalvik.vm.image-dex2oat-threads=8 \
 dalvik.vm.dex2oat-minidebuginfo=false \
 dalvik.vm.minidebuginfo=false
 
+# Speed profile services and wifi-service to reduce RAM and storage
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
