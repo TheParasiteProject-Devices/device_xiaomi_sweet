@@ -493,13 +493,13 @@ dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
 dalvik.vm.boot-dex2oat-threads=8 \
 dalvik.vm.dex2oat-threads=8 \
 dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
-dalvik.vm.dex2oat-filter=quicken \
+dalvik.vm.dex2oat-filter=everything \
 dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
-dalvik.vm.image-dex2oat-filter=quicken \
+dalvik.vm.image-dex2oat-filter=everything \
 dalvik.vm.image-dex2oat-threads=8 \
 dalvik.vm.dex2oat-minidebuginfo=false \
 dalvik.vm.minidebuginfo=false
 
 # Speed profile services and wifi-service to reduce RAM and storage
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := everything
 PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
