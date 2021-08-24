@@ -118,6 +118,10 @@ persist.vendor.qcom.bluetooth.twsp_state.enabled=false \
 ro.vendor.bluetooth.wipower=false \
 vendor.qcom.bluetooth.soc=cherokee
 
+# Blur
+PRODUCT_SYSTEM_PROPERTIES += \
+ro.launcher.blur.appLaunch=0
+
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.cne.feature=1
