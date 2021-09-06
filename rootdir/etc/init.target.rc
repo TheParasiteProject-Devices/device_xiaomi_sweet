@@ -187,6 +187,12 @@ service dcvs-sh /vendor/bin/init.qti.dcvs.sh
     disabled
     oneshot
 
+service vendor.adsprpcd /vendor/bin/adsprpcd
+   class main
+   user media
+   group media
+   disabled
+
 on property:vendor.dcvs.prop=1
     start dcvs-sh
 
