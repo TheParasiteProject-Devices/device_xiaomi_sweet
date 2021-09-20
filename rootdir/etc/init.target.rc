@@ -120,6 +120,11 @@ on post-fs-data
 on boot
     start rfs_access
 
+    chmod 0664 /sys/class/thermal/thermal_message/sconfig
+    chown system system /sys/class/thermal/thermal_message/sconfig
+    chmod 0666 /sys/class/thermal/thermal_message/temp_state
+    chown system system /sys/class/thermal/thermal_message/temp_state
+
     # Disable qcom qc3p5
     setprop persist.vendor.cp.support_qc3p5 0
 
