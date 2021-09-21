@@ -67,17 +67,12 @@ void full_property_override(const std::string &prop, const char value[], const b
 }
 
 void vendor_load_properties() {
-    const char *fingerprint = "Xiaomi/dipper/dipper:8.1.0/OPM1.171019.011/V9.5.5.0.OEAMIFA:user/release-keys";
-    const char *description = "dipper-user 8.1.0 OPM1.171019.011 V9.5.5.0.OEAMIFA release-keys";
     const bool is_global = (GetProperty("ro.boot.hwc", "UNKNOWN") == "GLOBAL");
     const bool is_pro = (GetProperty("ro.boot.product.hardware.sku", "UNKNOWN") != "std");
 
     std::string marketname =
        !(!is_global && is_pro) ? "Redmi Note 10 Pro" : "Redmi Note 10 Pro Max";
     const std::string mod_device = is_global ? "sweet_eea_global" : "sweetin_in_global";
-
-    full_property_override("build.fingerprint", fingerprint, false);
-    full_property_override("build.description", description, false);
 
     for (int i = 0; i <= 1; i++) {
         full_property_override("model", is_global ? "M2101K6G" :
