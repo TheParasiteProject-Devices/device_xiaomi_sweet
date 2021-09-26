@@ -1,2 +1,5 @@
 # Lights
 /vendor/bin/hw/android\.hardware\.lights-service\.sweet                                         u:object_r:hal_light_default_exec:s0
+
+# Vibrator
+/vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.sweet                                  u:object_r:hal_vibrator_default_exec:s0
