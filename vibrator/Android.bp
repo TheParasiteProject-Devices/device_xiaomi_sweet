@@ -39,4 +39,12 @@ cc_binary {
         "android.hardware.vibrator-ndk_platform",
         "vendor.qti.hardware.vibrator.impl.sweet",
     ],
+    required: ["excluded-input-devices-sweet.xml"]
+}
+
+prebuilt_etc {
+    name: "excluded-input-devices-sweet.xml",
+    filename: "excluded-input-devices.xml",
+    src: "excluded-input-devices-sweet.xml",
+    vendor: true
 }
