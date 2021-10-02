@@ -251,6 +251,12 @@ ro.surface_flinger.max_virtual_display_dimension=4096 \
 ro.surface_flinger.protected_contents=true \
 ro.surface_flinger.wcg_composition_dataspace=143261696
 
+# VoLTE/ViLTE/WFC
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.dbg.volte_avail_ovr=1 \
+persist.dbg.vt_avail_ovr=1 \
+persist.dbg.wfc_avail_ovr=1
+
 # WiFi
 PRODUCT_PROPERTY_OVERRIDES += \
 wifi.aware.interface=wifi-aware0
