@@ -61,3 +61,10 @@ prebuilt_etc {
     sub_dir: "init/hw",
     vendor: true,
 }
+
+prebuilt_etc {
+    name: "ueventd.sweet.rc",
+    filename: "ueventd.rc",
+    src: "etc/ueventd.qcom.rc",
+    vendor: true,
+}
