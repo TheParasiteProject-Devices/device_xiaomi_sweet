@@ -75,4 +75,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
     <!--  Flag to turn on the rendering of the above path or not  -->
     <bool name="config_enableDisplayCutoutProtection">true</bool>
+
+    <!-- Determines whether the shell features all run on another thread. -->
+    <bool name="config_enableShellMainThread">true</bool>
 </resources>
