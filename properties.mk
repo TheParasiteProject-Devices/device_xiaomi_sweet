@@ -231,6 +231,7 @@ ro.vendor.extension_library=libqti-perfd-client.so
 # Radio/RIL
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.radio.multisim.config=dsds \
+persist.sys.fflag.override.settings_provider_model=false \
 persist.vendor.radio.apm_sim_not_pwdn=1 \
 persist.vendor.radio.custom_ecc=1 \
 persist.vendor.radio.data_con_rprt=1 \
