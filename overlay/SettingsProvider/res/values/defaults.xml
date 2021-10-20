@@ -42,4 +42,7 @@
 
     <!-- Enable UI touch haptic feedback by default -->
     <bool name="def_haptic_feedback">true</bool>
+
+    <!-- Speed up the animations -->
+    <fraction name="def_window_transition_scale">50%</fraction>
 </resources>
