@@ -165,7 +165,7 @@ ro.vendor.display.sensortype=2
 # Display (color mode)
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.sys.sf.color_saturation=1.0 \
-persist.sys.sf.native_mode=2 \
+persist.sys.sf.native_mode=0 \
 persist.sys.sf.color_mode=9
 
 # Factory Reset Protection
@@ -198,6 +198,7 @@ vendor.display.disable_hw_recovery_dump=1 \
 vendor.display.disable_inline_rotator=1 \
 vendor.display.disable_scaler=0 \
 vendor.display.disable_ui_3d_tonemap=1 \
+vendor.display.enable_default_color_mode=0 \
 vendor.display.enable_force_split=1 \
 vendor.display.enable_null_display=0 \
 vendor.display.enable_optimize_refresh=1 \
