@@ -27,7 +27,7 @@
 
     <!-- Thermal Profiles -->
     <string name="thermal_title">Thermal Profiles</string>
-    <string name="thermal_summary">Adjust per-app thermal profiles for optimum performance</string>
+    <string name="thermal_summary">Adjust per-app thermal and touchscreen profiles</string>
     <string name="thermal_default">Default</string>
     <string name="thermal_benchmark">Benchmark</string>
     <string name="thermal_browser">Browser</string>
@@ -39,15 +39,15 @@
     <!-- Touch Control Settings -->
     <string name="touch_control_title">Touch Control</string>
     <string name="touch_game_mode_title">Enable game mode</string>
-    <string name="touch_game_mode_summary">Increases touch sampling rate to 180Hz</string>
+    <string name="touch_game_mode_summary">Activate manual touchscreen feature controls for a better gaming experience</string>
     <string name="touch_response_title">Touch response</string>
-    <string name="touch_response_summary">Controls touch response</string>
+    <string name="touch_response_summary">Control touch response</string>
     <string name="touch_sensitivity_title">Touch sensitivity</string>
-    <string name="touch_sensitivity_summary">Controls touch sensitivity for repeated taps</string>
+    <string name="touch_sensitivity_summary">Control touch sensitivity for repeated taps</string>
     <string name="touch_resistant_title">Touch-resistant area</string>
     <string name="touch_resistant_summary">Reduce touch sensitivity near the edges to avoid triggering touch controls</string>
 
-     <!-- Raise to wake strings-->
+    <!-- Raise to wake strings-->
     <string name="raise_to_wake_gesture_title">Raise to wake</string>
     <string name="raise_to_wake_gesture_summary">Wake up the device instead of pulsing notification</string>
 </resources>
