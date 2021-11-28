@@ -1355,3 +1355,7 @@ vendor/lib64/libmedia_ecoservice.so|84ace8e8d7aba7c5bc715ad53a7523597aeae062
 
 # NFC - from sweet-user 12 SKQ1.210908.001 V13.0.8.0.SKFMIXM release-keys
 vendor/lib/libpn553_fw.so|ec325ad8028c573638a6f6902c4aec73c4ec00fa
+
+# Soundtrigger - from sunfish-user-12-SP1A.210812.015-7679548-release-keys
+vendor/lib64/hw/sound_trigger.primary.sm6150.so|18886433c30b32f99dcddb5c6c3bd1a1e03dfb48
+vendor/lib/hw/sound_trigger.primary.sm6150.so|aa050b609cfde8ea4a6010533a0fb50e66a33e2e
