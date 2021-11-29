@@ -205,6 +205,10 @@ ro.vendor.qti.va_odm.support=1
 PRODUCT_VENDOR_PROPERTIES += \
 ro.vendor.qti.va_aosp.support=1
 
+# GBoard
+PRODUCT_PRODUCT_PROPERTIES += \
+ro.com.google.ime.height_ratio=1.2
+
 # Graphics
 PRODUCT_VENDOR_PROPERTIES += \
 debug.sf.enable_hwc_vds=1 \
