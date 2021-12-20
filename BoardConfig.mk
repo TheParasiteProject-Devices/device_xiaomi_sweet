@@ -147,6 +147,7 @@ TARGET_BOARD_PLATFORM := sm6150
 # Power
 TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
 TARGET_POWERHAL_BOOST_EXT := $(DEVICE_PATH)/power/boost-ext.cpp
+TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/mode-ext.cpp
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
