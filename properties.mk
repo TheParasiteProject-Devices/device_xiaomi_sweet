@@ -243,6 +243,21 @@ ro.incremental.enable=1
 PRODUCT_VENDOR_PROPERTIES += \
 ro.hardware.keystore_desede=true
 
+# Legit Touch Hax
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+touch.size.scale=1 \
+touch.size.bias=0 \
+touch.size.isSummed=0 \
+touch.pressure.scale=0.001 \
+touch.distance.calibration=none \
+touch.distance.scale=0 \
+touch.coverage.calibration=box \
+touch.gestureMode=spots \
+MultitouchSettleInterval=1ms \
+MultitouchMinDistance=1px \
+TapInterval=1ms \
+TapSlop=1px
+
 # LMKD
 PRODUCT_PRODUCT_PROPERTIES += \
 ro.config.low_ram=false \
