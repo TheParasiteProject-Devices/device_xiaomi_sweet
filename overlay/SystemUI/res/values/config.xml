@@ -78,4 +78,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
     <!-- Determines whether the shell features all run on another thread. -->
     <bool name="config_enableShellMainThread">true</bool>
+
+    <!-- The default tiles to display in QuickSettings -->
+    <string name="quick_settings_tiles_default" translatable="false">
+        wifi,cell,location,bt,flashlight,airplane,nfc,hotspot,battery,screenrecord,mictoggle,cameratoggle
+    </string>
 </resources>
