@@ -606,3 +606,8 @@ PRODUCT_PACKAGES += \
 # Power Stats
 PRODUCT_PACKAGES += \
     android.hardware.power.stats
+
+# Tetheroffload
+PRODUCT_PACKAGES += \
+    android.hardware.tetheroffload.config@1.0.vendor \
+    android.hardware.tetheroffload.control@1.0.vendor
