@@ -235,6 +235,11 @@ vendor.display.enable_optimize_refresh=1 \
 vendor.display.qdcm.mode_combine=1 \
 vendor.gralloc.disable_ubwc=0
 
+# HWUI
+PRODUCT_VENDOR_PROPERTIES += \
+debug.hwui.use_hint_manager=true \
+debug.hwui.target_cpu_time_percent=30
+
 # Incremental FS
 PRODUCT_VENDOR_PROPERTIES += \
 ro.incremental.enable=1
