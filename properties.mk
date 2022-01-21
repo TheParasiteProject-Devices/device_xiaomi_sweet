@@ -272,7 +272,8 @@ ro.lmk.critical_upgrade=true \
 ro.lmk.upgrade_pressure=40 \
 ro.lmk.downgrade_pressure=60 \
 ro.lmk.thrashing_limit=30 \
-ro.lmk.thrashing_limit_decay=50
+ro.lmk.thrashing_limit_decay=50 \
+ro.lmk.log_stats=false
 
 # Media
 PRODUCT_VENDOR_PROPERTIES += \
