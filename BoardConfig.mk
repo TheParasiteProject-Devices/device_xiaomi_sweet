@@ -149,7 +149,7 @@ TARGET_SEPOLICY_DIR := msmsteppe
 -include device/qcom/sepolicy_vndr/SEPolicy.mk
 
 # Vendor security patch level
-VENDOR_SECURITY_PATCH := 2021-10-05
+VENDOR_SECURITY_PATCH := 2021-12-01
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
