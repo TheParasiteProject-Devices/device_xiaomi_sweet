@@ -475,3 +475,6 @@ PRODUCT_PACKAGES += \
 # Lily Experience
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/lily_experience.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/lily_experience.xml
+
+# Dolby
+$(call inherit-product-if-exists, vendor/dolby/config.mk)
