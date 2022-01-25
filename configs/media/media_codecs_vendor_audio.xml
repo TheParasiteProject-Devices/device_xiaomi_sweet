@@ -21,4 +21,5 @@
         <MediaCodec name="OMX.google.raw.decoder" type="audio/raw" update="true" rank="1"/>
         <!-- SimpleOMXComponet based software decoder-->
     </Decoders>
+    <Include href="media_codecs_dolby_audio.xml" />
 </Included>
