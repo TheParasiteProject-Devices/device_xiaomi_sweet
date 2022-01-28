@@ -18,6 +18,9 @@
 */
 -->
 <resources>
+    <!-- Padding around the status bar -->
+    <dimen name="rounded_corner_content_padding">50px</dimen>
+
     <!-- Radius of the software rounded corners at the bottom of the display in its natural
         orientation. If zero, the value of rounded_corner_radius is used. -->
     <dimen name="rounded_corner_radius_bottom">102.0px</dimen>
