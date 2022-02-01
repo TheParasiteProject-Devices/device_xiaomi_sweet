@@ -15,3 +15,6 @@ ro.product.mod_device                                    u:object_r:build_prop:s
 
 # Sensors
 persist.sensor.sardisable                                u:object_r:vendor_sensors_prop:s0
+
+# SettingsLib
+settingsdebug.instant.packages                           u:object_r:settingslib_prop:s0
