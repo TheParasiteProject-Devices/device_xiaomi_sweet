@@ -438,3 +438,9 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Inherit vendor
 $(call inherit-product, vendor/xiaomi/sweet/sweet-vendor.mk)
+
+# Firmware
+$(call inherit-product-if-exists, vendor/xiaomi-firmware/sweet/Android.mk)
+
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/xiaomi-firmware

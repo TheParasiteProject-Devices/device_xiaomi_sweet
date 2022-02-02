@@ -10,5 +10,11 @@
         "target_path": "vendor/xiaomi/sweet",
         "remote": "github",
         "branch": "thirteen"
+    },
+    {
+        "repository": "someone5678/vendor_xiaomi-firmware",
+        "target_path": "vendor/xiaomi-firmware",
+        "remote": "gitlab",
+        "branch": "thirteen"
     }
 ]
