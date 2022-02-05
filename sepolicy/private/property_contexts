@@ -1,3 +1,6 @@
 # Proximity
 elliptic.ultrasound.                                     u:object_r:vendor_sensors_prop:s0
 invn.hal.                                                u:object_r:vendor_sensors_prop:s0
+
+# Sensors
+persist.sensor.sardisable                                u:object_r:vendor_sensors_prop:s0
