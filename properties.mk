@@ -362,6 +362,12 @@ debug.sf.early.app.duration=16666666 \
 debug.sf.earlyGl.sf.duration=15666666 \
 debug.sf.earlyGl.app.duration=16666666
 
+# Suspend properties
+PRODUCT_VENDOR_PROPERTIES += \
+suspend.short_suspend_threshold_millis=2000 \
+suspend.short_suspend_backoff_enabled=true \
+suspend.max_sleep_time_millis=40000
+
 # System
 PRODUCT_VENDOR_PROPERTIES += \
 persist.sys.binary_xml=false
