@@ -936,8 +936,13 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
-# QCV-Utils
+# QCV-Utils (SOC Helper)
+vendor/bin/init.qti.qcv.sh
+vendor/etc/init/init.qti.qcv.rc
+vendor/lib/libsoc_helper.so
+vendor/lib/libsoc_helper_jni.so
 vendor/lib64/libsoc_helper.so
+vendor/lib64/libsoc_helper_jni.so
 
 # QMI
 system_ext/etc/permissions/qti_libpermissions.xml
