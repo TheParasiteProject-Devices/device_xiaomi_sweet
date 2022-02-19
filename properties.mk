@@ -258,7 +258,7 @@ ro.telephony.default_cdma_sub=0 \
 ro.telephony.iwlan_operation_mode=legacy
 
 # Radio (IMS)
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_SYSTEM_PROPERTIES += \
 persist.vendor.ims.disableADBLogs=1 \
 persist.vendor.ims.disableDebugLogs=1 \
 persist.vendor.ims.disableIMSLogs=1 \
