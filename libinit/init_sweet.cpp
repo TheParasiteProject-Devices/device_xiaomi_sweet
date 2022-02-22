@@ -73,6 +73,9 @@ void vendor_load_properties() {
     full_property_override("build.fingerprint", fingerprint);
     full_property_override("build.description", description);
 
+    // Enable UI blur
+    property_override("ro.surface_flinger.supports_background_blur", "1");
+
     // Set dalvik heap configuration
     std::string heapstartsize, heapgrowthlimit, heapsize, heapminfree,
 			heapmaxfree, heaptargetutilization;
