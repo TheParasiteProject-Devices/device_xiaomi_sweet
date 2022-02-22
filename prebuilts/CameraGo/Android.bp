@@ -21,6 +21,15 @@ android_app_import {
 	dex_preopt: {
 		enabled: false,
 	},
+	product_specific: true,
 	privileged: true,
 	overrides: ["Camera", "Camera2", "Snap"],
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-camera-go.xml",
+	product_specific: true,
+    sub_dir: "permissions",
+    src: "privapp-permissions-camera-go.xml",
+    filename_from_src: true,
 }

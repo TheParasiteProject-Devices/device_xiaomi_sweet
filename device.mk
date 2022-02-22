@@ -76,6 +76,7 @@ PRODUCT_PACKAGES += \
     libgui_vendor \
     libxml2 \
     CameraGo \
+    privapp-permissions-camera-go.xml \
     vendor.qti.hardware.camera.device@1.0.vendor
 
 PRODUCT_COPY_FILES += \
