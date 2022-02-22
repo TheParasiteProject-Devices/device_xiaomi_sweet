@@ -56,3 +56,6 @@
 # Xiaomi thermal daemon
 /vendor/bin/mi_thermald                                                                         u:object_r:mi_thermald_exec:s0
 /data/vendor/thermal(/.*)?                                                                      u:object_r:thermal_data_file:s0
+
+# Touch
+/vendor/bin/hw/vendor\.lineage\.touch@1\.0-service\.xiaomi_sm6150                                 u:object_r:hal_lineage_touch_default_exec:s0
