@@ -1,0 +1,4 @@
+# Fingerprint
+persist.vendor.sys.fp.                                   u:object_r:vendor_fp_prop:s0
+ro.boot.fpsensor                                         u:object_r:vendor_fp_prop:s0
+vendor.fps_hal.restartimes                               u:object_r:vendor_fp_prop:s0

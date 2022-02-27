@@ -1,2 +1,5 @@
+# Fingerprint
+type fingerprint_data_file, data_file_type, file_type;
+
 # Proximity
 type sysfs_iio_devices, fs_type, sysfs_type;

@@ -1,6 +1,19 @@
 # Battery
 genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify    u:object_r:vendor_sysfs_battery_supply:s0
 
+# Fingerprint
+genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/device_prepare            u:object_r:vendor_sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/fingerdown_wait           u:object_r:vendor_sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/irq                       u:object_r:vendor_sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/power_cfg                 u:object_r:vendor_sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/request_vreg              u:object_r:vendor_sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/vendor                    u:object_r:vendor_sysfs_fingerprint:s0
+genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/wakeup_enable             u:object_r:vendor_sysfs_fingerprint:s0
+
+# fingerprint_fpc/finger_irq
+# fingerprint_fpc/hw_reset
+# fingerprint_fpc/simulate_irq
+
 # Proximity
 genfscon sysfs /bus/iio/devices                                                    u:object_r:sysfs_iio_devices:s0
 genfscon sysfs /devices/platform/us_prox.0/iio:device2                             u:object_r:sysfs_iio_devices:s0

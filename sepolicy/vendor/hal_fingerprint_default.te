@@ -1,0 +1,24 @@
+# Allow FP to create /data/vendor/fortsense dir & file
+allow hal_fingerprint_default fingerprint_data_file:dir create_dir_perms;
+allow hal_fingerprint_default fingerprint_data_file:file create_file_perms;
+
+# Allow FP to r&w /dev/fortsense_fp
+allow hal_fingerprint_default fingerprint_device:chr_file rw_file_perms;
+
+allow hal_fingerprint_default init:unix_stream_socket connectto;
+allow hal_fingerprint_default input_device:chr_file rw_file_perms;
+allow hal_fingerprint_default vendor_sysfs_fingerprint:file rw_file_perms;
+allow hal_fingerprint_default self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+allow hal_fingerprint_default tee_device:chr_file rw_file_perms;
+
+add_hwservice(hal_fingerprint_default, hal_fingerprint_hwservice_xiaomi)
+allow hal_fingerprint_default vendor_hal_perf_hwservice:hwservice_manager find;
+
+# Allow access to fp props
+get_prop(hal_fingerprint_default, vendor_fp_prop)
+set_prop(hal_fingerprint_default, vendor_fp_prop)
+
+allow hal_fingerprint_default property_socket:sock_file write;
+
+# Allow FP to r&w to /dev/vndbinder
+allow hal_fingerprint_default vndbinder_device:chr_file rw_file_perms;

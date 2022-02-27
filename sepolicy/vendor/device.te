@@ -1,2 +1,5 @@
 # Display
 type touchfeature_device, dev_type;
+
+# Fingerprint
+type fingerprint_device, dev_type;
