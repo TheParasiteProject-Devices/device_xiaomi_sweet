@@ -312,7 +312,8 @@ PRODUCT_PACKAGES += \
     NotchBarKiller
 
 PRODUCT_PACKAGES += \
-    PixelConfigOverlaySweet
+    PixelConfigOverlaySweet \
+    CustomWebViewOverlay
 
 # Perf
 PRODUCT_PACKAGES += \
