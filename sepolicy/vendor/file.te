@@ -1,3 +1,6 @@
+# Audio
+type sysfs_re25_calib, fs_type, sysfs_type;
+
 # Fingerprint
 type fingerprint_data_file, data_file_type, file_type;
 

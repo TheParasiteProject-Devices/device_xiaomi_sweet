@@ -1,0 +1,2 @@
+# Allow audio hal to r&w /sys/class/smartpa/re25_calib
+allow hal_audio_default sysfs_re25_calib:file rw_file_perms;

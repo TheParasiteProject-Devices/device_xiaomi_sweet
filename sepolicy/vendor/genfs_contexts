@@ -1,3 +1,6 @@
+# Audio
+genfscon sysfs /class/smartpa/re25_calib                                           u:object_r:sysfs_re25_calib:s0
+
 # Battery
 genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify    u:object_r:vendor_sysfs_battery_supply:s0
 
