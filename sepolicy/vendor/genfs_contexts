@@ -1,3 +1,6 @@
+# Battery
+genfscon sysfs /devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify    u:object_r:vendor_sysfs_battery_supply:s0
+
 # Proximity
 genfscon sysfs /bus/iio/devices                                                    u:object_r:sysfs_iio_devices:s0
 genfscon sysfs /devices/platform/us_prox.0/iio:device2                             u:object_r:sysfs_iio_devices:s0
