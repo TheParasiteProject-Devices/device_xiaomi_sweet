@@ -1,0 +1,4 @@
+# Allow access to read /mnt/vendor/persist/camera/
+r_dir_file(hal_camera_default, mnt_vendor_file)
+
+get_prop(hal_camera_default, exported_camera_prop)
