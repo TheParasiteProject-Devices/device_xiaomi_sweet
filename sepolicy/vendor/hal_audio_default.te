@@ -10,3 +10,6 @@ allow hal_audio_default vendor_audio_socket:sock_file rw_file_perms;
 
 # Allow audio hal to set property
 set_prop(hal_audio_default, vendor_audio_prop)
+
+# Allow audio hal access to elliptic.ultrasound property
+get_prop(hal_audio_default, vendor_sensors_prop)
