@@ -1,3 +1,6 @@
 allow hal_sensors_default iio_device:chr_file r_file_perms;
 allow hal_sensors_default sysfs_iio_devices:dir r_dir_perms;
 allow hal_sensors_default sysfs_iio_devices:file rw_file_perms;
+
+# Allow ultrasound sensors to w to /dev/socket/audio_hw_socket
+allow hal_sensors_default vendor_audio_socket:sock_file w_file_perms;
