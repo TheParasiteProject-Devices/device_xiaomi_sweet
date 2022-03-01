@@ -4,3 +4,6 @@ allow hal_sensors_default sysfs_iio_devices:file rw_file_perms;
 
 # Allow ultrasound sensors to w to /dev/socket/audio_hw_socket
 allow hal_sensors_default vendor_audio_socket:sock_file w_file_perms;
+
+# Allow hal_sensors to connect to audio_hw_socket via hal_audio
+unix_socket_connect(hal_sensors_default, vendor_audio, hal_audio_default)
