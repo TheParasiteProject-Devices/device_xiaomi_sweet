@@ -18,6 +18,18 @@
 # Persist subsystem
 /mnt/vendor/persist/subsys(/.*)?                                                                u:object_r:persist_subsys_file:s0
 
+# sysfs (wakeup)
+/sys/devices/platform/soc/[0-9a-f]+.qcom,spmi/spmi-[0-9]+/spmi[0-9]+-[0-9]+/[0-9a-f]+.qcom,spmi:qcom,pm[0-9]+@[0-9]+:qcom,pm[0-9]+_rtc/rtc/rtc[0-9]+/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-[0-9]+/spmi[0-9]+-[0-9]+/c440000.qcom,spmi:qcom,pm[0-9]+[a-z]?@[0-9]+:qcom,qpnp-smb[0-9]+/power_supply/(battery|dc|main|pc_port|usb|wireless)/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-[0-9]+/spmi[0-9]+-[0-9]+/c440000.qcom,spmi:qcom,pm[0-9]+[a-z]?@[0-9]+:qcom,usb-pdphy@[0-9]+/usbpd/usbpd[0-9]+/otg_default/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-[0-9]+/spmi[0-9]+-[0-9]+/c440000.qcom,spmi:qcom,pm[0-9]+[a-z]?@[0-9]+:qcom,usb-pdphy@[0-9]+/usbpd/usbpd[0-9]+/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
+/sys/devices/platform/soc/soc:qcom,msm-audio-apr/soc:qcom,msm-audio-apr:qcom,q6core-audio/soc:qcom,msm-audio-apr:qcom,q6core-audio:bolero-cdc/(tx-macro/tx_swr_ctrl|rx-macro/rx_swr_ctrl)/wakeup/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
+
+/sys/devices/virtual/fastrpc/adsprpc-smd-secure/wakeup[0-9]+(/.*)?                              u:object_r:sysfs_wakeup:s0
+/sys/devices/virtual/fastrpc/adsprpc-smd/wakeup[0-9]+(/.*)?                                     u:object_r:sysfs_wakeup:s0
+/sys/devices/virtual/misc/(msm_[a-z0-9]+)/wakeup[0-9]+(/.*)?                                    u:object_r:sysfs_wakeup:s0
+/sys/devices/virtual/misc/msm_multi_aac/wakeup[0-9]+(/.*)?                                      u:object_r:sysfs_wakeup:s0
+
 # Vibrator
 /vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.sweet                                  u:object_r:hal_vibrator_default_exec:s0
 
