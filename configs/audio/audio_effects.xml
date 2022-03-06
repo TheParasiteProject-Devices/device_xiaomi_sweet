@@ -130,6 +130,8 @@
         </stream>
         <stream type="notification">
         </stream>
+        <stream type="none">
+        </stream>
     </postprocess>
     <preprocess>
         <stream type="voice_communication">
