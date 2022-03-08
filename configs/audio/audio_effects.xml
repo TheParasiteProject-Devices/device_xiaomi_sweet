@@ -123,12 +123,15 @@
         <stream type="music">
         </stream>
         <stream type="ring">
+            <apply effect="ring_helper"/>
         </stream>
         <stream type="alarm">
+            <apply effect="alarm_helper"/>
         </stream>
         <stream type="voice_call">
         </stream>
         <stream type="notification">
+            <apply effect="notification_helper"/>
         </stream>
         <stream type="none">
         </stream>
