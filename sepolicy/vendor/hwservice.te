@@ -1,2 +1,6 @@
 # Fingeprint
 type hal_fingerprint_hwservice_xiaomi, hwservice_manager_type;
+
+# NFC
+type hal_nxpese_hwservice, hwservice_manager_type;
+type hal_nxpnfc_hwservice, hwservice_manager_type;
