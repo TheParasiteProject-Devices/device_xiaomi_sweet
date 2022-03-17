@@ -126,4 +126,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <!-- Icons that don't show in a collapsed statusbar on keyguard -->
     <string-array name="config_keyguard_statusbar_icon_blocklist" translatable="false">
     </string-array>
+
+		<!-- Max visible notification icons -->
+    <integer name="config_maxVisibleNotificationIcons">5</integer>
+    <integer name="config_maxVisibleNotificationIconsOnLock">5</integer>
 </resources>
