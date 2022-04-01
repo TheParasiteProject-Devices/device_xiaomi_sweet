@@ -40,7 +40,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     <bool name="doze_proximity_sensor_supported">false</bool>
 
     <!-- Location on the screen of the center of the physical power button. -->
-    <dimen name="physical_power_button_center_screen_location_y">1100px</dimen>
+    <dimen name="physical_power_button_center_screen_location_y">@dimen/physical_fingerprint_sensor_center_screen_location_y</dimen>
 
     <!-- Location on the screen of the center of the fingerprint sensor. For devices with under
      display fingerprint sensors, this directly corresponds to the fingerprint sensor's location.
