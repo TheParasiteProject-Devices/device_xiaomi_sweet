@@ -4,5 +4,8 @@ vendor_internal_prop(vendor_displayfeature_prop);
 # Fingerprint
 vendor_public_prop(vendor_fp_prop);
 
+# Insmod
+vendor_internal_prop(vendor_device_prop)
+
 # Power HAL
 vendor_internal_prop(vendor_power_prop);

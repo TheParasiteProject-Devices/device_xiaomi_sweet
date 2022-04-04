@@ -10,6 +10,9 @@ persist.vendor.sys.fp.                                   u:object_r:vendor_fp_pr
 ro.boot.fpsensor                                         u:object_r:vendor_fp_prop:s0
 vendor.fps_hal.restartimes                               u:object_r:vendor_fp_prop:s0
 
+# Insmod
+vendor.all.devices.ready        u:object_r:vendor_device_prop:s0
+
 # Power HAL
 vendor.powerhal.				         u:object_r:vendor_power_prop:s0
 
