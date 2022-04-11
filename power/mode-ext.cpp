@@ -33,6 +33,9 @@
 #include <log/log.h>
 
 #include <aidl/android/hardware/power/BnPower.h>
+#include <android-base/file.h>
+#include <android-base/logging.h>
+#include <sys/ioctl.h>
 
 extern "C" {
 #include "hint-data.h"
@@ -40,6 +43,15 @@ extern "C" {
 #include "performance.h"
 #include "power-common.h"
 #include "utils.h"
+
+// defines from drivers/input/touchscreen/xiaomi/xiaomi_touch.h
+#define SET_CUR_VALUE 0
+#define Touch_Doubletap_Mode 14
+
+#define TOUCH_DEV_PATH "/dev/xiaomi-touch"
+
+#define TOUCH_MAGIC 0x5400
+#define TOUCH_IOC_SETMODE TOUCH_MAGIC + SET_CUR_VALUE
 
 const int kMaxLaunchDuration = 4000; /* ms */
 
@@ -81,6 +93,9 @@ namespace impl {
 
 bool isDeviceSpecificModeSupported(Mode type, bool *_aidl_return) {
     switch (type) {
+        case Mode::DOUBLE_TAP_TO_WAKE:
+            *_aidl_return = true;
+            return true;
         case Mode::LAUNCH:
             *_aidl_return = true;
             return true;
@@ -91,6 +106,13 @@ bool isDeviceSpecificModeSupported(Mode type, bool *_aidl_return) {
 
 bool setDeviceSpecificMode(Mode type, bool enabled) {
     switch (type) {
+        case Mode::DOUBLE_TAP_TO_WAKE: {
+            int fd = open(TOUCH_DEV_PATH, O_RDWR);
+            int arg[2] = {Touch_Doubletap_Mode, enabled ? 1 : 0};
+            ioctl(fd, TOUCH_IOC_SETMODE, &arg);
+            close(fd);
+            return true;
+        }
         case Mode::LAUNCH:
             process_activity_launch_hint(&enabled);
             return true;
