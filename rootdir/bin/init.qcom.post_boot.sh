@@ -812,6 +812,7 @@ KernelVersionA=${KernelVersionStr:0:1}
 KernelVersionB=${KernelVersionS%.*}
 
 function configure_zram_parameters() {
+    return
     MemTotalStr=`cat /proc/meminfo | grep MemTotal`
     MemTotal=${MemTotalStr:16:8}
 
@@ -922,6 +923,7 @@ function disable_ppr()
 }
 
 function configure_memory_parameters() {
+    return
     # Set Memory parameters.
     #
     # Set per_process_reclaim tuning parameters
