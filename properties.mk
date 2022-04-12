@@ -134,6 +134,10 @@ camera.disable_zsl_mode=1
 PRODUCT_PRODUCT_PROPERTIES += \
 ro.charger.enable_suspend=true
 
+# Set fcc_main to 400mA to avoid the risk of vph_pwr drop
+PRODUCT_SYSTEM_PROPERTIES += \
+persist.vendor.cp.fcc_main_ua=400000
+
 # Chipset
 PRODUCT_VENDOR_PROPERTIES += \
 ro.soc.manufacturer=QTI \
@@ -228,6 +232,24 @@ PRODUCT_PROPERTY_OVERRIDES += \
 debug.stagefright.omx_default_rank=0 \
 debug.stagefright.ccodec=1
 
+PRODUCT_SYSTEM_PROPERTIES += \
+media.aac_51_output_enabled=true \
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
+media.stagefright.enable-aac=true \
+media.stagefright.enable-fma2dp=true \
+media.stagefright.enable-http=true \
+media.stagefright.enable-player=true \
+media.stagefright.enable-qcp=true \
+media.stagefright.enable-scan=true \
+media.stagefright.thumbnail.prefer_hw_codecs=true \
+mmp.enable.3g2=true \
+persist.mm.enable.prefetch=true \
+ro.media.recorder-max-base-layer-fps=60
+
+# Netflix custom property
+PRODUCT_SYSTEM_PROPERTIES += \
+ro.netflix.bsp_rev=Q6150-17263-1
+
 # Netmgr
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.data.iwlan.enable=true
@@ -256,6 +278,12 @@ persist.vendor.radio.redir_party_num=1 \
 persist.vendor.radio.sib16_support=1 \
 ro.telephony.default_cdma_sub=0 \
 ro.telephony.iwlan_operation_mode=legacy
+
+PRODUCT_SYSTEM_PROPERTIES += \
+DEVICE_PROVISIONED=1 \
+ril.subscription.types=NV,RUIM \
+ro.telephony.default_network=22,22 \
+telephony.lteOnCdmaDevice=1
 
 # Radio (IMS)
 PRODUCT_SYSTEM_PROPERTIES += \
@@ -296,3 +324,8 @@ persist.dbg.wfc_avail_ovr=1
 # WiFi
 PRODUCT_PROPERTY_OVERRIDES += \
 wifi.aware.interface=wifi-aware0
+
+# Wireless display
+PRODUCT_SYSTEM_PROPERTIES += \
+persist.debug.wfd.enable=1 \
+#persist.sys.wfd.virtual=0
