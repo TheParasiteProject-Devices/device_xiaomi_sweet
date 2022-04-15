@@ -190,7 +190,6 @@ on property:sys.boot_completed=1
     write /dev/stune/schedtune.prefer_high_cap 0
     write /dev/stune/schedtune.boost 0
     write /dev/stune/top-app/schedtune.prefer_high_cap 0
-    write /dev/stune/top-app/schedtune.boost 0
 
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.qcom
