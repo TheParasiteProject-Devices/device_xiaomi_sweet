@@ -35,6 +35,28 @@ on init
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
 
+    # Boot time cpuset and stune
+    write /dev/cpuset/top-app/cpus 0-7
+    write /dev/cpuset/foreground/cpus 0-7
+    write /dev/cpuset/background/cpus 0-5
+    write /dev/cpuset/system-background/cpus 0-5
+    write /dev/cpuset/restricted/cpus 2-5
+
+    write /dev/stune/foreground/schedtune.prefer_high_cap 1
+    write /dev/stune/foreground/schedtune.boost 100
+
+    write /dev/stune/schedtune.prefer_idle 1
+    write /dev/stune/schedtune.prefer_high_cap 1
+    write /dev/stune/schedtune.boost 100
+
+    write /dev/stune/top-app/schedtune.prefer_high_cap 1
+    write /dev/stune/top-app/schedtune.boost 100
+
+    # Boot time fs tuning
+    write /sys/block/sda/queue/scheduler cfq
+    write /sys/block/sda/queue/iosched/slice_idle 0
+    write /sys/block/sda/queue/nr_requests 256
+
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
     # ZRAM setup
@@ -66,9 +88,19 @@ on fs
     chmod 0440 /sys/class/hphlr_impedance/hphr
 
 on late-fs
+    start surfaceflinger
+    start bootanim
+    start vendor.hwcomposer-2-4
+    start vendor.qti.hardware.display.allocator
+    start vendor.lights
+
     wait_for_prop hwservicemanager.ready true
     exec_start wait_for_keymaster
+
     mount_all --late
+
+    # Start time daemon early so that the system time can be set early
+    start time_daemon
 
 on post-fs-data
     mkdir /data/vendor/nfc 0770 nfc nfc
@@ -81,18 +113,6 @@ on post-fs-data
 
 on boot
     start rfs_access
-
-    # First setup runtime cpusets only for silver cpus
-    write /dev/cpuset/top-app/cpus 0-3
-    write /dev/cpuset/foreground/cpus 0-3
-    write /dev/cpuset/background/cpus 0-3
-    write /dev/cpuset/system-background/cpus 0-3
-
-    # Setup runtime cpusets
-    write /dev/cpuset/top-app/cpus 0-7
-    write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/background/cpus 0-7
-    write /dev/cpuset/system-background/cpus 0-7
 
     chown system system /sys/class/thermal/thermal_message/sconfig
 
@@ -160,5 +180,17 @@ on property:vendor.dcvs.prop=1
     start dcvs-sh
 
 on property:sys.boot_completed=1
+    # Runtime fs tuning
+    write /sys/block/sda/queue/nr_requests 128
+
+    # Setup runtime schedTune
+    write /dev/stune/foreground/schedtune.prefer_high_cap 0
+    write /dev/stune/foreground/schedtune.boost 0
+    write /dev/stune/schedtune.prefer_idle 0
+    write /dev/stune/schedtune.prefer_high_cap 0
+    write /dev/stune/schedtune.boost 0
+    write /dev/stune/top-app/schedtune.prefer_high_cap 0
+    write /dev/stune/top-app/schedtune.boost 0
+
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.qcom
