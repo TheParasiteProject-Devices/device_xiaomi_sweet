@@ -16,5 +16,6 @@
         <permission name="android.permission.VIBRATE"/>
 		<permission name="android.permission.BIND_JOB_SERVICE"/>
 		<permission name="android.permission.DUMP"/>
+        <permission name="android.permission.WRITE_SETTINGS"/>
 	</privapp-permissions>
 </permissions>
