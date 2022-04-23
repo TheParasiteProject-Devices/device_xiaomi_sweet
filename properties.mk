@@ -311,6 +311,16 @@ ro.surface_flinger.max_virtual_display_dimension=4096 \
 ro.surface_flinger.protected_contents=true \
 ro.surface_flinger.wcg_composition_dataspace=143261696
 
+# Surfaceflinger
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+debug.sf.use_phase_offsets_as_durations=1 \
+debug.sf.late.sf.duration=15666666 \
+debug.sf.late.app.duration=16666666 \
+debug.sf.early.sf.duration=15666666 \
+debug.sf.early.app.duration=16666666 \
+debug.sf.earlyGl.sf.duration=15666666 \
+debug.sf.earlyGl.app.duration=16666666
+
 # System
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.sys.binary_xml=false
