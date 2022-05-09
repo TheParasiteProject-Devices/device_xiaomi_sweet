@@ -950,6 +950,9 @@ vendor/bin/cnss-daemon
 vendor/bin/nv_mac
 
 # Pinned section
+# Audio (FX modules) - from cheetah-user 13 TQ2A.230405.003.E1 9802792 release-keys
+vendor/lib/soundfx/libspatialaudio.so|379b98b020729d05cad4e84202f42335b96bb755
+
 # Camera Components - from sweet-user-13-TKQ1.221013.002-V14.0.1.0.TKFMIXM-release-keys
 vendor/lib64/camera/com.qti.tuned.sweet_ofilm_s5khm2_wide.bin|ab8ef3bfcfe0383d82510512f9615dd6d24710f1
 

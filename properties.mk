@@ -48,6 +48,10 @@ ro.vendor.audio.sdk.ssr=false \
 ro.vendor.audio.us.type=mius \
 vendor.audio.mic.status=off
 
+# Audio (Bluetooth)
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.audio.spatializer_enabled=true
+
 # Audio (Features)
 PRODUCT_VENDOR_PROPERTIES += \
 vendor.audio.feature.a2dp_offload.enable=true \
