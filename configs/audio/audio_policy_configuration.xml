@@ -77,6 +77,10 @@
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </mixPort>
+                <mixPort name="immersive_out" role="source" flags="AUDIO_OUTPUT_FLAG_SPATIALIZER">
+                    <profile name="" format="AUDIO_FORMAT_PCM_FLOAT"
+                             samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
+                </mixPort>
                 <mixPort name="hifi_playback" role="source" />
                 <mixPort name="compress_passthrough" role="source"
                         flags="AUDIO_OUTPUT_FLAG_DIRECT AUDIO_OUTPUT_FLAG_NON_BLOCKING">
@@ -368,9 +372,9 @@
                 <route type="mix" sink="BT SCO Car Kit"
                        sources="primary output,raw,deep_buffer,direct_pcm,voip_rx"/>
                 <route type="mix" sink="USB Device Out"
-                       sources="primary output,raw,deep_buffer,direct_pcm,voip_rx,mmap_no_irq_out,hifi_playback"/>
+                       sources="primary output,raw,deep_buffer,direct_pcm,voip_rx,mmap_no_irq_out,hifi_playback,immersive_out"/>
                 <route type="mix" sink="USB Headset Out"
-                       sources="primary output,raw,deep_buffer,direct_pcm,voip_rx,mmap_no_irq_out,hifi_playback"/>
+                       sources="primary output,raw,deep_buffer,direct_pcm,voip_rx,mmap_no_irq_out,hifi_playback,immersive_out"/>
                 <route type="mix" sink="Telephony Tx"
                        sources="voice_tx,incall_music_uplink"/>
                 <route type="mix" sink="hotword input"
@@ -392,11 +396,11 @@
                 <route type="mix" sink="mmap_no_irq_in"
                        sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,USB Device In,USB Headset In"/>
                 <route type="mix" sink="BT A2DP Out"
-                       sources="primary output,deep_buffer,direct_pcm,voip_rx"/>
+                       sources="primary output,deep_buffer,direct_pcm,voip_rx,immersive_out"/>
                 <route type="mix" sink="BT A2DP Headphones"
-                       sources="primary output,deep_buffer,direct_pcm,voip_rx"/>
+                       sources="primary output,deep_buffer,direct_pcm,voip_rx,immersive_out"/>
                 <route type="mix" sink="BT A2DP Speaker"
-                       sources="primary output,deep_buffer,direct_pcm,voip_rx"/>
+                       sources="primary output,deep_buffer,direct_pcm,voip_rx,immersive_out"/>
                 <route type="mix" sink="hifi_input" sources="USB Device In,USB Headset In" />
             </routes>
 

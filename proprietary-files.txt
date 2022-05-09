@@ -949,6 +949,9 @@ vendor/bin/cnss-daemon
 vendor/bin/nv_mac
 
 # Pinned section
+# Audio (FX modules) - from cheetah-user 13 TQ2A.230405.003.E1 9802792 release-keys
+vendor/lib/soundfx/libspatialaudio.so|379b98b020729d05cad4e84202f42335b96bb755
+
 # Camera Arcsoft
 vendor/lib64/libarcsoft_super_night_raw.so
 
