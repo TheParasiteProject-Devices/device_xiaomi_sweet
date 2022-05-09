@@ -43,6 +43,7 @@
         <library name="audio_pre_processing" path="libqcomvoiceprocessing.so"/>
         <library name="volume_listener" path="libvolumelistener.so"/>
         <library name="audiosphere" path="libasphere.so"/>
+        <library name="spatializer" path="libspatialaudio.so"/>
 	<library name="shoebox" path="libshoebox.so"/>
 	<library name="dirac" path="libdirac.so"/>
         <library name="misoundfx" path="libmisoundfx.so"/>
@@ -106,6 +107,7 @@
             <libhw library="dap_hw" uuid="a0c30891-8246-4aef-b8ad-d53e26da0253"/>
         </effectProxy>
         <!--DOLBY END-->
+        <effect name="spatializer" library="spatializer" uuid="cc4677de-ff72-11eb-9a03-0242ac130003"/>
     </effects>
     <postprocess>
         <stream type="music">
