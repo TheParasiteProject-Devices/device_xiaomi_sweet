@@ -281,6 +281,9 @@ vendor.display.enable_optimize_refresh=1 \
 vendor.display.qdcm.mode_combine=1 \
 vendor.gralloc.disable_ubwc=0
 
+PRODUCT_SYSTEM_PROPERTIES += \
+debug.hwui.skia_atrace_enabled=false
+
 PRODUCT_PRODUCT_PROPERTIES += \
 ro.sf.force_hwc_brightness=1
 
