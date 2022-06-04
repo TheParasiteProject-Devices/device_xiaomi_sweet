@@ -132,6 +132,7 @@
             <apply effect="voice_helper"/>
         </stream>
         <stream type="notification">
+            <apply effect="notification_helper"/>
         </stream>
     </postprocess>
     <preprocess>
