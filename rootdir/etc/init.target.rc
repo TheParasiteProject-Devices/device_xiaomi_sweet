@@ -115,6 +115,7 @@ on boot
     start rfs_access
 
     chown system system /sys/class/thermal/thermal_message/sconfig
+    write /sys/class/thermal/thermal_message/sconfig 0
 
     # Disable qcom qc3p5
     setprop persist.vendor.cp.support_qc3p5 0
