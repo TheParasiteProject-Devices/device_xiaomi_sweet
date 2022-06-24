@@ -62,3 +62,4 @@ setprop ro.vendor.ril.mbn_copy_completed 1
 
 # Remove settings cache, avoids derps after dirty flash
 rm -rf /data/system/package_cache
+rm -rf /data/property/persistent_properties
