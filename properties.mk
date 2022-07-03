@@ -1,7 +1,8 @@
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
 aaudio.hw_burst_min_usec=2000 \
-aaudio.mmap_exclusive_policy=2 \
+aaudio.mmap_exclusive_policy=1 \
+aaudio.mmap_policy=1 \
 af.fast_track_multiplier=1 \
 audio.deep_buffer.media=true \
 audio.offload.min.duration.secs=30 \
@@ -109,14 +110,16 @@ persist.vendor.audio.fluence.voicerec=false
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
+persist.vendor.bluetooth.ble_drop_power=true \
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptive \
 persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true \
 persist.vendor.qcom.bluetooth.enable.splita2dp=true \
+persist.vendor.qcom.bluetooth.enable.swb=false \
+persist.vendor.qcom.bluetooth.enable.swbpm=false \
 persist.vendor.qcom.bluetooth.scram.enabled=true \
 persist.vendor.qcom.bluetooth.soc=cherokee \
 persist.vendor.qcom.bluetooth.twsp_state.enabled=false \
-ro.vendor.bluetooth.wipower=false \
-vendor.qcom.bluetooth.soc=cherokee
+ro.vendor.bluetooth.wipower=false
 
 # Blur
 PRODUCT_SYSTEM_PROPERTIES += \
@@ -145,7 +148,9 @@ ro.soc.model=SM7150
 
 # Crypto
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.crypto.volume.filenames_mode=aes-256-cts
+ro.crypto.dm_default_key.options_format.version=2 \
+ro.crypto.volume.filenames_mode=aes-256-cts \
+ro.crypto.volume.metadata.method=dm-default-key
 
 # DPM
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
@@ -212,6 +217,9 @@ vendor.display.enable_optimize_refresh=1 \
 vendor.display.qdcm.mode_combine=1 \
 vendor.gralloc.disable_ubwc=0
 
+PRODUCT_PRODUCT_PROPERTIES += \
+ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30
+
 # Incremental FS
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.incremental.enable=1
@@ -235,6 +243,7 @@ debug.stagefright.ccodec=1
 PRODUCT_SYSTEM_PROPERTIES += \
 media.aac_51_output_enabled=true \
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
+media.stagefright.audio.deep=false \
 media.stagefright.enable-aac=true \
 media.stagefright.enable-fma2dp=true \
 media.stagefright.enable-http=true \
@@ -278,6 +287,10 @@ persist.vendor.radio.redir_party_num=1 \
 persist.vendor.radio.sib16_support=1 \
 ro.telephony.default_cdma_sub=0 \
 ro.telephony.iwlan_operation_mode=legacy
+
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+ro.telephony.sim_slots.count=2 \
+telephony.active_modems.max_count=2
 
 PRODUCT_SYSTEM_PROPERTIES += \
 DEVICE_PROVISIONED=1 \
