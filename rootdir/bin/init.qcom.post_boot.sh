@@ -3733,7 +3733,7 @@ case "$target" in
 
             echo "0:1324800" > /sys/module/cpu_boost/parameters/input_boost_freq
             echo 120 > /sys/module/cpu_boost/parameters/input_boost_ms
-            echo "0:1324800 1:0 2:0 3:0 4:0 5:0 6:2169600 7:0" > /sys/module/cpu_boost/parameters/powerkey_input_boost_freq
+            echo "0:1804800 1:0 2:0 3:0 4:0 5:0 6:2208000 7:0" > /sys/module/cpu_boost/parameters/powerkey_input_boost_freq
             echo 400 > /sys/module/cpu_boost/parameters/powerkey_input_boost_ms
 
             # Configure default schedTune value for foreground/top-app
@@ -5311,6 +5311,8 @@ case "$target" in
 	# configure input boost settings
 	echo "0:1324800" > /sys/module/cpu_boost/parameters/input_boost_freq
 	echo 120 > /sys/module/cpu_boost/parameters/input_boost_ms
+        echo "0:1785600 1:0 2:0 3:0 4:2419200 5:0 6:0 7:2956800" > /sys/module/cpu_boost/parameters/powerkey_input_boost_freq
+        echo 400 > /sys/module/cpu_boost/parameters/powerkey_input_boost_ms
 
 	# Disable wsf, beacause we are using efk.
 	# wsf Range : 1..1000 So set to bare minimum value 1.

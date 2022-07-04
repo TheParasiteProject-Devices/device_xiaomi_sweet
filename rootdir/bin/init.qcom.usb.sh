@@ -1,5 +1,5 @@
 #!/vendor/bin/sh
-# Copyright (c) 2012-2018, 2020 The Linux Foundation. All rights reserved.
+# Copyright (c) 2012-2018, 2020-2021 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are
@@ -59,9 +59,22 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" 
 	if [ "$esoc_name" == "" ]; then
 	#setprop persist.vendor.usb.config adb
 		case "$soc_hwplatform" in
-			"ALIOTH")
+			"ALIOTH" | "PSYCHE" | "POUSSIN" | "MUNCH")
 				if [ "$(getprop ro.boot.factorybuild)" == "1" ]; then
 					setprop persist.vendor.usb.config diag,diag_mdm,qdss,qdss_mdm,serial_cdev,dpl,rmnet,adb
+				elif [ "$buildvariant" = "eng" ]; then
+					setprop persist.vendor.usb.config diag,diag_mdm,qdss,qdss_mdm,serial_cdev,dpl,rmnet,adb
+				else
+					if [ -z "$debuggable" -o "$debuggable" = "1"  ]; then
+						setprop persist.vendor.usb.config adb
+					else
+						setprop persist.vendor.usb.config none
+					fi
+				fi
+			;;
+			"ELISH")
+				if [ "$(getprop ro.boot.factorybuild)" == "1" ]; then
+					setprop persist.vendor.usb.config diag,adb
 				elif [ "$buildvariant" = "eng" ]; then
 					setprop persist.vendor.usb.config diag,diag_mdm,qdss,qdss_mdm,serial_cdev,dpl,rmnet,adb
 				else
@@ -85,19 +98,42 @@ if [ "$(getprop persist.vendor.usb.config)" == "" -a "$(getprop ro.build.type)" 
 					fi
 				fi
 			;;
+			"NABU")
+				if [ "$(getprop ro.boot.factorybuild)" == "1" ]; then
+					setprop persist.vendor.usb.config diag,adb
+				elif [ "$buildvariant" = "eng" ]; then
+					setprop persist.vendor.usb.config diag,adb
+				else
+					if [ -z "$debuggable" -o "$debuggable" = "1"  ]; then
+						setprop persist.vendor.usb.config adb
+					else
+						setprop persist.vendor.usb.config none
+					fi
+				fi
+			;;
 		esac
 
 	else
 		case "$(getprop ro.baseband)" in
 			"apq")
-				setprop persist.vendor.usb.config diag,adb
+				if [ "$(getprop ro.boot.factorybuild)" == "1" ]; then
+					setprop persist.vendor.usb.config diag,adb
+				elif [ "$buildvariant" = "eng" ]; then
+					setprop persist.vendor.usb.config diag,adb
+				else
+					if [ -z "$debuggable" -o "$debuggable" = "1"  ]; then
+						setprop persist.vendor.usb.config adb
+					else
+						setprop persist.vendor.usb.config none
+					fi
+				fi
 			;;
 		*)
 		case "$soc_hwplatform" in
 			"Dragon" | "SBC")
 				setprop persist.vendor.usb.config diag,adb
 			;;
-			"CMI" | "UMI" | "PICASSO" | "MONET" | "VANGOGH" | "LMI" | "COURBET" | "SWEET" | "ALIOTH" | "THYME" | "VAYU")
+			"CMI" | "UMI" | "PICASSO" | "MONET" | "VANGOGH" | "LMI" | "COURBET" | "SWEET" | "ALIOTH" | "THYME" | "VAYU" | "ENUMA" | "NABU" | "PSYCHE"| "POUSSIN" | "MUNCH")
 				if [ "$(getprop ro.boot.factorybuild)" == "1" ]; then
 					setprop persist.vendor.usb.config diag,diag_mdm,qdss,qdss_mdm,serial_cdev,dpl,rmnet,adb
 				elif [ "$buildvariant" = "eng" ]; then
@@ -191,6 +227,15 @@ esac
 
 # check configfs is mounted or not
 if [ -d /config/usb_gadget ]; then
+	# Chip-serial is used for unique MSM identification in Product string
+	msm_serial=`cat /sys/devices/soc0/serial_number`;
+	# If MSM serial number is not available, then keep it blank instead of 0x00000000
+	if [ "$msm_serial" != "" ]; then
+		msm_serial_hex=`printf %08X $msm_serial`
+	fi
+
+	machine_type=`cat /sys/devices/soc0/machine`
+	setprop vendor.usb.product_string "$machine_type-$soc_hwplatform _SN:$msm_serial_hex"
 
 	# ADB requires valid iSerialNumber; if ro.serialno is missing, use dummy
 	serialnumber=`cat /config/usb_gadget/g1/strings/0x409/serialnumber 2> /dev/null`
@@ -215,9 +260,9 @@ fi
 # update product
 marketname=`getprop ro.product.marketname`
 if [ "$marketname" != "" ]; then
-    echo "$marketname" > /config/usb_gadget/g1/strings/0x409/product
+    setprop vendor.usb.product_string "$marketname"
 else
-    echo "$(getprop ro.product.model)" > /config/usb_gadget/g1/strings/0x409/product
+    setprop vendor.usb.product_string "$(getprop ro.product.model)"
 fi
 
 #
