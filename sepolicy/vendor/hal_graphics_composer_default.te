@@ -1,3 +1,6 @@
 binder_call(hal_graphics_composer_default, hal_displayfeature_xiaomi_default)
 
 allow hal_graphics_composer_default hal_displayfeature_xiaomi_hwservice:hwservice_manager find;
+
+# Alow to read service.bootanim.exit prop
+get_prop(hal_graphics_composer_default, bootanim_system_prop)
