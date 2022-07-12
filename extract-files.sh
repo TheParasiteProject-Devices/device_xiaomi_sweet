@@ -61,6 +61,20 @@ function blob_fixup() {
         vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0.so | vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0_vendor.so)
             "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
         ;;
+        vendor/lib64/libsdmcore.so)
+            MODIFIED_LIBSDMCORE_SHASUM="f81a23cac3cc90fc3c89d3e993b9e0b15e1346f8"
+            echo "Patching libsdmcore"
+            xxd -p "${2}" > /tmp/libsdmcore.hex
+
+            sed -i s:2b18621e:1f2003d5:g /tmp/libsdmcore.hex
+            sed -i s:00540a18621e4:00541f2003d54:g /tmp/libsdmcore.hex
+
+            xxd -r -p /tmp/libsdmcore.hex "${2}"
+            rm /tmp/libsdmcore.hex
+
+            echo "Done, checking the sha1sum"
+            echo "${MODIFIED_LIBSDMCORE_SHASUM} ${2}" | sha1sum -c
+        ;;
     esac
 }
 
