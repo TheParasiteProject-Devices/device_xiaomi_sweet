@@ -58,6 +58,9 @@ function blob_fixup() {
         vendor/bin/mi_thermald)
             sed -i "s|ug_cpu|ug_uwu|g" "${2}"
         ;;
+        vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0.so | vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0_vendor.so)
+            "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
+        ;;
     esac
 }
 
