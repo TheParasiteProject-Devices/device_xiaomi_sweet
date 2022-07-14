@@ -7,6 +7,9 @@
 # Display
 /dev/xiaomi-touch                                                                               u:object_r:touchfeature_device:s0
 
+# Display Feature
+/vendor/bin/hw/vendor\.xiaomi\.hardware\.displayfeature@1\.0-service                            u:object_r:hal_displayfeature_xiaomi_default_exec:s0
+
 # Fingerprint
 /data/vendor/fortsense(/.*)?                                                                    u:object_r:fingerprint_data_file:s0
 /data/vendor/fpc(/.*)?                                                                          u:object_r:fingerprint_data_file:s0
@@ -23,6 +26,9 @@
 
 # Power
 /vendor/bin/hw/android\.hardware\.power-service\.sweet-libperfmgr                               u:object_r:hal_power_default_exec:s0
+
+# Sensor Service
+/vendor/bin/hw/vendor\.xiaomi\.hardware\.citsensorservice@1\.1-service                          u:object_r:vendor_hal_citsensorservice_xiaomi_default_exec:s0
 
 # sysfs (wakeup)
 /sys/devices/platform/soc/[0-9a-f]+.qcom,spmi/spmi-[0-9]+/spmi[0-9]+-[0-9]+/[0-9a-f]+.qcom,spmi:qcom,pm[0-9]+@[0-9]+:qcom,pm[0-9]+_rtc/rtc/rtc[0-9]+/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
