@@ -19,3 +19,5 @@ allow hal_displayfeature_xiaomi_default vendor_qdisplay_service:service_manager 
 binder_call(hal_displayfeature_xiaomi_default, vendor_hal_display_color_default)
 
 get_prop(hal_displayfeature_xiaomi_default, vendor_mpctl_prop)
+
+allow hal_displayfeature_xiaomi_default vendor_sysfs_graphics:file rw_file_perms;
