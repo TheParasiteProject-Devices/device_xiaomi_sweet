@@ -218,9 +218,6 @@ vendor.display.enable_optimize_refresh=1 \
 vendor.display.qdcm.mode_combine=1 \
 vendor.gralloc.disable_ubwc=0
 
-PRODUCT_PRODUCT_PROPERTIES += \
-ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.sm6150.api30
-
 # Incremental FS
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.incremental.enable=1
