@@ -120,6 +120,10 @@ on boot
     # Disable qcom qc3p5
     setprop persist.vendor.cp.support_qc3p5 0
 
+    # Set doze mode permissions
+    chown system system /sys/class/drm/card0-DSI-1/doze_backlight
+    chmod 0660 /sys/class/drm/card0-DSI-1/doze_backlight
+
     # Set xiaomi touch permissions
     chown system system /dev/xiaomi-touch
     chmod 0660 /dev/xiaomi-touch
