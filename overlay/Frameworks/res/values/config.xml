@@ -196,8 +196,8 @@
         <item>369</item>
         <item>434</item>
         <item>500</item>
-        <item>500</item>
-        <item>500</item>
+        <item>590</item>
+        <item>680</item>
     </array>
 
     <!-- An array describing the screen's backlight values corresponding to the brightness
@@ -218,7 +218,7 @@
          This array should be equal in size to config_screenBrightnessBacklight -->
     <array name="config_screenBrightnessNits">
         <item>0.2100635</item>
-        <item>430.0</item>
+        <item>475.0</item>
     </array>
 
     <!-- Array of hysteresis constraint values for brightening, represented as tenths of a
