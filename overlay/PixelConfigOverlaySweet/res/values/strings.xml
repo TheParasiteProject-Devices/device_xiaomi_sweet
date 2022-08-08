@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="config_defaultCallRedirection">com.google.android.dialer</string>
+    <string name="config_defaultCallScreening">com.google.android.dialer</string>
 </resources>
