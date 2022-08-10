@@ -1,0 +1,11 @@
+-keep class org.lineageos.settings.display.* {
+  *;
+}
+
+-keep class org.lineageos.settings.doze.* {
+  *;
+}
+
+-keep class org.lineageos.settings.thermal.* {
+  *;
+}
