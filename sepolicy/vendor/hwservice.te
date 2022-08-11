@@ -1,6 +1,3 @@
-# Display Feature
-type hal_displayfeature_xiaomi_hwservice, hwservice_manager_type;
-
 # Fingeprint
 type hal_fingerprint_hwservice_xiaomi, hwservice_manager_type;
 
@@ -10,6 +7,3 @@ type hal_nxpnfc_hwservice, hwservice_manager_type;
 
 # Sensor Service
 type vendor_hal_citsensorservice_xiaomi_hwservice, hwservice_manager_type;
-
-# Touch Feature
-type hal_touchfeature_xiaomi_hwservice, hwservice_manager_type;
