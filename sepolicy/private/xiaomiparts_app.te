@@ -42,3 +42,10 @@ get_prop(xiaomiparts_app, settingslib_prop)
 
 # Allow xiaomiparts_app to search /data/misc/profiles
 allow xiaomiparts_app user_profile_root_file:dir search;
+
+# dont allow xiaomiparts_app to access some rendering and resampling props
+# persist.input.velocitytracker.strategy
+# renderthread.skia.reduceopstasksplitting
+# ro.input.resampling
+# viewroot.profile_rendering
+dontaudit xiaomiparts_app default_prop:file read;
