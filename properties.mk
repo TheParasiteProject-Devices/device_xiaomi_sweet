@@ -109,6 +109,21 @@ persist.vendor.audio.fluence.voicecomm=true \
 persist.vendor.audio.fluence.voicerec=false
 
 # Bluetooth
+PRODUCT_PRODUCT_PROPERTIES += \
+bluetooth.profile.a2dp.source.enabled=true \
+bluetooth.profile.avrcp.controller.enabled=false \
+bluetooth.profile.avrcp.target.enabled=true \
+bluetooth.profile.gatt.enabled=true \
+bluetooth.profile.hfp.ag.enabled=true \
+bluetooth.profile.hid.device.enabled=true \
+bluetooth.profile.hid.host.enabled=true \
+bluetooth.profile.map.server.enabled=true \
+bluetooth.profile.opp.enabled=true \
+bluetooth.profile.pan.nap.enabled=true \
+bluetooth.profile.pan.panu.enabled=true \
+bluetooth.profile.pbap.server.enabled=true \
+bluetooth.profile.sap.server.enabled=false
+
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.bluetooth.ble_drop_power=true \
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptive \
