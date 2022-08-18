@@ -47,5 +47,11 @@ service citsensor-hal-1-1  /vendor/bin/hw/vendor.xiaomi.hardware.citsensorservic
     user system
     group system input wakelock
 
+service vendor.displayfeature-hal-1-0 /vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service
+    override
+    class hal
+    user system
+    group system graphics
+
 on boot && property:ro.boot.product.hardware.sku=nfc
     enable vendor.nfc_hal_service
