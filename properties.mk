@@ -256,6 +256,7 @@ ro.com.google.ime.height_ratio=1.2
 PRODUCT_VENDOR_PROPERTIES += \
 debug.sf.disable_backpressure=1 \
 debug.sf.enable_hwc_vds=1 \
+debug.sf.enable_transaction_tracing=false \
 debug.sf.auto_latch_unsignaled=1 \
 debug.sf.treat_170m_as_sRGB=1 \
 debug.sf.predict_hwc_composition_strategy=0 \
