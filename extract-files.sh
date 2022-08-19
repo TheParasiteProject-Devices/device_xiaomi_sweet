@@ -75,6 +75,9 @@ function blob_fixup() {
             echo "Done, checking the sha1sum"
             echo "${MODIFIED_LIBSDMCORE_SHASUM} ${2}" | sha1sum -c
         ;;
+        vendor/lib64/camera/components/com.qti.node.watermark.so)
+            "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
+        ;;
     esac
 }
 
