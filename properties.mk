@@ -111,6 +111,7 @@ persist.vendor.audio.fluence.voicerec=false
 
 # Bluetooth
 PRODUCT_PRODUCT_PROPERTIES += \
+bluetooth.hardware.power.operating_voltage_mv=3300
 bluetooth.profile.a2dp.source.enabled=true \
 bluetooth.profile.avrcp.controller.enabled=false \
 bluetooth.profile.avrcp.target.enabled=true \
