@@ -1,0 +1,14 @@
+[
+    {
+        "repository": "Pulkit077/kernel_xiaomi_sweet",
+        "target_path": "kernel/xiaomi/sweet",
+        "remote": "github",
+        "branch": "twelve"
+    },
+    {
+        "repository": "Pulkit077/vendor_xiaomi_sweet",
+        "target_path": "vendor/xiaomi/sweet",
+        "remote": "github",
+        "branch": "twelve"
+    }
+]
