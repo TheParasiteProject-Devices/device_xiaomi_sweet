@@ -123,7 +123,7 @@
         <service
             android:name=".display.tile.DcDimmingTile"
             android:icon="@drawable/ic_dimming_off"
-            android:label="@string/dc_dimming_tile_title"
+            android:label="@string/dc_dimming_enable_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
             android:exported="true">
             <intent-filter>
