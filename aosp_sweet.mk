@@ -13,6 +13,7 @@ $(call inherit-product, device/xiaomi/sweet/device.mk)
 
 # Inherit some common PixelExperience stuff
 TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 PRODUCT_NAME := aosp_sweet
