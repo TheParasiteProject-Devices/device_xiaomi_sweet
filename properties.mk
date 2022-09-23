@@ -198,6 +198,16 @@ persist.sys.sf.color_mode=9
 PRODUCT_VENDOR_PROPERTIES += \
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
+# Fling
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+ro.min.fling_velocity=160 \
+ro.max.fling_velocity=20000 \
+ro.max.fling_velocity=20000 \
+ro.vendor.qti.cgroup_follow.enable=true \
+persist.vendor.qti.inputopts.enable=true \
+persist.vendor.qti.inputopts.movetouchslop=0.6 \
+ro.qcom.adreno.qgl.ShaderStorageImageExtendedFormats=0
+
 # Fwk detect
 PRODUCT_ODM_PROPERTIES += \
 ro.vendor.qti.va_odm.support=1
