@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Settings intelligence package name -->
+    <string name="config_settingsintelligence_package_name" translatable="false">
+        com.google.android.settings.intelligence
+    </string>
 </resources>
