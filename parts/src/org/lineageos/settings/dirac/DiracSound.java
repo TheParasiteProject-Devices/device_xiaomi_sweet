@@ -25,7 +25,6 @@ public class DiracSound extends AudioEffect {
     private static final int DIRACSOUND_PARAM_HEADSET_TYPE = 1;
     private static final int DIRACSOUND_PARAM_EQ_LEVEL = 2;
     private static final int DIRACSOUND_PARAM_MUSIC = 4;
-    private static final int DIRACSOUND_PARAM_HIFI = 8;
     private static final int DIRACSOUND_PARAM_SCENE = 15;
 
     private static final UUID EFFECT_TYPE_DIRACSOUND =
@@ -61,12 +60,6 @@ public class DiracSound extends AudioEffect {
             RuntimeException {
         checkStatus(setParameter(new int[]{DIRACSOUND_PARAM_EQ_LEVEL, band},
                 String.valueOf(level).getBytes()));
-    }
-
-    public void setHifiMode(int mode) throws IllegalStateException,
-            IllegalArgumentException, UnsupportedOperationException,
-            RuntimeException {
-        checkStatus(setParameter(DIRACSOUND_PARAM_HIFI, mode));
     }
 
     public void setScenario(int scene) throws IllegalStateException,
