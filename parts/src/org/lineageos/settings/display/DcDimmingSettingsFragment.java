@@ -27,6 +27,7 @@ import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreference;
 
 import org.lineageos.settings.R;
+import org.lineageos.settings.utils.FileUtils;
 
 import vendor.xiaomi.hardware.displayfeature.V1_0.IDisplayFeature;
 
@@ -34,10 +35,19 @@ public class DcDimmingSettingsFragment extends PreferenceFragment implements
         OnPreferenceChangeListener, SharedPreferences.OnSharedPreferenceChangeListener {
 
     private static final String DC_DIMMING_ENABLE_KEY = "dc_dimming_enable";
+
     private SwitchPreference mDcDimmingPreference;
     private IDisplayFeature mDisplayFeature;
     private SharedPreferences mSharedPrefs;
+
     public static final String DC_DIMMING_KEY = "dc_dimming_enable";
+
+    public static final String DISPPARAM_NODE = "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/disp_param";
+    public static final String BRIGHTNESS_NODE = "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/backlight/panel0-backlight/brightness";
+
+    public static final String DISPPARAM_DC_ON = "0x40000";
+    public static final String DISPPARAM_DC_OFF = "0x50000";
+
     public static final boolean DC_DIMMING_DEFAULT_VALUE = false;
 
     @Override
@@ -54,15 +64,15 @@ public class DcDimmingSettingsFragment extends PreferenceFragment implements
         mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
     }
 
-    @Override     
+    @Override
     public void onResume() {
         super.onResume();
-        mSharedPrefs.registerOnSharedPreferenceChangeListener(this);     
+        mSharedPrefs.registerOnSharedPreferenceChangeListener(this);
     }
 
-    @Override     
-    public void onPause() {         
-        super.onPause();          
+    @Override
+    public void onPause() {
+        super.onPause();
         mSharedPrefs.unregisterOnSharedPreferenceChangeListener(this);
     }
 
@@ -77,15 +87,21 @@ public class DcDimmingSettingsFragment extends PreferenceFragment implements
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (DC_DIMMING_ENABLE_KEY.equals(preference.getKey())) {
-            enableDcDimming((Boolean) newValue ? 1 : 0);
+            enableDcDimming((Boolean) newValue);
         }
         return true;
     }
 
-    private void enableDcDimming(int enable) {
+    private void enableDcDimming(boolean enable) {
         if (mDisplayFeature == null) return;
+
         try {
-            mDisplayFeature.setFeature(0, 20, enable, 255);
+            mDisplayFeature.setFeature(0, 20, enable ? 1 : 0, 255);
+
+            FileUtils.writeLine(DISPPARAM_NODE, enable ? DISPPARAM_DC_ON : DISPPARAM_DC_OFF);
+
+            // Update the brightness node so dc dimming updates its state
+            FileUtils.writeLine(BRIGHTNESS_NODE, FileUtils.readOneLine(BRIGHTNESS_NODE));
         } catch (RemoteException e) {
             // Do nothing
         }

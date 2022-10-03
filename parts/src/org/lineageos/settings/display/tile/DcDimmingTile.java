@@ -25,7 +25,9 @@ import android.service.quicksettings.TileService;
 import androidx.preference.PreferenceManager;
 
 import static org.lineageos.settings.display.DcDimmingSettingsFragment.*;
+
 import org.lineageos.settings.R;
+import org.lineageos.settings.utils.FileUtils;
 
 import vendor.xiaomi.hardware.displayfeature.V1_0.IDisplayFeature;
 
@@ -54,6 +56,11 @@ public class DcDimmingTile extends TileService {
         try {
             IDisplayFeature mDisplayFeature = IDisplayFeature.getService();
             mDisplayFeature.setFeature(0, 20, enable ? 1 : 0, 255);
+
+            FileUtils.writeLine(DISPPARAM_NODE, enable ? DISPPARAM_DC_ON : DISPPARAM_DC_OFF);
+
+            // Update the brightness node so dc dimming updates its state
+            FileUtils.writeLine(BRIGHTNESS_NODE, FileUtils.readOneLine(BRIGHTNESS_NODE));
         } catch (RemoteException e) {
             // Do nothing
         }
