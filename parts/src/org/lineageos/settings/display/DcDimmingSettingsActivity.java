@@ -22,14 +22,19 @@ import android.os.Bundle;
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 import com.android.settingslib.collapsingtoolbar.R;
 
+import org.lineageos.settings.utils.FileUtils;
+
 public class DcDimmingSettingsActivity extends CollapsingToolbarBaseActivity {
 
     private static final String TAG_DCDIMMING = "dcdimming";
+    private static final String DISPPARAM_NODE = "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/disp_param";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getFragmentManager().beginTransaction().replace(R.id.content_frame,
-                new DcDimmingSettingsFragment(), TAG_DCDIMMING).commit();
+        if (FileUtils.fileExists(DISPPARAM_NODE)) {
+            getFragmentManager().beginTransaction().replace(R.id.content_frame,
+                    new DcDimmingSettingsFragment(), TAG_DCDIMMING).commit();
+        }
     }
 }
