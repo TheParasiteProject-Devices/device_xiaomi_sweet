@@ -46,6 +46,7 @@ u:object_r:sysfs_iio_devices:s0
 genfscon sysfs /devices/platform/goodix_ts.0/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/18800000.qcom,icnss/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/888000.i2c/i2c-0/0-0028/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/88e0000.qcom,msm-eud/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-2/2-0051/power_supply/bq2597x-standalone/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-2/2-0051/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-2/2-005a/wakeup u:object_r:sysfs_wakeup:s0
@@ -65,3 +66,4 @@ genfscon sysfs /devices/platform/soc/soc:qcom,smp2p-adsp/wakeup u:object_r:sysfs
 genfscon sysfs /devices/platform/soc/soc:qcom,smp2p-cdsp/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,smp2p-modem/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,smp2p_sleepstate/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/virtual/diag/diag/wakeup u:object_r:sysfs_wakeup:s0
