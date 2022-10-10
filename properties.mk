@@ -236,7 +236,7 @@ ro.com.google.ime.height_ratio=1.2
 # Graphics
 PRODUCT_VENDOR_PROPERTIES += \
 debug.sf.enable_hwc_vds=1 \
-debug.sf.latch_unsignaled=1 \
+debug.sf.auto_latch_unsignaled=1 \
 persist.sys.sf.color_saturation=1.0 \
 ro.hardware.egl=adreno \
 ro.hardware.vulkan=adreno \
