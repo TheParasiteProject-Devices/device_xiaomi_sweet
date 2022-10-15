@@ -23,7 +23,7 @@ android_app_import {
 	},
 	product_specific: true,
 	privileged: true,
-	overrides: ["Camera", "Camera2", "Snap", "SnapdragonCamera"],
+	overrides: ["Aperture", "Camera", "Camera2", "Snap", "SnapdragonCamera"],
     optional_uses_libs: ["androidx.window.extensions", "androidx.window.sidecar"],
 }
 
