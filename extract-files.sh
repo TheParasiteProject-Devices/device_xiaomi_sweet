@@ -58,9 +58,6 @@ function blob_fixup() {
         vendor/bin/mi_thermald)
             sed -i 's/%d\/on/%d\/../g' "${2}"
         ;;
-        vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0.so | vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0_vendor.so)
-            "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
-        ;;
         vendor/lib64/hw/hwcomposer.sm6150.so)
             $PATCHELF_TOOL --add-needed "libsdmcore-shim.so" "${2}"
         ;;
