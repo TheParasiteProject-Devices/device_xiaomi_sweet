@@ -298,6 +298,7 @@ PRODUCT_PACKAGES += \
     CarrierConfigResSweet \
     FrameworksResSweet \
     SettingsResSweet \
+    SettingsProviderResSweet \
     SystemUIResSweet \
     TelephonyResSweet \
     WifiResSweet
