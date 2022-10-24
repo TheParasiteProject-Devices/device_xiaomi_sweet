@@ -16,6 +16,11 @@ TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORTS_GOOGLE_RECORDER := false
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
+# Additional Pixel stuffs
+TARGET_INCLUDE_CARRIER_SETTINGS := true
+TARGET_SHIP_PREBUILT_APEX := true
+$(call inherit-product-if-exists, vendor/pixel-additional/config.mk)
+
 PRODUCT_NAME := aosp_sweet
 PRODUCT_DEVICE := sweet
 PRODUCT_BRAND := Redmi
