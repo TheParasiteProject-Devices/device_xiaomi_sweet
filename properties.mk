@@ -1,5 +1,5 @@
 # Audio
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 aaudio.hw_burst_min_usec=2000 \
 aaudio.mmap_exclusive_policy=1 \
 aaudio.mmap_policy=1 \
@@ -9,11 +9,11 @@ audio.offload.min.duration.secs=30 \
 audio.offload.video=true \
 ro.audio.monitorRotation=true
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 ro.config.media_vol_default=10 \
 ro.config.vc_call_vol_steps=11
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 persist.vendor.audio.avs.afe_api_version=2 \
 persist.vendor.audio.hifi=false \
 persist.vendor.audio.ras.enabled=false \
@@ -37,7 +37,7 @@ vendor.voice.path.for.pcm.voip=false \
 vendor.audio_hal.period_size=192
 
 # Audio (ximi)
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 persist.vendor.audio.delta.refresh=false \
 persist.vendor.audio.misound.disable=true \
 persist.vendor.audio.ring.filter.mask=0 \
@@ -49,13 +49,13 @@ ro.vendor.audio.us.type=mius \
 vendor.audio.mic.status=off
 
 # Audio (Bluetooth)
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac \
 persist.bluetooth.a2dp_offload.disabled=false \
 ro.bluetooth.a2dp_offload.supported=true
 
 # Audio (Features)
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 vendor.audio.adm.buffering.ms=6 \
 vendor.audio.feature.a2dp_offload.enable=true \
 vendor.audio.feature.afe_proxy.enable=true \
@@ -100,7 +100,7 @@ vendor.audio.feature.vbat.enable=true \
 vendor.audio.feature.wsa.enable=false
 
 # Audio (Fluence)
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 ro.vendor.audio.sdk.fluencetype=fluence \
 vendor.audio.feature.fluence.enable=true \
 persist.vendor.audio.fluence.speaker=true \
@@ -124,7 +124,7 @@ bluetooth.profile.pan.panu.enabled=true \
 bluetooth.profile.pbap.server.enabled=true \
 bluetooth.profile.sap.server.enabled=false
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 persist.vendor.bluetooth.ble_drop_power=true \
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptive \
 persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true \
@@ -145,7 +145,7 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 persist.vendor.cne.feature=1
 
 # Camera
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 camera.disable_zsl_mode=1
 
 # Charger
@@ -162,7 +162,7 @@ ro.soc.manufacturer=QTI \
 ro.soc.model=SM7150
 
 # Crypto
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 ro.crypto.dm_default_key.options_format.version=2 \
 ro.crypto.volume.filenames_mode=aes-256-cts \
 ro.crypto.volume.metadata.method=dm-default-key
@@ -173,7 +173,7 @@ persist.vendor.dpm.feature=11 \
 persist.vendor.dpmhalservice.enable=1
 
 # DRM
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 drm.service.enabled=true
 
 # Dalvik
@@ -186,31 +186,31 @@ PRODUCT_SYSTEM_PROPERTIES += \
 arm64.memtag.process.system_server=off
 
 # Display (AD)
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 ro.vendor.display.ad=1 \
 ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg \
 ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg \
 ro.vendor.display.sensortype=2
 
 # Display (color mode)
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 persist.sys.sf.color_saturation=1.0 \
 persist.sys.sf.native_mode=0 \
 persist.sys.sf.color_mode=9
 
 # Factory Reset Protection
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # Fwk detect
 PRODUCT_ODM_PROPERTIES += \
 ro.vendor.qti.va_odm.support=1
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 ro.vendor.qti.va_aosp.support=1
 
 # Graphics
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 debug.sf.enable_hwc_vds=1 \
 debug.sf.latch_unsignaled=1 \
 persist.sys.sf.color_saturation=1.0 \
@@ -235,11 +235,11 @@ vendor.display.qdcm.mode_combine=1 \
 vendor.gralloc.disable_ubwc=0
 
 # Incremental FS
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 ro.incremental.enable=1
 
 # Keystore
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 ro.hardware.keystore_desede=true
 
 # LMKD
@@ -250,7 +250,7 @@ ro.lmk.kill_timeout_ms=100 \
 ro.lmk.use_minfree_levels=true
 
 # Media
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 debug.stagefright.omx_default_rank=0 \
 debug.stagefright.ccodec=1
 
@@ -274,15 +274,15 @@ PRODUCT_SYSTEM_PROPERTIES += \
 ro.netflix.bsp_rev=Q6150-17263-1
 
 # Netmgr
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 persist.vendor.data.iwlan.enable=true
 
 # Perf
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 ro.vendor.extension_library=libqti-perfd-client.so
 
 # Radio/RIL
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 persist.radio.multisim.config=dsds \
 persist.sys.fflag.override.settings_provider_model=false \
 persist.vendor.radio.apm_sim_not_pwdn=1 \
@@ -319,7 +319,7 @@ persist.vendor.ims.disableIMSLogs=1 \
 persist.vendor.ims.disableQXDMLogs=1
 
 # Sensors
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 persist.vendor.sensors.enable.mag_filter=true
 
 # Shutdown
@@ -348,17 +348,17 @@ debug.sf.earlyGl.sf.duration=15666666 \
 debug.sf.earlyGl.app.duration=16666666
 
 # System
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 persist.sys.binary_xml=false
 
 # VoLTE/ViLTE/WFC
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 persist.dbg.volte_avail_ovr=1 \
 persist.dbg.vt_avail_ovr=1 \
 persist.dbg.wfc_avail_ovr=1
 
 # WiFi
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 wifi.aware.interface=wifi-aware0
 
 # Wireless display
@@ -367,5 +367,5 @@ persist.debug.wfd.enable=1 \
 #persist.sys.wfd.virtual=0
 
 # Zygote
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 zygote.critical_window.minute=10
