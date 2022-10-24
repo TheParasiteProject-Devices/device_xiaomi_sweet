@@ -205,6 +205,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libsdmcore-shim
 
+# Lineage Compat
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0.vendor
+
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm
