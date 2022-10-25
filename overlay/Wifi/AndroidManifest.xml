@@ -2,5 +2,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     coreApp="true"
     package="com.android.wifi.resources.overlay.xiaomi_sweet">
-    <overlay android:targetPackage="com.android.wifi.resources" android:targetName="WifiCustomization" android:isStatic="true" />
+    <overlay android:targetPackage="com.google.android.wifi.resources" android:targetName="WifiCustomization" android:isStatic="true" />
 </manifest>
