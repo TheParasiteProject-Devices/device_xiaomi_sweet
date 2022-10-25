@@ -485,7 +485,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 	ro.input.video_enabled=false
 
 # ART
-PRODUCT_VENDOR_PROPERTIES += \
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
 dalvik.vm.dex2oat64.enabled=true \
 ro.vendor.qti.am.reschedule_service=true \
 ro.dex2oat_white_list=com.google.android.gms \
