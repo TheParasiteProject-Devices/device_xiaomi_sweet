@@ -177,11 +177,6 @@ persist.vendor.dpmhalservice.enable=1
 PRODUCT_VENDOR_PROPERTIES += \
 drm.service.enabled=true
 
-# Dalvik
-PRODUCT_SYSTEM_PROPERTIES += \
-dalvik.vm.dex2oat64.enabled=true \
-dalvik.vm.systemuicompilerfilter=speed
-
 # Disable MTE Async for system server
 PRODUCT_SYSTEM_PROPERTIES += \
 arm64.memtag.process.system_server=off
