@@ -24,6 +24,8 @@ TARGET_INCLUDE_CARRIER_SETTINGS := true
 TARGET_SHIP_PREBUILT_APEX := true
 $(call inherit-product-if-exists, vendor/pixel-additional/config.mk)
 
+TARGET_BOOT_ANIMATION_RES := 1080
+
 PRODUCT_NAME := aosp_sweet
 PRODUCT_DEVICE := sweet
 PRODUCT_BRAND := Redmi
