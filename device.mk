@@ -11,6 +11,9 @@ PRODUCT_SOONG_NAMESPACES += \
 # Product launched with 11.0
 PRODUCT_SHIPPING_API_LEVEL := 30
 
+# VNDK
+PRODUCT_EXTRA_VNDK_VERSIONS := 30 31 32
+
 # AID/fs configs
 PRODUCT_PACKAGES += \
     fs_config_dirs \
