@@ -6,7 +6,6 @@ aaudio.mmap_policy=1 \
 af.fast_track_multiplier=1 \
 audio.deep_buffer.media=true \
 audio.offload.min.duration.secs=30 \
-audio.offload.video=true \
 ro.audio.monitorRotation=true
 
 PRODUCT_VENDOR_PROPERTIES += \
@@ -290,12 +289,17 @@ ro.lmk.stall_limit_critical=40
 
 # Media
 PRODUCT_VENDOR_PROPERTIES += \
-debug.stagefright.omx_default_rank=0 \
-debug.stagefright.ccodec=1
+audio.offload.video=true \
+debug.media.codec2=2 \
+debug.stagefright.ccodec=4 \
+debug.stagefright.omx_default_rank=512 \
+vendor.media.target.version=2 \
+debug.stagefright.c2inputsurface=-1 \
+vendor.media.omx=0 \
+vendor.qc2.venc.avgqp.enable=1
 
 PRODUCT_SYSTEM_PROPERTIES += \
 media.aac_51_output_enabled=true \
-media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
 media.stagefright.audio.deep=false \
 media.stagefright.enable-aac=true \
 media.stagefright.enable-fma2dp=true \
