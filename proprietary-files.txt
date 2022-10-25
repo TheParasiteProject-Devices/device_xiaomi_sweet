@@ -92,7 +92,6 @@ vendor/lib/libaudioroute_ext.so
 vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_Codec_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_General_cal.acdb
-vendor/etc/acdbdata/Forte/Forte_Global_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_Handset_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_Hdmi_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_Headset_cal.acdb
@@ -1317,6 +1316,9 @@ vendor/bin/cnss-daemon
 vendor/bin/nv_mac
 
 # Pinned section
+# Audio ACDB - from sweet-user 11 RKQ1.200826.002 V12.0.6.0.RKFMIXM release-keys
+vendor/etc/acdbdata/Forte/Forte_Global_cal.acdb|b34ec442b87c1acb88dafd55fd86e77acbb003a3
+
 # Audio HAL - from sweet-user 11 RKQ1.200826.002 V12.5.9.0.RKFMIXM release-keys
 vendor/lib/hw/audio.primary.sm6150.so|2ae8153e03bd9ca87f9a6a6bff59f9f5ed52a01f
 vendor/lib/libaudio_log_utils.so|71ec4d31ad6c9e9a4bee8db7b5ab55b70ef7c4c3
