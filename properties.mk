@@ -10,6 +10,7 @@ audio.offload.video=true \
 ro.audio.monitorRotation=true
 
 PRODUCT_VENDOR_PROPERTIES += \
+ro.config.media_vol_steps=100 \
 ro.config.media_vol_default=10 \
 ro.config.vc_call_vol_steps=11
 
