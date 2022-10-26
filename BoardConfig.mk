@@ -167,6 +167,8 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor/google
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor/qcom/common
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private/parts
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor/parts
 TARGET_SEPOLICY_DIR := msmsteppe
 -include device/qcom/sepolicy_vndr/SEPolicy.mk
 

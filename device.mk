@@ -542,3 +542,6 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 # SystemUI
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed
+
+# Parts
+$(call inherit-product-if-exists, packages/apps/Parts/config.mk)

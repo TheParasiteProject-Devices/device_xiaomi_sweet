@@ -22,5 +22,11 @@
         "target_path": "vendor/pixel-additional",
         "remote": "github",
         "branch": "thirteen"
+    },
+    {
+        "repository": "someone5678/packages_apps_Parts",
+        "target_path": "packages/apps/Parts",
+        "remote": "github",
+        "branch": "thirteen"
     }
 ]
