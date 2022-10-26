@@ -114,13 +114,10 @@ on post-fs-data
 on boot
     start rfs_access
 
-    chown system system /sys/class/thermal/thermal_message/sconfig
-    write /sys/class/thermal/thermal_message/sconfig 0
-
     # Disable qcom qc3p5
     setprop persist.vendor.cp.support_qc3p5 0
 
-    # Set doze mode permissions
+	# Set doze mode permissions
     chown system system /sys/class/drm/card0-DSI-1/doze_backlight
     chmod 0660 /sys/class/drm/card0-DSI-1/doze_backlight
 
@@ -133,10 +130,6 @@ on boot
 
     # palm_sensor
     chown system system /sys/class/touch/touch_dev/palm_sensor
-
-    # Allow system to adjust haptic level directly
-    chown system system /sys/devices/platform/soc/a8c000.i2c/i2c-2/2-005a/ulevel
-    chmod 0664 /sys/devices/platform/soc/a8c000.i2c/i2c-2/2-005a/ulevel
 
     # USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"

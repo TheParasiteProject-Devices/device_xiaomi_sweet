@@ -32,9 +32,6 @@ genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/wakeup_enable          
 # fingerprint_fpc/hw_reset
 # fingerprint_fpc/simulate_irq
 
-# Haptic
-genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-2/2-005a/ulevel                u:object_r:sysfs_vibrator:s0
-
 # Proximity
 genfscon sysfs /bus/iio/devices                                                    u:object_r:sysfs_iio_devices:s0
 genfscon sysfs /devices/platform/us_prox.0/iio:device2                             u:object_r:sysfs_iio_devices:s0
