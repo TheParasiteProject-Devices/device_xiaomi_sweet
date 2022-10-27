@@ -99,10 +99,6 @@ on fs
     chmod 0440 /sys/class/hphlr_impedance/hphr
 
 on late-fs
-    start surfaceflinger
-    start bootanim
-    start vendor.hwcomposer-2-4
-    start vendor.qti.hardware.display.allocator
     start vendor.lights
 
     wait_for_prop hwservicemanager.ready true
