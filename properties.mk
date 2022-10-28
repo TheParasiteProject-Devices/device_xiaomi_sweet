@@ -48,12 +48,6 @@ ro.vendor.audio.soundfx.usb=true \
 ro.vendor.audio.us.type=mius \
 vendor.audio.mic.status=off
 
-# Audio (Bluetooth)
-PRODUCT_VENDOR_PROPERTIES += \
-persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac \
-persist.bluetooth.a2dp_offload.disabled=false \
-ro.bluetooth.a2dp_offload.supported=true
-
 # Audio (Features)
 PRODUCT_VENDOR_PROPERTIES += \
 vendor.audio.adm.buffering.ms=6 \
@@ -109,33 +103,60 @@ persist.vendor.audio.fluence.voicecomm=true \
 persist.vendor.audio.fluence.voicerec=false
 
 # Bluetooth
-PRODUCT_PRODUCT_PROPERTIES += \
-bluetooth.hardware.power.operating_voltage_mv=3300
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+bluetooth.device.class_of_device=90,2,12 \
 bluetooth.profile.a2dp.source.enabled=true \
-bluetooth.profile.avrcp.controller.enabled=false \
+bluetooth.profile.asha.central.enabled=true \
 bluetooth.profile.avrcp.target.enabled=true \
+bluetooth.profile.bap.broadcast.assist.enabled=true \
+bluetooth.profile.bap.unicast.client.enabled=true \
+bluetooth.profile.bas.client.enabled=true \
+bluetooth.profile.csip.set_coordinator.enabled=true \
 bluetooth.profile.gatt.enabled=true \
+bluetooth.profile.hap.client.enabled=true \
 bluetooth.profile.hfp.ag.enabled=true \
 bluetooth.profile.hid.device.enabled=true \
 bluetooth.profile.hid.host.enabled=true \
 bluetooth.profile.map.server.enabled=true \
+bluetooth.profile.mcp.server.enabled=true \
 bluetooth.profile.opp.enabled=true \
 bluetooth.profile.pan.nap.enabled=true \
 bluetooth.profile.pan.panu.enabled=true \
 bluetooth.profile.pbap.server.enabled=true \
-bluetooth.profile.sap.server.enabled=false
-
-PRODUCT_VENDOR_PROPERTIES += \
+bluetooth.profile.sap.server.enabled=true \
+bluetooth.profile.ccp.server.enabled=true \
+bluetooth.profile.vcp.controller.enabled=true \
+persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac \
+persist.bluetooth.a2dp_offload.disabled=false \
+persist.bluetooth.bqr.event_mask=14 \
+persist.bluetooth.bqr.min_interval_ms=500 \
 persist.vendor.bluetooth.ble_drop_power=true \
+persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptive-aac-ldac \
+persist.vendor.bt.a2dp.aac_whitelist=false \
+persist.vendor.bt.a2dp.mac_whitelist=false \
+persist.vendor.bt.aac_frm_ctl.enabled=true \
+persist.vendor.btsatck.absvolfeature=true \
+persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aptxadaptive-aac-ldac \
+persist.vendor.btstack.connect.peer_earbud=true \
+persist.vendor.btstack.enable.lpa=true \
+persist.vendor.btstack.enable.splita2dp=true \
+persist.vendor.btstack.enable.twsplus=true \
+persist.vendor.btstack.enable.twsplussho=true \
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptive \
 persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true \
+persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=false \
+persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=false \
 persist.vendor.qcom.bluetooth.enable.splita2dp=true \
-persist.vendor.qcom.bluetooth.enable.swb=false \
-persist.vendor.qcom.bluetooth.enable.swbpm=false \
 persist.vendor.qcom.bluetooth.scram.enabled=true \
 persist.vendor.qcom.bluetooth.soc=cherokee \
 persist.vendor.qcom.bluetooth.twsp_state.enabled=false \
-ro.vendor.bluetooth.wipower=false
+ro.bluetooth.a2dp_offload.supported=true \
+ro.vendor.bluetooth.wipower=false \
+vendor.bluetooth.soc=cherokee \
+vendor.qcom.bluetooth.soc=cherokee \
+persist.vendor.service.bdroid.soc.alwayson=true \
+persist.vendor.btstack.aac_frm_ctl.enabled=true \
+ro.bluetooth.emb_wp_mode=false
 
 # Blur
 PRODUCT_SYSTEM_PROPERTIES += \
