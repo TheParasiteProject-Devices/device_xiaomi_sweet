@@ -370,6 +370,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     PixelConfigOverlaySweet \
+    SettingsGoogleOverlaySweet \
     CustomWebViewOverlay
 
 # Perf
