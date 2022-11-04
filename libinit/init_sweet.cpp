@@ -79,6 +79,7 @@ static const char *cts_prop_key[] =
         { "ro.boot.vbmeta.device_state", "ro.boot.verifiedbootstate", "ro.boot.flash.locked",
           "ro.boot.veritymode", "ro.boot.warranty_bit", "ro.warranty_bit",
           "ro.debuggable", "ro.secure", "ro.build.type", "ro.build.tags",
+          "ro.oem_unlock_supported",
           "ro.vendor.boot.warranty_bit", "ro.vendor.warranty_bit",
           "vendor.boot.vbmeta.device_state", nullptr };
 
@@ -86,6 +87,7 @@ static const char *cts_prop_val[] =
         { "locked", "green", "1",
           "enforcing", "0", "0",
           "0", "1", "user", "release-keys",
+          "0",
           "0", "0",
           "locked", nullptr };
 
