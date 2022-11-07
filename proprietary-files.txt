@@ -1334,6 +1334,10 @@ system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 # Camera Components - from sweet-user 12 SKQ1.210908.001 V13.0.8.0.SKFMIXM release-keys
 vendor/lib64/camera/com.qti.tuned.sweet_ofilm_s5khm2_wide.bin|85c87788c70367aef48cef96d7817479a26b1a0d
 
+# GPS - from missi_phone_global-user-13-TKQ1.220630.001-V13.0.4.0.TLCMIXM-release-keys
+vendor/lib/libloc_api_wds.so
+vendor/lib64/libloc_api_wds.so
+
 # Graphics - from hanoip S2RI32.32-20-7
 vendor/lib/egl/eglSubDriverAndroid.so|07f8ae50ed02fa107219bf49f02c93a8720366bf
 vendor/lib/egl/libEGL_adreno.so|e6382c9115d5d471c32c010fc50dcbbf6a523d1f
