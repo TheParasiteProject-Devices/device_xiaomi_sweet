@@ -66,8 +66,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
     com.qualcomm.qti.bluetooth_audio@1.0.vendor \
     libbtconfigstore \
-    libbthost_if \
-    libbthost_if.vendor \
+    libbthost_if_sink \
     libldacBT_bco.vendor \
     libldacBT_enc \
     libldacBT_abr \
