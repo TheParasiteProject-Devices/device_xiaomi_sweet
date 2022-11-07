@@ -67,7 +67,7 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.bluetooth_audio@1.0.vendor \
     libbtconfigstore \
     libbthost_if_sink \
-    libldacBT_bco.vendor \
+    libldacBT_bco \
     libldacBT_enc \
     libldacBT_abr \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \
