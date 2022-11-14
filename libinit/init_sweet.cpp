@@ -134,6 +134,11 @@ void vendor_load_properties() {
     // Set hardware revision
     property_override("ro.boot.hardware.revision", GetProperty("ro.boot.hwversion", "").c_str());
 
+    // Check whether device is INDIA variant or not and enable NFC
+    if (GetProperty("ro.boot.hwc", "").c_str() != "INDIA") {
+        property_override("ro.boot.product.hardware.sku", "nfc");
+    }
+
     /* Workaround CTS */
     workaround_cts_properties();
 
