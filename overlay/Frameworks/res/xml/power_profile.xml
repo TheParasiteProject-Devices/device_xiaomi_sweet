@@ -29,10 +29,12 @@
     <!-- Power consumption when CPU is suspended -->
     <item name="cpu.suspend">5.6</item>
     <!-- Additional power consumption when CPU is in a kernel idle loop -->
-       <item name="cpu.idle">5.4</item>
+    <item name="cpu.idle">5.4</item>
+
     <!-- Additional power consumption by CPU excluding cluster and core when
          running -->
     <item name="cpu.active">8.4</item>
+
     <!-- Additional power consumption by CPU cluster0 itself when running
          excluding cores in it -->
     <item name="cpu.cluster_power.cluster0">2</item>
@@ -41,7 +43,7 @@
     <item name="cpu.cluster_power.cluster1">2.2</item>
 
     <!-- Different CPU speeds as reported in
-         /sys/devices/system/cpu/cpufreq/ploicy0/scaling_available_frequencies -->
+         /sys/devices/system/cpu/cpufreq/policy0/scaling_available_frequencies -->
     <array name="cpu.core_speeds.cluster0">
       <value>300000</value> <!-- 300 MHz CPU speed -->
       <value>576000</value> <!-- 576 MHz CPU speed -->
@@ -55,7 +57,7 @@
       <value>1804800</value> <!-- 1804 MHz CPU speed -->
     </array>
     <!-- Different CPU speeds as reported in
-         /sys/devices/system/cpu/cpufreq/ploicy4/scaling_available_frequencies -->
+         /sys/devices/system/cpu/cpufreq/policy6/scaling_available_frequencies -->
     <array name="cpu.core_speeds.cluster1">
       <value>300000</value> <!-- 300 MHz CPU speed -->
       <value>652800</value> <!-- 652 MHz CPU speed -->
@@ -70,6 +72,7 @@
       <value>1939200</value> <!-- 1939 MHz CPU speed -->
       <value>2169600</value> <!-- 2169 MHz CPU speed -->
       <value>2208000</value> <!-- 2208 MHz CPU speed -->
+      <value>2304000</value> <!-- 2304 MHz CPU speed -->
     </array>
 
     <!-- Additional power used by a CPU core from cluster 0 when running at
@@ -103,15 +106,16 @@
       <value>238.54</value> <!-- 2169 MHz CPU speed -->
       <value>266.21</value> <!-- 2208 MHz CPU speed -->
     </array>
-    
+
+
     <!-- Additional power used when screen is ambient mode -->
-    <item name="ambient.on.display0">29</item>
+    <item name="ambient.on">29</item>
 
     <!-- Additional power used when screen is turned on at minimum brightness -->
-    <item name="screen.on.display0">85</item>
+    <item name="screen.on">85</item>
     <!-- Additional power used when screen is at maximum brightness, compared to
          screen at minimum brightness -->
-    <item name="screen.full.display0">250</item>
+    <item name="screen.full">250</item>
 
     <!-- Average power used by the camera flash module when on -->
     <item name="camera.flashlight">240.47</item>
@@ -120,10 +124,24 @@
          preview and capturing approximately 10 full-resolution pictures per
          minute. -->
     <item name="camera.avg">900</item>
+
+    <item name="gps.on">10</item> <!-- ~50mA -->
+
+    <!-- Radio related values. For modems without energy reporting support in firmware, use
+         radio.active, radio.scanning, and radio.on. -->
+    <item name="radio.active">124</item> <!-- ~200mA -->
+    <item name="radio.scanning">5.2</item>
+    <!-- Current consumed by the radio at different signal strengths, when paging -->
+    <array name="radio.on"> <!-- Strength 0 to BINS-1 -->
+        <value>58</value> <!-- ~2mA -->
+        <value>6.5</value> <!-- ~1mA -->
+    </array>
+
     <!-- Additional power used when video is playing -->
     <item name="video">25</item>
     <!-- Additional power used when audio is playing -->
     <item name="audio">75</item>
+
     <!-- Cellular modem related values.-->
     <item name="modem.controller.sleep">0</item>
     <item name="modem.controller.idle">128</item>
@@ -136,13 +154,14 @@
         <value>363</value>
     </array>
     <item name="modem.controller.voltage">3700</item>
+
     <!-- GPS related values.-->
     <array name="gps.signalqualitybased"> <!-- Strength 0 to 1 -->
         <value>34</value>
         <value>6</value>
     </array>
-
     <item name="gps.voltage">3700</item>
+
     <!-- Idle Receive current for wifi radio in mA.-->
     <item name="wifi.controller.idle">79</item>
     <!-- Rx current for wifi radio in mA.-->
@@ -151,6 +170,15 @@
     <item name="wifi.controller.tx">387</item>
     <!-- Operating voltage for wifi radio in mV.-->
     <item name="wifi.controller.voltage">3700</item>
+
+    <array name="wifi.batchedscan"> <!-- mA -->
+        <value>.0001</value> <!-- 1-8/hr -->
+        <value>.001</value>  <!-- 9-64/hr -->
+        <value>.01</value>   <!-- 65-512/hr -->
+        <value>.1</value>    <!-- 513-4,096/hr -->
+        <value>1</value>     <!-- 4097-/hr -->
+    </array>
+
     <!-- Idle current for bluetooth in mA.-->
     <item name="bluetooth.controller.idle">0.01</item>
     <!-- Rx current for bluetooth in mA.-->
