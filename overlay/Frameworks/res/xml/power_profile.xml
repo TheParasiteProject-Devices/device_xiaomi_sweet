@@ -29,9 +29,9 @@
     </array>
 
     <!-- Power consumption when CPU is suspended -->
-    <item name="cpu.suspend">5.6</item>
+    <item name="cpu.suspend">0</item>
     <!-- Additional power consumption when CPU is in a kernel idle loop -->
-    <item name="cpu.idle">5.4</item>
+    <item name="cpu.idle">5.3</item>
 
     <!-- Additional power consumption by CPU excluding cluster and core when
          running -->
@@ -111,10 +111,10 @@
 
 
     <!-- Additional power used when screen is ambient mode -->
-    <item name="ambient.on.display0">29</item>
+    <item name="ambient.on.display0">0.1</item>
 
     <!-- Additional power used when screen is turned on at minimum brightness -->
-    <item name="screen.on.display0">85</item>
+    <item name="screen.on.display0">75.47</item>
     <!-- Additional power used when screen is at maximum brightness, compared to
          screen at minimum brightness -->
     <item name="screen.full.display0">250</item>
@@ -140,9 +140,9 @@
     </array>
 
     <!-- Additional power used when video is playing -->
-    <item name="video">25</item>
+    <item name="video">15</item>
     <!-- Additional power used when audio is playing -->
-    <item name="audio">75</item>
+    <item name="audio">6.6</item>
 
     <!-- Cellular modem related values.-->
     <item name="modem.controller.sleep">0</item>
