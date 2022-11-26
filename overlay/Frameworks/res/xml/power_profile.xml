@@ -17,6 +17,8 @@
 */
 -->
 <device name="Android">
+    <item name="none">0</item>
+
     <!-- All values are in mA except as noted -->
     <item name="battery.capacity">5020</item>
 
