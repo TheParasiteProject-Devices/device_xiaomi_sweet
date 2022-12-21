@@ -94,7 +94,6 @@ PRODUCT_PACKAGES += \
     libmm-qcamera \
     libgui_vendor \
     libxml2 \
-    CameraGo \
     privapp-permissions-camera-go.xml \
     vendor.qti.hardware.camera.device@1.0.vendor
 
@@ -534,20 +533,6 @@ $(call inherit-product-if-exists, vendor/xiaomi-firmware/sweet/Android.mk)
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/xiaomi-firmware
-
-# GApps
-PRODUCT_PACKAGES += \
-    Drive \
-    Maps \
-    PrebuiltGmail \
-    TipsPrebuilt
-
-PRODUCT_PACKAGES += \
-    pixel_tips
-
-# Lily Experience
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/lily_experience.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/lily_experience.xml
 
 # Dolby
 $(call inherit-product-if-exists, vendor/dolby/config.mk)
