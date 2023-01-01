@@ -1,0 +1,2 @@
+genfscon debugfs /ipc_logging                         u:object_r:vendor_debugfs_ipc:s0
+genfscon debugfs /msm_ipc_router                      u:object_r:vendor_debugfs_ipc:s0
