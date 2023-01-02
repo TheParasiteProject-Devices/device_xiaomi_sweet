@@ -176,7 +176,7 @@ BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor/qcom/common
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private/parts
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor/parts
 TARGET_SEPOLICY_DIR := msmsteppe
--include device/qcom/sepolicy_vndr/SEPolicy.mk
+-include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
 
 # Security patch level
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
