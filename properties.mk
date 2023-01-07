@@ -138,7 +138,6 @@ bluetooth.profile.pan.nap.enabled=true \
 bluetooth.profile.pan.panu.enabled=true \
 bluetooth.profile.pbap.server.enabled=true \
 bluetooth.profile.sap.server.enabled=true \
-persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac \
 persist.bluetooth.a2dp_offload.disabled=false \
 persist.bluetooth.bqr.event_mask=14 \
 persist.bluetooth.bqr.min_interval_ms=500 \
