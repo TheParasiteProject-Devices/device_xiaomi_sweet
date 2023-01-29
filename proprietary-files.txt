@@ -1189,6 +1189,7 @@ vendor/lib64/libqrtr.so|3ea4f27b261a1a5ddeee02e9561dc040ddb26514
 vendor/lib64/libqsocket.so|3fa01c9aff6ed96a5ea9886c7696a046c929e339
 
 # Radio - from LA.QSSI.13.0.r1-09700-qssi.0
+system_ext/app/QtiTelephony/QtiTelephony.apk|15a703222355f0b68ee7bcaf4eac54751e90b7ab
 system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|38701f94dca753199cbff47b338a71851a3280bf
 system_ext/app/embms/embms.apk|8c55c180078e4b54abc922cc6762299d6cb6a918
 system_ext/etc/permissions/embms.xml|22e7474091f9f71f02dd0cfc76cfa8848a46f079
@@ -1197,6 +1198,7 @@ system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml|a7e1
 system_ext/framework/embmslibrary.jar|6fd7f060af0bb76dba317b58cef9b51e0a37a6cc
 system_ext/framework/qcrilhook.jar|8d44048c04f4d38a6bf6a279e3bceface10c0dde
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|e3cf3ab60bf632270eccc4e99ead89254d3d84ab
+system_ext/framework/qti-telephony-common.jar|7aaeaf9208b8bad3ea187e87c746f7b982374ff5
 
 # Radio - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/bin/hw/qcrild|77d0168fbad7db01eec8abd9df25f19c05411eb4
@@ -1313,7 +1315,7 @@ vendor/lib64/libdiag.so|3007e1709a4713b0ab6abd76b10c3a822c436c61
 
 # Radio (IMS) - from LA.QSSI.13.0.r1-09700-qssi.0
 system_ext/app/ImsRcsService/ImsRcsService.apk|1808781bcabdec3db97fd19cfe0365a1040178c1
-system_ext/priv-app/ims/ims.apk|5690534155879d101cbe323456b01f29cb97b8b4
+system_ext/priv-app/ims/ims.apk|b0f1805095d9434202715a315b32e58315b24ee2
 system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml|7ce9e6ccb5026b0aa87b0eb94a20448e2d4c481c
 system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar|ec58d15adf1930c4dcfb59e209a4bcf8d230a756
 system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar|3218cd7bba1dd0e0a140d93d252b96b8e2c81ae5
