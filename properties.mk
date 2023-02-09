@@ -1,3 +1,7 @@
+# App Locale Opt In
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+persist.sys.fflag.override.settings_app_locale_opt_in_enabled=false
+
 # Audio
 PRODUCT_VENDOR_PROPERTIES += \
 aaudio.hw_burst_min_usec=2000 \
