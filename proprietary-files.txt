@@ -1,4 +1,4 @@
-# Unpinned section - from MIUI V13.0.5.0.SKFINXM
+# Unpinned section - from MIUI V13.0.9.0.SKFINXM
 
 # ADSP
 vendor/bin/adsprpcd
@@ -1329,8 +1329,8 @@ vendor/etc/acdbdata/Forte/Forte_Global_cal.acdb|b34ec442b87c1acb88dafd55fd86e77a
 system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 
-# Camera Components - from sweet-user 12 SKQ1.210908.001 V13.0.8.0.SKFMIXM release-keys
-vendor/lib64/camera/com.qti.tuned.sweet_ofilm_s5khm2_wide.bin|85c87788c70367aef48cef96d7817479a26b1a0d
+# Camera Components - from sweet-user 12 SKQ1.210908.001 V13.0.15.0.SKFMIXM release-keys
+vendor/lib64/camera/com.qti.tuned.sweet_ofilm_s5khm2_wide.bin|ab8ef3bfcfe0383d82510512f9615dd6d24710f1
 
 # GPS - from missi_phone_global-user-13-TKQ1.220630.001-V13.0.4.0.TLCMIXM-release-keys
 vendor/lib/libloc_api_wds.so
@@ -1383,7 +1383,7 @@ vendor/lib64/libqcodec2.so|cc57edb1047ea6850321fe4038e9cab8dd410924
 vendor/lib/libmedia_ecoservice.so|f7497d42ca668b55ff622c1ae33fda2eb05219d0
 vendor/lib64/libmedia_ecoservice.so|1711d2f86e650dce9c8fc473229633900d73603c
 
-# NFC - from sweet-user 12 SKQ1.210908.001 V13.0.8.0.SKFMIXM release-keys
+# NFC - from sweet-user 12 SKQ1.210908.001 V13.0.15.0.SKFMIXM release-keys
 vendor/lib/libpn553_fw.so|ec325ad8028c573638a6f6902c4aec73c4ec00fa
 
 # Soundtrigger - from sunfish-user-12-SP1A.210812.015-7679548-release-keys
