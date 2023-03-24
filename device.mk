@@ -374,6 +374,12 @@ PRODUCT_PACKAGES += \
     PixelConfigOverlaySweet \
     CustomWebViewOverlay
 
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    $(LOCAL_PATH)/overlay/static
+
+PRODUCT_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay/static/common
+
 # Perf
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2.vendor
