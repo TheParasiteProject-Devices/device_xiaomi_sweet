@@ -1292,10 +1292,6 @@ vendor/bin/nv_mac
 # Audio ACDB - from sweet-user 11 RKQ1.200826.002 V12.0.6.0.RKFMIXM release-keys
 vendor/etc/acdbdata/Forte/Forte_Global_cal.acdb|b34ec442b87c1acb88dafd55fd86e77acbb003a3
 
-# Bluetooth (aptX) - from Pixel 4A RQ3A.210905.001
-system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
-system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
-
 # Camera Components - from sweet-user 12 SKQ1.210908.001 V13.0.15.0.SKFMIXM release-keys
 vendor/lib64/camera/com.qti.tuned.sweet_ofilm_s5khm2_wide.bin|ab8ef3bfcfe0383d82510512f9615dd6d24710f1
 
