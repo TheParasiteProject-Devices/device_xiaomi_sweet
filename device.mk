@@ -371,8 +371,7 @@ PRODUCT_PACKAGES += \
     NotchBarKiller
 
 PRODUCT_PACKAGES += \
-    PixelConfigOverlaySweet \
-    CustomWebViewOverlay
+    PixelConfigOverlaySweet
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     $(LOCAL_PATH)/overlay/static
