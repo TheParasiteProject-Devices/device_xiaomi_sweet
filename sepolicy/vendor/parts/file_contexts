@@ -6,6 +6,7 @@
 
 # XiaomiParts (High Brighness Mode)
 /sys/devices/platform/soc/soc:qcom,dsi-display/hbm u:object_r:sysfs_dm:s0
+/sys/class/backlight/panel0-backlight/brightness   u:object_r:sysfs_dm:s0
 
 # XiaomiParts (Kcal)
 /sys/devices/platform/kcal_ctrl.0/kcal_enable                        u:object_r:sysfs_dm:s0
