@@ -451,9 +451,6 @@ persist.dbg.volte_avail_ovr=1 \
 persist.dbg.vt_avail_ovr=1 \
 persist.dbg.wfc_avail_ovr=1
 
-PRODUCT_PROPERTY_OVERRIDES += \
-persist.vendor.qti.telephony.vt_cam_interface=2
-
 # WiFi
 PRODUCT_VENDOR_PROPERTIES += \
 wifi.aware.interface=wifi-aware0
