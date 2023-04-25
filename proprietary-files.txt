@@ -1393,7 +1393,7 @@ system_ext/lib64/libimsmedia_jni.so|d1b4c03352a9b34f4d26a4fe3a8595f295c7cef8
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|ace5e02b6cd79b43a07d84e2d18d6818821a3c48
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so|e64aa8a21a8db69d2e2ea14929bb20ced99c119d
 
-# Soundtrigger - from sunfish-user-12-SP1A.210812.015-7679548-release-keys
+# Soundtrigger - from sunfish-user-13-TQ2A.230405.003.B2-9760227-release-keys
 vendor/lib64/hw/sound_trigger.primary.sm6150.so|18886433c30b32f99dcddb5c6c3bd1a1e03dfb48
 vendor/lib/hw/sound_trigger.primary.sm6150.so|aa050b609cfde8ea4a6010533a0fb50e66a33e2e
 
