@@ -1352,7 +1352,7 @@ vendor/lib64/libllvm-qcom.so
 vendor/lib/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.adreno.so
 
-# Media-C2 - from sunfish-user-13-TP1A.221005.002-9012097-release-keys
+# Media-C2 - from sunfish-user-13-TQ2A.230405.003.B2-9760227-release-keys
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/lib/libqcodec2.so
