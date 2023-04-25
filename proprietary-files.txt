@@ -1292,7 +1292,7 @@ vendor/bin/nv_mac
 # Audio ACDB - from sweet-user 11 RKQ1.200826.002 V12.0.6.0.RKFMIXM release-keys
 vendor/etc/acdbdata/Forte/Forte_Global_cal.acdb|b34ec442b87c1acb88dafd55fd86e77acbb003a3
 
-# Camera Components - from sweet-user 12 SKQ1.210908.001 V13.0.15.0.SKFMIXM release-keys
+# Camera Components - from sweet-user-13-TKQ1.221013.002-V14.0.1.0.TKFMIXM-release-keys
 vendor/lib64/camera/com.qti.tuned.sweet_ofilm_s5khm2_wide.bin|ab8ef3bfcfe0383d82510512f9615dd6d24710f1
 
 # DPM - from LA.QSSI.13.0.r1-05300-qssi.0
@@ -1310,10 +1310,6 @@ system_ext/lib64/libdpmfdmgr.so|b705b098462e1198fc24175732d687142cc26562
 system_ext/lib64/libdpmframework.so|c3d8d6f1745c19d29466e9de823ff56f9f8f6993
 system_ext/lib64/libdpmtcm.so|57b6c42d581305d8ef16aa127cd4cd1672d2e7f1
 system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|4d78eda10ef66c3c59b7b4c13afeb2c93de5bddb
-
-# GPS - from missi_phone_global-user-13-TKQ1.220630.001-V13.0.4.0.TLCMIXM-release-keys
-vendor/lib/libloc_api_wds.so
-vendor/lib64/libloc_api_wds.so
 
 # Graphics - from hanoip S2RI32.32-20-7
 vendor/lib/egl/eglSubDriverAndroid.so|07f8ae50ed02fa107219bf49f02c93a8720366bf
@@ -1362,7 +1358,7 @@ vendor/lib64/libqcodec2.so|cc57edb1047ea6850321fe4038e9cab8dd410924
 vendor/lib/libmedia_ecoservice.so|f7497d42ca668b55ff622c1ae33fda2eb05219d0
 vendor/lib64/libmedia_ecoservice.so|1711d2f86e650dce9c8fc473229633900d73603c
 
-# NFC - from sweet-user 12 SKQ1.210908.001 V13.0.15.0.SKFMIXM release-keys
+# NFC - from sweet-user-13-TKQ1.221013.002-V14.0.1.0.TKFMIXM-release-keys
 vendor/lib/libpn553_fw.so|ec325ad8028c573638a6f6902c4aec73c4ec00fa
 
 # Radio - from LA.QSSI.13.0.r1-05300-qssi.0
