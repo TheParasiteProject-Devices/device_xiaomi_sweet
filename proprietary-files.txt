@@ -1289,122 +1289,122 @@ vendor/bin/nv_mac
 
 # Pinned section
 # Audio ACDB - from sweet-user 11 RKQ1.200826.002 V12.0.6.0.RKFMIXM release-keys
-vendor/etc/acdbdata/Forte/Forte_Global_cal.acdb|b34ec442b87c1acb88dafd55fd86e77acbb003a3
+vendor/etc/acdbdata/Forte/Forte_Global_cal.acdb
 
 # Camera Arcsoft
-vendor/lib64/libarcsoft_super_night_raw.so|a725136e8fe0c9ffd6b5ed527fd480478c9fd57d
+vendor/lib64/libarcsoft_super_night_raw.so
 
 # Camera Components - from sweet-user 12 SKQ1.210908.001 V13.0.15.0.SKFMIXM release-keys
-vendor/lib64/camera/com.qti.tuned.sweet_ofilm_s5khm2_wide.bin|ab8ef3bfcfe0383d82510512f9615dd6d24710f1
+vendor/lib64/camera/com.qti.tuned.sweet_ofilm_s5khm2_wide.bin
 
 # DPM - from LA.QSSI.13.0.r1-05300-qssi.0
-system/framework/tcmclient.jar|0402c82a800b58a2e93fd7cb8e81a24e674ebc35
-system_ext/bin/dpmd|606bf68351189bb5cdbdf86630c018a209862e03
-system_ext/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
-system_ext/etc/init/dpmd.rc|738b638ff04cda368e22c03e16baf90ba157a6fc
-system_ext/etc/permissions/com.qti.dpmframework.xml|c4b7ad0879d00c1eba4f3fe3a88ddb8aa153629a
-system_ext/etc/permissions/dpmapi.xml|255903759a60a31c0876ec004e74554c753270fe
-system_ext/framework/com.qti.dpmframework.jar|06871af3c26d8357a250276948112d8eae105e01
-system_ext/framework/dpmapi.jar|556f859768e370414eb91b0e5aaab619d655e2d8
-system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so|62e5bfe5c7525844a828e89360fde9694a7cdf96
-system_ext/lib64/libdpmctmgr.so|9d13e5ae9882f5b7e6ac31a9d073a66a27d1c465
-system_ext/lib64/libdpmfdmgr.so|b705b098462e1198fc24175732d687142cc26562
-system_ext/lib64/libdpmframework.so|c3d8d6f1745c19d29466e9de823ff56f9f8f6993
-system_ext/lib64/libdpmtcm.so|57b6c42d581305d8ef16aa127cd4cd1672d2e7f1
-system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|4d78eda10ef66c3c59b7b4c13afeb2c93de5bddb
+system/framework/tcmclient.jar
+system_ext/bin/dpmd
+system_ext/etc/dpm/dpm.conf
+system_ext/etc/init/dpmd.rc
+system_ext/etc/permissions/com.qti.dpmframework.xml
+system_ext/etc/permissions/dpmapi.xml
+system_ext/framework/com.qti.dpmframework.jar
+system_ext/framework/dpmapi.jar
+system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so
+system_ext/lib64/libdpmctmgr.so
+system_ext/lib64/libdpmfdmgr.so
+system_ext/lib64/libdpmframework.so
+system_ext/lib64/libdpmtcm.so
+system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk
 
 # GPS - from missi_phone_global-user-13-TKQ1.220630.001-V13.0.4.0.TLCMIXM-release-keys
 vendor/lib/libloc_api_wds.so
 vendor/lib64/libloc_api_wds.so
 
 # Graphics - from hanoip S2RI32.32-20-7
-vendor/lib/egl/eglSubDriverAndroid.so|07f8ae50ed02fa107219bf49f02c93a8720366bf
-vendor/lib/egl/libEGL_adreno.so|e6382c9115d5d471c32c010fc50dcbbf6a523d1f
-vendor/lib/egl/libGLESv1_CM_adreno.so|715f3463528f1e74ffa02627ee5916a09e0748f5
-vendor/lib/egl/libGLESv2_adreno.so|0bde422aac3719a52dafef39ffda1406db2b959c
-vendor/lib/egl/libq3dtools_adreno.so|9ec9c053592e58be935e8ae5e0a9d362c101773a
-vendor/lib/egl/libq3dtools_esx.so|8804515311b8c3b07ef3f8e72995b8c7297f1c46
-vendor/lib/libC2D2.so|91f015cad79024fdbb6a5603cce48693e58a4510
-vendor/lib/libCB.so|8159b5e2b3510db92ba3f0b2fc8445b4dee34fa2
-vendor/lib/libOpenCL.so|087fe776117a61287e2301061feeeb060ebb60a9
-vendor/lib/libVkLayer_q3dtools.so|bb83d028ff697f3697a9295825b7387779db674b
-vendor/lib/libadreno_app_profiles.so|63349072a208b3833887d28962d620547061bc87
-vendor/lib/libadreno_utils.so|1ab5eba1b8df146055ab896e08f53da1fbf91828
-vendor/lib/libc2d30_bltlib.so|9977576a557bef02de296e742a4eeecc711fad9c
-vendor/lib/libgpudataproducer.so|7c12a4f31253d2099778cd574561b090c9240a4b
-vendor/lib/libgsl.so|91806d6e7973fc8c443b5067b3a0f7a709f2d13b
-vendor/lib/libllvm-glnext.so|a7f9195adca1e472af8fc896f8af91687a4c80dd
-vendor/lib/libllvm-qcom.so|2f896317139accdb781c3a1a208525f062862983
-vendor/lib64/egl/eglSubDriverAndroid.so|9dac5b2c3d9ad28daf85137faa020546ce9f2905
-vendor/lib64/egl/libEGL_adreno.so|e7a43ed0337890618bb6881460c51def05a1500f
-vendor/lib64/egl/libGLESv1_CM_adreno.so|0a2a648ca2dcd887ea62860bbfa2ef397f01d42d
-vendor/lib64/egl/libGLESv2_adreno.so|bc50c5ed04d366c7eed145d51f1dd22a40960d30
-vendor/lib64/egl/libq3dtools_adreno.so|189b9c3d400c6a98c87582b8df0910530cba6d44
-vendor/lib64/egl/libq3dtools_esx.so|0f88c7955ad0a5c716da239c1a5dbd56605ae486
-vendor/lib64/libC2D2.so|175115cc36fd471f9eb83af76be21b5f602b9460
-vendor/lib64/libCB.so|4d8c46e56fa8c426050ccc1aeee4ae7e22852d6b
-vendor/lib64/libOpenCL.so|0c5d889028ecb59ed9bb0c7522094dbebc468954
-vendor/lib64/libVkLayer_q3dtools.so|f72e09d4915e27c5b9a36c48ba482baca7438000
-vendor/lib64/libadreno_app_profiles.so|1dfc3e93520c771417dcb4210e886fc395169a53
-vendor/lib64/libadreno_utils.so|56b1d1b127eb571a584caf2ba12d5d069e9aed71
-vendor/lib64/libgpudataproducer.so|8d1b97e65e63bb8a0c37af54f38053028d9fcab9
-vendor/lib64/libgsl.so|906445697a01e905f6b94136b1993694396e76db
-vendor/lib64/libllvm-glnext.so|eaf5143a2aad128e86094cd3b65717efb7381a78
-vendor/lib64/libllvm-qcom.so|512c0db7ea845f992f382e53da4ca4c988dc5837
+vendor/lib/egl/eglSubDriverAndroid.so
+vendor/lib/egl/libEGL_adreno.so
+vendor/lib/egl/libGLESv1_CM_adreno.so
+vendor/lib/egl/libGLESv2_adreno.so
+vendor/lib/egl/libq3dtools_adreno.so
+vendor/lib/egl/libq3dtools_esx.so
+vendor/lib/libC2D2.so
+vendor/lib/libCB.so
+vendor/lib/libOpenCL.so
+vendor/lib/libVkLayer_q3dtools.so
+vendor/lib/libadreno_app_profiles.so
+vendor/lib/libadreno_utils.so
+vendor/lib/libc2d30_bltlib.so
+vendor/lib/libgpudataproducer.so
+vendor/lib/libgsl.so
+vendor/lib/libllvm-glnext.so
+vendor/lib/libllvm-qcom.so
+vendor/lib64/egl/eglSubDriverAndroid.so
+vendor/lib64/egl/libEGL_adreno.so
+vendor/lib64/egl/libGLESv1_CM_adreno.so
+vendor/lib64/egl/libGLESv2_adreno.so
+vendor/lib64/egl/libq3dtools_adreno.so
+vendor/lib64/egl/libq3dtools_esx.so
+vendor/lib64/libC2D2.so
+vendor/lib64/libCB.so
+vendor/lib64/libOpenCL.so
+vendor/lib64/libVkLayer_q3dtools.so
+vendor/lib64/libadreno_app_profiles.so
+vendor/lib64/libadreno_utils.so
+vendor/lib64/libgpudataproducer.so
+vendor/lib64/libgsl.so
+vendor/lib64/libllvm-glnext.so
+vendor/lib64/libllvm-qcom.so
 
 # Graphics (vulkan) - from hanoip S2RI32.32-20-7
-vendor/lib/hw/vulkan.adreno.so|3111afef634cdabcd20f2db66a9f5d7c7ae439ee
-vendor/lib64/hw/vulkan.adreno.so|b65f4b27bd946fc5950b7b6b039205ac877e5bfd
+vendor/lib/hw/vulkan.adreno.so
+vendor/lib64/hw/vulkan.adreno.so
 
 # Media-C2 - from sunfish-user-13-TP1A.221005.002-9012097-release-keys
-vendor/bin/hw/vendor.qti.media.c2@1.0-service|af91cb2facd9f86db88b328358ad504cc2d9b6f1
-vendor/etc/init/vendor.qti.media.c2@1.0-service.rc|11209316ba8aae64b689217bc13b0804f6620678
-vendor/lib/libqcodec2.so|c61060e03b769e21d4c36f679c5ac7ae7865e4e0
-vendor/lib64/libqcodec2.so|cc57edb1047ea6850321fe4038e9cab8dd410924
-vendor/lib/libmedia_ecoservice.so|f7497d42ca668b55ff622c1ae33fda2eb05219d0
-vendor/lib64/libmedia_ecoservice.so|1711d2f86e650dce9c8fc473229633900d73603c
+vendor/bin/hw/vendor.qti.media.c2@1.0-service
+vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
+vendor/lib/libqcodec2.so
+vendor/lib64/libqcodec2.so
+vendor/lib/libmedia_ecoservice.so
+vendor/lib64/libmedia_ecoservice.so
 
 # NFC - from sweet-user 12 SKQ1.210908.001 V13.0.15.0.SKFMIXM release-keys
-vendor/lib/libpn553_fw.so|ec325ad8028c573638a6f6902c4aec73c4ec00fa
+vendor/lib/libpn553_fw.so
 
 # Radio - from LA.QSSI.13.0.r1-05300-qssi.0
-system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|9ef9e77f209b7d699d0b37463acfb19faf46d6d4
-system_ext/app/embms/embms.apk|d31e4d6bd81832197d363954def7c54aa78aa4e0
-system_ext/etc/permissions/embms.xml|22e7474091f9f71f02dd0cfc76cfa8848a46f079
-system_ext/etc/permissions/qcrilhook.xml|30397e293b2c40e6b7a1d11c2a615cdd05de625a
-system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml|a7e114ea1e6909685ce49717a2b5b66d8275d419
-system_ext/framework/embmslibrary.jar|6fd7f060af0bb76dba317b58cef9b51e0a37a6cc
-system_ext/framework/qcrilhook.jar|8d44048c04f4d38a6bf6a279e3bceface10c0dde
-system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|3ed05e8d9078c817ad3c93780f1541fc27bd552c
+system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
+system_ext/app/embms/embms.apk
+system_ext/etc/permissions/embms.xml
+system_ext/etc/permissions/qcrilhook.xml
+system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
+system_ext/framework/embmslibrary.jar
+system_ext/framework/qcrilhook.jar
+system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 
 # Radio (diag) - from LA.QSSI.13.0.r1-05300-qssi.0
-system_ext/lib64/libdiag_system.so|26f511bc6889ae18505510ea58abb2e9ffb415c7
-system_ext/lib64/vendor.qti.diaghal@1.0.so|92555fd8ae83569d61a26ea3ab33e3f2d89a5729
+system_ext/lib64/libdiag_system.so
+system_ext/lib64/vendor.qti.diaghal@1.0.so
 
 # Radio (IMS) - from LA.QSSI.13.0.r1-05300-qssi.0
-system_ext/app/ImsRcsService/ImsRcsService.apk|c0566bd1093cc281df903f64f62945088d14087b
-system_ext/priv-app/ims/ims.apk|9dd8f0bbe724abe8ea50e653290a2192742205df
-system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml|7ce9e6ccb5026b0aa87b0eb94a20448e2d4c481c
-system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar|ec58d15adf1930c4dcfb59e209a4bcf8d230a756
-system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar|3218cd7bba1dd0e0a140d93d252b96b8e2c81ae5
-system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar|ae7015efe55d17b1caf0da0c2247dac6cfaaa272
-system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar|137f296405fd5f8c036c511f1d186e7178c5d57f
-system_ext/framework/vendor.qti.ims.factory-V2.2-java.jar|70dbc40c581103970402959342ea250b6a1fb84b
-system_ext/lib64/lib-imsvideocodec.so|f5d502e14357e1984e90a405a9f14e6dc3faf766
-system_ext/lib64/lib-imsvt.so|2dd3277d4a8e4b4c0afb5dd129f650b56e595179
-system_ext/lib64/lib-imsvtextutils.so|1dfb5640cd23a92e7ca55a84118b2966653aebc7
-system_ext/lib64/lib-imsvtutils.so|501c2081942844498c466b49a09b79615e5ba877
-system_ext/lib64/libimscamera_jni.so|a21333fa8f338acaa4996f74a0e29145f77d5299
-system_ext/lib64/libimsmedia_jni.so|d1b4c03352a9b34f4d26a4fe3a8595f295c7cef8
-system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|ace5e02b6cd79b43a07d84e2d18d6818821a3c48
-system_ext/lib64/vendor.qti.imsrtpservice@3.1.so|e64aa8a21a8db69d2e2ea14929bb20ced99c119d
+system_ext/app/ImsRcsService/ImsRcsService.apk
+system_ext/priv-app/ims/ims.apk
+system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml
+system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar
+system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar
+system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar
+system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar
+system_ext/framework/vendor.qti.ims.factory-V2.2-java.jar
+system_ext/lib64/lib-imsvideocodec.so
+system_ext/lib64/lib-imsvt.so
+system_ext/lib64/lib-imsvtextutils.so
+system_ext/lib64/lib-imsvtutils.so
+system_ext/lib64/libimscamera_jni.so
+system_ext/lib64/libimsmedia_jni.so
+system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
+system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
 
 # Soundtrigger - from sunfish-user-12-SP1A.210812.015-7679548-release-keys
-vendor/lib64/hw/sound_trigger.primary.sm6150.so|18886433c30b32f99dcddb5c6c3bd1a1e03dfb48
-vendor/lib/hw/sound_trigger.primary.sm6150.so|aa050b609cfde8ea4a6010533a0fb50e66a33e2e
+vendor/lib64/hw/sound_trigger.primary.sm6150.so
+vendor/lib/hw/sound_trigger.primary.sm6150.so
 
 # HotWord Enrollment - from oneplus8pro qssi-user-11-RP1A.201005.001 2107082312 release-keys 
--product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|aca670c20dfee58a96a471b64ea7d63a0a3fb812
--product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk|59192e638ea3b13ee9005d730ce269db66a4d10a
-system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a58554d9c0dd0608552b644fbf74519a447bb
--system_ext/framework/com.android.hotwordenrollment.common.util.jar|bef92589e75a6da6043f85f4b9b0e85866429624
+-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
+-product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
+system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
+-system_ext/framework/com.android.hotwordenrollment.common.util.jar
