@@ -1350,7 +1350,7 @@ vendor/lib64/libllvm-qcom.so|512c0db7ea845f992f382e53da4ca4c988dc5837
 vendor/lib/hw/vulkan.adreno.so|3111afef634cdabcd20f2db66a9f5d7c7ae439ee
 vendor/lib64/hw/vulkan.adreno.so|b65f4b27bd946fc5950b7b6b039205ac877e5bfd
 
-# Media-C2 - from sunfish-user-13-TP1A.221005.002-9012097-release-keys
+# Media-C2 - from sunfish-user-13-TQ2A.230405.003.B2-9760227-release-keys
 vendor/bin/hw/vendor.qti.media.c2@1.0-service|af91cb2facd9f86db88b328358ad504cc2d9b6f1
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc|11209316ba8aae64b689217bc13b0804f6620678
 vendor/lib/libqcodec2.so|c61060e03b769e21d4c36f679c5ac7ae7865e4e0
