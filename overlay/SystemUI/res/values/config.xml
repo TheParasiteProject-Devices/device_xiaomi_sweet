@@ -86,8 +86,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       DisplayCutout path will be rendered
        -->
     <string translatable="false" name="config_frontBuiltInDisplayCutoutProtection">
-        M 500,52
-        a 35,35 0 1 0 82,0 35,35 0 1 0 -82,0
+        M 496,54
+        a 35,35 0 1 0 98,0 35,35 0 1 0 -98,0
         Z
     </string>
 
