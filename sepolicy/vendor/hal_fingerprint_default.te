@@ -20,5 +20,5 @@ set_prop(hal_fingerprint_default, vendor_fp_prop)
 
 allow hal_fingerprint_default property_socket:sock_file write;
 
-# Allow FP to r&w to /dev/vndbinder
-allow hal_fingerprint_default vndbinder_device:chr_file rw_file_perms;
+# Allow FP to use vendor binder IPC
+vndbinder_use(hal_fingerprint_default)
