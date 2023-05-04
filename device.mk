@@ -611,3 +611,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.config@1.0.vendor \
     android.hardware.tetheroffload.control@1.0.vendor
+
+# Hotword Enrollment
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/permissions/com.android.hotwordenrollment.okgoogle.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.android.hotwordenrollment.okgoogle.xml \
+    $(LOCAL_PATH)/configs/sysconfig/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.android.hotwordenrollment.common.util.xml

@@ -1397,7 +1397,7 @@ system_ext/lib64/vendor.qti.imsrtpservice@3.1.so|e64aa8a21a8db69d2e2ea14929bb20c
 vendor/lib64/hw/sound_trigger.primary.sm6150.so|18886433c30b32f99dcddb5c6c3bd1a1e03dfb48
 vendor/lib/hw/sound_trigger.primary.sm6150.so|aa050b609cfde8ea4a6010533a0fb50e66a33e2e
 
-# HotWord Enrollment - from oneplus8pro qssi-user-11-RP1A.201005.001 2107082312 release-keys 
+# HotWord Enrollment - from OnePlus 10 Pro qssi-user-13-TP1A.220624.014-1663162171091-release-keys
 -product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk|aca670c20dfee58a96a471b64ea7d63a0a3fb812
 -product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk|59192e638ea3b13ee9005d730ce269db66a4d10a
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|563a58554d9c0dd0608552b644fbf74519a447bb
