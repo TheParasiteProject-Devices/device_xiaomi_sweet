@@ -362,6 +362,9 @@ PRODUCT_PACKAGES += \
     CarrierConfigResSweet \
     FrameworksResSweet \
     SettingsResSweet \
+    SettingsResM2101K6C \
+    SettingsResM2101K6G \
+    SettingsResM2101K6R \
     SettingsProviderResSweet \
     SystemUIResSweet \
     TelephonyResSweet \
@@ -372,12 +375,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     PixelConfigOverlaySweet
-
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    $(LOCAL_PATH)/overlay/static
-
-PRODUCT_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay/static/common
 
 # Perf
 PRODUCT_PACKAGES += \

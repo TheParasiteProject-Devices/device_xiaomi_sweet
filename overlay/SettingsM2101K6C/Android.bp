@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "SettingsResM2101K6C",
+    product_specific: true,
+}
