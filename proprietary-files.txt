@@ -91,6 +91,7 @@ vendor/lib/libaudioroute_ext.so
 vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_Codec_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_General_cal.acdb
+vendor/etc/acdbdata/Forte/Forte_Global_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_Handset_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_Hdmi_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_Headset_cal.acdb
@@ -1288,9 +1289,6 @@ vendor/bin/cnss-daemon
 vendor/bin/nv_mac
 
 # Pinned section
-# Audio ACDB - from sweet-user 11 RKQ1.200826.002 V12.0.6.0.RKFMIXM release-keys
-vendor/etc/acdbdata/Forte/Forte_Global_cal.acdb
-
 # Camera Arcsoft
 vendor/lib64/libarcsoft_super_night_raw.so
 
