@@ -42,12 +42,9 @@ vendor.audio_hal.period_size=192
 # Audio (ximi)
 PRODUCT_VENDOR_PROPERTIES += \
 persist.vendor.audio.delta.refresh=false \
-persist.vendor.audio.misound.disable=true \
 persist.vendor.audio.ring.filter.mask=0 \
 ro.vendor.audio.camera.loopback.support=true \
-ro.vendor.audio.scenario.support=true \
 ro.vendor.audio.sdk.ssr=false \
-ro.vendor.audio.soundfx.usb=true \
 ro.vendor.audio.us.type=mius \
 vendor.audio.mic.status=off
 
