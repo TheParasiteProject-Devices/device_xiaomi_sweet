@@ -1,4 +1,4 @@
-# Unpinned section - from MIUI V14.0.1.0.SKFINXM
+# Unpinned section - from MIUI V14.0.3.0.TKFEUXM
 
 # ADSP
 vendor/bin/adsprpcd
@@ -74,7 +74,6 @@ vendor/lib/libsurround_3mic_proc.so
 system_ext/etc/permissions/audiosphere.xml
 system_ext/framework/audiosphere.jar
 vendor/lib/soundfx/libasphere.so
-vendor/lib/soundfx/libdirac.so
 vendor/lib/soundfx/libmisoundfx.so
 vendor/lib/soundfx/libshoebox.so
 vendor/lib/soundfx/libqcbassboost.so
@@ -183,12 +182,11 @@ vendor/lib64/camera/com.qti.tuned.sweet_ofilm_imx355_ultra.bin
 vendor/lib64/camera/com.qti.tuned.sweet_ofilm_imx471_front.bin
 vendor/lib64/camera/com.qti.tuned.sweet_ofilm_ov02b1b_depth.bin
 vendor/lib64/camera/com.qti.tuned.sweet_ofilm_ov5675_macro.bin
-vendor/lib64/camera/com.qti.tuned.sweet_ofilm_s5kgw3_wide.bin
+vendor/lib64/camera/com.qti.tuned.sweet_ofilm_s5khm2_wide.bin
 vendor/lib64/camera/com.qti.tuned.sweet_sunny_gc02m1_depth.bin
 vendor/lib64/camera/com.qti.tuned.sweet_sunny_imx355_ultra.bin
 vendor/lib64/camera/com.qti.tuned.sweet_sunny_imx471_front.bin
 vendor/lib64/camera/com.qti.tuned.sweet_sunny_ov5675_macro.bin
-vendor/lib64/camera/com.qti.tuned.sweet_sunny_s5kgw3_wide.bin
 vendor/lib64/camera/com.qti.tuned.sweet_sunny_s5khm2_wide.bin
 vendor/lib64/camera/fdconfigpreview.bin
 vendor/lib64/camera/fdconfigpreviewlite.bin
@@ -767,6 +765,9 @@ vendor/lib64/unnhal-acc-common.so
 vendor/lib64/unnhal-acc-hta.so
 vendor/lib64/unnhal-acc-hvx.so
 
+# NFC
+vendor/lib/libpn553_fw.so
+
 # Perf
 vendor/bin/hw/vendor.qti.hardware.perf@2.2-service
 vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc
@@ -953,8 +954,9 @@ vendor/bin/nv_mac
 # Audio (FX modules) - from cheetah-user 13 TQ2A.230405.003.E1 9802792 release-keys
 vendor/lib/soundfx/libspatialaudio.so|379b98b020729d05cad4e84202f42335b96bb755
 
-# Camera Components - from sweet-user-13-TKQ1.221013.002-V14.0.1.0.TKFMIXM-release-keys
-vendor/lib64/camera/com.qti.tuned.sweet_ofilm_s5khm2_wide.bin|ab8ef3bfcfe0383d82510512f9615dd6d24710f1
+# Camera Components - from sweetin-user 13 TKQ1.221013.002 V14.0.1.0.TKFINXM release-keys
+vendor/lib64/camera/com.qti.tuned.sweet_ofilm_s5kgw3_wide.bin|ab8ef3bfcfe0383d82510512f9615dd6d24710f1
+vendor/lib64/camera/com.qti.tuned.sweet_sunny_s5kgw3_wide.bin
 
 # Certificate Authority - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/app/CACertService/CACertService.apk|b1072f129d588b5c5aefa8824b6d531586a26755
@@ -1162,9 +1164,6 @@ vendor/lib/libqcodec2.so|c61060e03b769e21d4c36f679c5ac7ae7865e4e0
 vendor/lib64/libqcodec2.so|cc57edb1047ea6850321fe4038e9cab8dd410924
 vendor/lib/libmedia_ecoservice.so|f7497d42ca668b55ff622c1ae33fda2eb05219d0
 vendor/lib64/libmedia_ecoservice.so|1711d2f86e650dce9c8fc473229633900d73603c
-
-# NFC - from sweet-user-13-TKQ1.221013.002-V14.0.1.0.TKFMIXM-release-keys
-vendor/lib/libpn553_fw.so|ec325ad8028c573638a6f6902c4aec73c4ec00fa
 
 # QMI - from LA.QSSI.13.0.r1-09700-qssi.0
 system_ext/etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
