@@ -376,6 +376,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     PixelConfigOverlaySweet
 
+PRODUCT_PACKAGES += \
+    FrameworksParaiteResSweet
+
 # Perf
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.2.vendor
