@@ -587,9 +587,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Parts
 $(call inherit-product-if-exists, packages/apps/Parts/config.mk)
 
-# QTI Power HAL
-$(call inherit-product-if-exists, vendor/qcom/opensource/power/power-vendor-product.mk)
-
 # Touch
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.xiaomi_sm6150
