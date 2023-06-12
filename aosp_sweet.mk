@@ -23,6 +23,7 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 TARGET_INCLUDE_CARRIER_SETTINGS := true
 TARGET_INCLUDE_CAMERA_GO := true
 TARGET_SUPPORTS_LILY_EXPERIENCE := true
+TARGET_NOT_SUPPORTS_GOOGLE_BATTERY := true
 TARGET_FLATTEN_APEX := false
 $(call inherit-product-if-exists, vendor/pixel-additional/config.mk)
 
