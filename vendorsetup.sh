@@ -29,3 +29,14 @@ if [ -f "kernel/modules/misc/KernelSU/kernel/ksu.c" ]; then
     sed -i 's/	ksu_enable_sucompat();/	\/\/ksu_enable_sucompat();/g' kernel/modules/misc/KernelSU/kernel/ksu.c
     sed -i 's/	ksu_enable_ksud();/	\/\/ksu_enable_ksud();/g' kernel/modules/misc/KernelSU/kernel/ksu.c
 fi
+
+# gralloc build fix
+if [ -d "vendor/qcom/opensource/commonsys-intf/display" ]; then
+    cd vendor/qcom/opensource/commonsys-intf/display
+    git reset --hard
+    cd ../../../../../
+fi
+
+if [ -f "vendor/qcom/opensource/commonsys-intf/display/gralloc/gralloc_priv.h" ]; then
+    sed -i 's/return (x + (getpagesize() - 1)) \& \~(getpagesize() - 1)\;/return (x + ((unsigned long) getpagesize() - 1UL)) \& \~((unsigned long) getpagesize() - 1UL)\;/g' vendor/qcom/opensource/commonsys-intf/display/gralloc/gralloc_priv.h
+fi
