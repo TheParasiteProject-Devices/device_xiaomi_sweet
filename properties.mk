@@ -251,6 +251,7 @@ ro.vendor.qti.va_aosp.support=1
 
 # Graphics
 PRODUCT_VENDOR_PROPERTIES += \
+debug.hwui.renderer=skiavk \
 debug.sf.disable_backpressure=1 \
 debug.sf.enable_hwc_vds=1 \
 debug.sf.enable_transaction_tracing=false \
