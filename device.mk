@@ -588,7 +588,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     dalvik.vm.systemuicompilerfilter=speed
 
 # Parts
-$(call inherit-product-if-exists, packages/apps/Parts/config.mk)
+$(call inherit-product-if-exists, packages/apps/XiaomiParts/config.mk)
 
 # Touch
 PRODUCT_PACKAGES += \
