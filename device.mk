@@ -523,9 +523,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
 
-# Don't build super.img.
-PRODUCT_BUILD_SUPER_PARTITION := false
-
 # Enable Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
