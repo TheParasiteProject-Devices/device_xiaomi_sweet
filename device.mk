@@ -377,7 +377,8 @@ PRODUCT_PACKAGES += \
     PixelConfigOverlaySweet
 
 PRODUCT_PACKAGES += \
-    FrameworksParaiteResSweet
+    FrameworksParaiteResSweet \
+    SystemUIParasiteResSweet
 
 # Perf
 PRODUCT_PACKAGES += \
