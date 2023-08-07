@@ -2,4 +2,7 @@
 <resources>
      <!-- Device model (Build.MODEL) to spoof for netflix, if not empty -->
      <string name="config_netflixSpoofModel" translatable="false">M2101K6G</string>
+
+    <!-- Enforce DisplayModeDirector to select user preferred resolution -->
+    <bool name="config_forceToUseSelectedResolution">true</bool>
 </resources>
