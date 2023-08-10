@@ -533,10 +533,10 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 $(call inherit-product, vendor/xiaomi/sweet/sweet-vendor.mk)
 
 # Firmware
-$(call inherit-product-if-exists, vendor/xiaomi-firmware/sweet/Android.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/firmware/sweet/Android.mk)
 
 PRODUCT_SOONG_NAMESPACES += \
-    vendor/xiaomi-firmware
+    vendor/xiaomi/firmware/sweet
 
 # Dolby
 $(call inherit-product-if-exists, vendor/dolby/products/dolby.mk)
