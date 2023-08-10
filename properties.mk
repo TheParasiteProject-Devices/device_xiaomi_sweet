@@ -44,9 +44,11 @@ ro.vendor.audio.sdk.ssr=false \
 ro.vendor.audio.us.type=mius \
 vendor.audio.mic.status=off
 
-# Audio (Bluetooth)
+# Audio (Spatializer)
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.audio.spatializer_enabled=true
+ro.audio.spatializer_enabled=true \
+ro.audio.spatializer_transaural_enabled_default=false \
+persist.vendor.audio.spatializer.speaker_enabled=true
 
 # Audio (Features)
 PRODUCT_VENDOR_PROPERTIES += \
