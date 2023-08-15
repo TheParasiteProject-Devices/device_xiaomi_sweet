@@ -125,7 +125,7 @@
     </postprocess>
     <preprocess>
         <stream type="voice_communication">
-            <apply effect="aes"/>
+            <apply effect="aec"/>
             <apply effect="ns"/>
         </stream>
     </preprocess>
