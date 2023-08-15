@@ -2,7 +2,8 @@
 
 # Clone Kernel Modules repo
 if [ ! -d "kernel/modules" ]; then
-    git clone https://github.com/TheParasiteProject/kernel_modules kernel/modules
+    mkdir -p kernel/modules
+    touch kernel/modules/Android.mk
 fi
 
 # Clone KernelSU repo
