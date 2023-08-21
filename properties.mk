@@ -45,7 +45,7 @@ ro.vendor.audio.us.type=mius \
 vendor.audio.mic.status=off
 
 # Audio (Spatializer)
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 ro.audio.spatializer_enabled=true \
 ro.audio.spatializer_transaural_enabled_default=false \
 persist.vendor.audio.spatializer.speaker_enabled=true
