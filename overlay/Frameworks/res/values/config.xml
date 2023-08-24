@@ -678,12 +678,6 @@
          fading edges is prohibitively expensive on most GPUs. -->
     <bool name="config_ui_enableFadingMarquee">true</bool>
 
-    <!-- Flag indicating whether the surface flinger is inefficient
-         at performing a blur.  Used by parts of the UI to turn off
-         the blur effect where it isn't worth the performance hit.
-         As of Honeycomb, blurring is not supported anymore. -->
-    <bool name="config_sf_slowBlur">false</bool>
-
     <!-- the number of the max cached processes in the system. -->
     <integer name="config_customizedMaxCachedProcesses">48</integer>
 
