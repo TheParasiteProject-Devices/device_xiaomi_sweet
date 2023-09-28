@@ -539,7 +539,7 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/xiaomi/firmware/sweet
 
 # Dolby
-$(call inherit-product-if-exists, vendor/dolby/products/dolby.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/dolby/products/dolby.mk)
 
 # Disable touch video heatmap to reduce latency, motion jitter, and CPU usage
 # on supported devices with Deep Press input classifier HALs and models
