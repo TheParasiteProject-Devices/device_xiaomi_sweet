@@ -71,6 +71,7 @@ build_date_prop=`getprop ro.system.build.date.utc`
 # Compare build date before clean-up
 if [ $build_date_prop != $build_date_file ]; then
     # Remove settings cache and persistent_properties to avoid derps after dirty flash
+    rm -rf /data/resource-cache
     rm -rf /data/system/package_cache
     rm -rf /data/property/persistent_properties
     # Remove and update build date file
