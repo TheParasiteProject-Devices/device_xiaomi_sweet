@@ -16,6 +16,14 @@
 */
 -->
 <resources>
+    <!-- The maximum offset in either direction that elements are moved vertically to prevent
+         burn-in on status bar and navigation bar. -->
+    <dimen name="vertical_max_shift">1.0dp</dimen>
+
+    <!-- The maximum offset in either direction that elements are moved horizontally to prevent
+         burn-in on status bar and navigation bar. -->
+    <dimen name="horizontal_max_shift">2.0dp</dimen>
+
     <!-- the padding on the start of the statusbar -->
     <dimen name="status_bar_padding_start">16dp</dimen>
 
