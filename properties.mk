@@ -166,7 +166,8 @@ vendor.bluetooth.soc=cherokee \
 vendor.qcom.bluetooth.soc=cherokee \
 persist.vendor.service.bdroid.soc.alwayson=true \
 persist.vendor.btstack.aac_frm_ctl.enabled=true \
-ro.bluetooth.emb_wp_mode=false
+ro.bluetooth.emb_wp_mode=false \
+bluetooth.hci.erroneous_data_reporting.enabled=false
 
 # CNE
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
