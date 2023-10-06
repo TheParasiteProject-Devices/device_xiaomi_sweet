@@ -144,7 +144,7 @@ void vendor_load_properties() {
     property_override("bluetooth.device.default_name", GetProperty("ro.product.marketname", "").c_str());
 
     // Check whether device is INDIA variant or not and enable NFC
-    if (GetProperty("ro.boot.hwc", "").c_str() != "INDIA") {
+    if (std::strcmp(GetProperty("ro.boot.hwc", "").c_str(), "INDIA") != 0) {
         property_override("ro.boot.product.hardware.sku", "nfc");
     }
 
@@ -203,7 +203,7 @@ void vendor_load_properties() {
 
 #ifdef __ANDROID_RECOVERY__
     std::string buildtype = GetProperty("ro.build.type", "userdebug");
-    if (buildtype != "user") {
+    if (std::strcmp(buildtype.c_str(), "user") != 0) {
         property_override("ro.debuggable", "1");
         property_override("ro.adb.secure.recovery", "0");
     }
