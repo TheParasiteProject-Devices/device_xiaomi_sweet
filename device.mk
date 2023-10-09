@@ -102,7 +102,9 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0.vendor
 
 PRODUCT_VENDOR_PROPERTIES += \
-    persist.vendor.camera.privapp.list=com.google.android.apps.cameralite \
+    persist.vendor.camera.privapp.list=com.google.android.apps.cameralite
+
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.camera.privapp.list=com.google.android.apps.cameralite
 
 PRODUCT_COPY_FILES += \
