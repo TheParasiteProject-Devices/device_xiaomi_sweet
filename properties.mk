@@ -105,14 +105,16 @@ persist.vendor.audio.fluence.voicerec=false
 
 # Audio (Misc)
 PRODUCT_VENDOR_PROPERTIES += \
-audio.safemedia.bypass=true \
 vendor.audio.usb.perio=2500 \
 vendor.audio.usb.out.period_us=2500 \
 vendor.audio.usb.out.period_count=2 \
-audio_hal.period_multiplier=1 \
 vendor.audio_hal.period_multiplier=1 \
+vendor.audio.adm.buffering.ms=2
+
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+audio.safemedia.bypass=true \
+audio_hal.period_multiplier=1 \
 audio.adm.buffering.ms=2 \
-vendor.audio.adm.buffering.ms=2 \
 persist.bluetooth.sbc_hd_higher_bitrate=1 \
 af.resampler.quality=7 \
 ro.audio.resampler.psd.enable_at_samplerate=44100 \
