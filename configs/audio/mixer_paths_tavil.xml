@@ -3469,6 +3469,7 @@
     <path name="incall_music_uplink speaker-safe-and-display-port">
         <path name="incall_music_uplink" />
     </path>
+
     <path name="incall_music_uplink afe-proxy">
         <path name="incall_music_uplink" />
     </path>
@@ -3522,9 +3523,6 @@
     </path>
 
     <path name="incall_music_uplink bt-a2dp">
-        <path name="incall_music_uplink" />
-    </path>
-    <path name="incall_music_uplink afe-proxy">
         <path name="incall_music_uplink" />
     </path>
 
