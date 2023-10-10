@@ -26,6 +26,7 @@ TARGET_INCLUDE_CAMERA_GO := true
 TARGET_SUPPORTS_LILY_EXPERIENCE := true
 TARGET_NOT_SUPPORTS_GOOGLE_BATTERY := true
 TARGET_FLATTEN_APEX := false
+MAINLINE_INCLUDE_VIRT_MODULE := false
 TARGET_GBOARD_KEY_HEIGHT := 1.2
 $(call inherit-product-if-exists, vendor/pixel-additional/config.mk)
 
