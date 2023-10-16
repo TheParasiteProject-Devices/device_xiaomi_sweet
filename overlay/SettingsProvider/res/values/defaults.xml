@@ -22,9 +22,6 @@
 
     <bool name="def_screen_brightness_automatic_mode">true</bool>
 
-    <!-- Comma-separated list of bluetooth, wifi, and cell. -->
-    <string name="def_airplane_mode_radios" translatable="false">cell</string>
-
 	<!-- 60 seconds for default screen timeout -->
     <integer name="def_screen_off_timeout">60000</integer>
 
