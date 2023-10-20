@@ -20,6 +20,20 @@ if [ -d "kernel/modules/misc/KernelSU" ]; then
     cd ../../../../
 fi
 
+# Clone Kprofiles repo
+if [ ! -d "kernel/modules/misc/Kprofiles" ]; then
+    git clone https://github.com/dakkshesh07/Kprofiles kernel/modules/misc/Kprofiles
+fi
+
+# Update Kprofiles repo
+if [ -d "kernel/modules/misc/Kprofiles" ]; then
+    cd kernel/modules/misc/Kprofiles
+    git reset --hard
+    git fetch origin
+    git pull origin main
+    cd ../../../../
+fi
+
 #
 # Comment out KernelSU's code since kprobes doesn't work properly
 #
