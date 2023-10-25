@@ -4,17 +4,18 @@ Common_CFlags += ["-Werror"]
 cc_library_shared {
     name: "vendor.qti.hardware.vibrator.impl.sweet",
     vendor: true,
-    cflags: Common_CFlags,
     srcs: [
         "Vibrator.cpp",
+        "VibratorOffload.cpp",
     ],
     shared_libs: [
         "libcutils",
         "libutils",
         "liblog",
         "libqtivibratoreffect",
+        "libqtivibratoreffectoffload",
         "libbinder_ndk",
-        "android.hardware.vibrator-V1-ndk",
+        "android.hardware.vibrator-V2-ndk",
     ],
     export_include_dirs: ["include"]
 }
@@ -27,7 +28,6 @@ cc_binary {
     vintf_fragments: [
         "vendor.qti.hardware.vibrator.service.sweet.xml",
     ],
-    cflags: Common_CFlags,
     srcs: [
         "service.cpp",
     ],
@@ -36,7 +36,7 @@ cc_binary {
         "libutils",
         "libbase",
         "libbinder_ndk",
-        "android.hardware.vibrator-V1-ndk",
+        "android.hardware.vibrator-V2-ndk",
         "vendor.qti.hardware.vibrator.impl.sweet",
     ],
     required: ["excluded-input-devices-sweet.xml"]
