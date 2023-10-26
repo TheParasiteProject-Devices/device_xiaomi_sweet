@@ -936,11 +936,11 @@ vendor/bin/nv_mac
 
 # Pinned section
 # Audio (FX modules) - from cheetah-user 14 UP1A.231005.007.A1 10762838 release-keys
-vendor/lib/soundfx/libspatialaudio.so|379b98b020729d05cad4e84202f42335b96bb755
+vendor/lib/soundfx/libspatialaudio.so|c84a1098a775401344d97d3c7638498d9207ccad
 
 # Camera Components - from sweetin-user 13 TKQ1.221013.002 V14.0.1.0.TKFINXM release-keys
-vendor/lib64/camera/com.qti.tuned.sweet_ofilm_s5kgw3_wide.bin|ab8ef3bfcfe0383d82510512f9615dd6d24710f1
-vendor/lib64/camera/com.qti.tuned.sweet_sunny_s5kgw3_wide.bin
+vendor/lib64/camera/com.qti.tuned.sweet_ofilm_s5kgw3_wide.bin|727410454921cbf6d56837ebf5c930fb948d7f15
+vendor/lib64/camera/com.qti.tuned.sweet_sunny_s5kgw3_wide.bin|34718fcf0dd5d3d30e383e02824145204772676d
 
 # Certificate Authority - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/app/CACertService/CACertService.apk|b1072f129d588b5c5aefa8824b6d531586a26755
@@ -1146,8 +1146,8 @@ vendor/bin/hw/vendor.qti.media.c2@1.0-service|af91cb2facd9f86db88b328358ad504cc2
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc|11209316ba8aae64b689217bc13b0804f6620678
 vendor/lib/libqcodec2.so|c61060e03b769e21d4c36f679c5ac7ae7865e4e0
 vendor/lib64/libqcodec2.so|cc57edb1047ea6850321fe4038e9cab8dd410924
-vendor/lib/libmedia_ecoservice.so|f7497d42ca668b55ff622c1ae33fda2eb05219d0
-vendor/lib64/libmedia_ecoservice.so|1711d2f86e650dce9c8fc473229633900d73603c
+vendor/lib/libmedia_ecoservice.so|5ffba5d7fc21686155246c9f390e1426b5a46044
+vendor/lib64/libmedia_ecoservice.so|ecf56b4ca217d12fb29abea7b7873427b6979c7f
 
 # QMI - from LA.QSSI.13.0.r1-09700-qssi.0
 system_ext/etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
@@ -1289,7 +1289,7 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so|5ec80005a20a2ef6
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so|663b65448ec8f5972337e1bbdc08ef5d4b08e8fa
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so|3ffb7301b6c185b114157c5423de604e5ba93ade
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so|75a58827c0b4e06e2ca8163b6a904dab2af3be6a
-vendor/radio/qcril_database/upgrade/0_initial.sql|e00b243261d8941802bdea9d4e659dc5e927c216
+vendor/radio/qcril_database/upgrade/0_initial.sql|d13b13043c0c9f4ced2ab19de3684b6a9883a10f
 vendor/radio/qcril_database/upgrade/1_version_intro.sql|67b96cb3e94737bfe271b2519b9eb5fae17373a2
 vendor/radio/qcril_database/upgrade/2_version_add_wps_config.sql|b4a825ba20fea3e2f20c7f02c8bd64596c24a75e
 vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql|0571aacaf9fc0868c48bba2f7542f5b4e68c9022
