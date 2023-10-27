@@ -895,17 +895,50 @@ ndk::ScopedAStatus Vibrator::compose(const std::vector<CompositeEffect>& composi
     return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Vibrator::getSupportedAlwaysOnEffects(std::vector<Effect>* _aidl_return __unused) {
-    return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
+static ndk::ScopedAStatus convertEffectStrength(EffectStrength strength, uint8_t *outScale) {
+    uint8_t scale;
+
+    switch (strength) {
+        case EffectStrength::LIGHT:
+            scale = 2;  // 50%
+            break;
+        case EffectStrength::MEDIUM:
+        case EffectStrength::STRONG:
+            scale = 0;  // 100%
+            break;
+        default:
+            return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+    }
+
+    *outScale = scale;
+
+    return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Vibrator::alwaysOnEnable(int32_t id __unused, Effect effect __unused,
-                                            EffectStrength strength __unused) {
-    return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
+ndk::ScopedAStatus Vibrator::getSupportedAlwaysOnEffects(std::vector<Effect> *_aidl_return) {
+    *_aidl_return = {
+            Effect::CLICK,       Effect::DOUBLE_CLICK, Effect::TICK,
+            Effect::HEAVY_CLICK, Effect::TEXTURE_TICK,
+    };
+    return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Vibrator::alwaysOnDisable(int32_t id __unused) {
-    return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
+ndk::ScopedAStatus Vibrator::alwaysOnEnable(int32_t id, Effect effect, EffectStrength strength) {
+    std::vector<Effect> effects;
+    getSupportedAlwaysOnEffects(&effects);
+
+    if (std::find(effects.begin(), effects.end(), effect) == effects.end()) {
+        return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+    } else {
+        LOG(INFO) << "Enabling always-on ID " << id << " with " << toString(effect) << "/"
+                  << toString(strength);
+        return ndk::ScopedAStatus::ok();
+    }
+}
+
+ndk::ScopedAStatus Vibrator::alwaysOnDisable(int32_t id) {
+    LOG(INFO) << "Disabling always-on ID " << id;
+    return ndk::ScopedAStatus::ok();
 }
 
 ndk::ScopedAStatus Vibrator::getResonantFrequency(float *resonantFreqHz __unused) {
