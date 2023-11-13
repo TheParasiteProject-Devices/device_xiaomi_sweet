@@ -179,10 +179,6 @@ persist.vendor.cne.feature=1
 PRODUCT_VENDOR_PROPERTIES += \
 camera.disable_zsl_mode=1
 
-# Charger
-PRODUCT_PRODUCT_PROPERTIES += \
-ro.charger.enable_suspend=true
-
 # Set fcc_main to 400mA to avoid the risk of vph_pwr drop
 PRODUCT_SYSTEM_PROPERTIES += \
 persist.vendor.cp.fcc_main_ua=400000
