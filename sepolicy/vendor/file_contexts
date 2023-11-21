@@ -22,7 +22,7 @@
 /dev/ir_spi											u:object_r:ir_spi_device:s0
 
 # Lights
-/vendor/bin/hw/android\.hardware\.lights-service\.sweet                                         u:object_r:hal_light_default_exec:s0
+/vendor/bin/hw/android\.hardware\.light-service\.xiaomi                                         u:object_r:hal_light_default_exec:s0
 
 # Live Display
 /vendor/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.xiaomi_sm6150    u:object_r:hal_lineage_livedisplay_qti_exec:s0
