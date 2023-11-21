@@ -267,7 +267,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.sweet
+    android.hardware.light-service.xiaomi
 
 PRODUCT_PACKAGES += \
     libsdmcore-shim
