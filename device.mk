@@ -398,7 +398,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
-    hardware/google/pixel
+    hardware/google/pixel \
+    hardware/xiaomi
 
 # Properties
 include $(LOCAL_PATH)/properties.mk
@@ -509,8 +510,7 @@ PRODUCT_PACKAGES += \
     vndservicemanager
 
 # Vibrator
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.sweet
+$(call inherit-product, hardware/xiaomi/aidl/vibrator/vibrator-vendor-product.mk)
 
 # WiFi
 PRODUCT_PACKAGES += \
