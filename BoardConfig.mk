@@ -111,6 +111,8 @@ TARGET_DISABLED_UBWC := true
 BOARD_RAMDISK_USE_LZ4 := true
 
 # Partitions
+-include vendor/aosp/config/BoardConfigReservedSize.mk
+
 BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := \
     odm \
