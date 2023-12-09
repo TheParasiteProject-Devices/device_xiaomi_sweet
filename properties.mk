@@ -403,6 +403,7 @@ ro.build.shutdown_timeout=2
 # Surfaceflinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 debug.sf.frame_rate_multiple_threshold=120 \
+ro.surface_flinger.enable_frame_rate_override=false \
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
 ro.surface_flinger.has_HDR_display=true \
 ro.surface_flinger.has_wide_color_display=true \
