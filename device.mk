@@ -278,8 +278,8 @@ PRODUCT_PACKAGES += \
     libavservices_minijail_vendor
 
 # LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm
+# PRODUCT_PACKAGES += \
+#     vendor.lineage.livedisplay@2.0-service-sdm
 
 # Media
 PRODUCT_PACKAGES += \
@@ -497,8 +497,8 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
 
 # Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
+# PRODUCT_PACKAGES += \
+#     vendor.lineage.trust@1.0-service
 
 # USB
 PRODUCT_PACKAGES += \
@@ -568,12 +568,12 @@ PRODUCT_PRODUCT_PROPERTIES += \
 $(call inherit-product-if-exists, packages/apps/XiaomiParts/config.mk)
 
 # Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.xiaomi_sm6150
+# PRODUCT_PACKAGES += \
+#     vendor.lineage.touch@1.0-service.xiaomi_sm6150
 
 # LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.1-service.xiaomi_sm6150
+# PRODUCT_PACKAGES += \
+#     vendor.lineage.livedisplay@2.1-service.xiaomi_sm6150
 
 # Power Stats
 PRODUCT_PACKAGES += \
