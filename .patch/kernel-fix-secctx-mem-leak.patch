@@ -1,0 +1,47 @@
+From 068e02b6b6a3f5ac9790621fea0c8d4ac19cbd85 Mon Sep 17 00:00:00 2001
+From: Ylarod <me@ylarod.cn>
+Date: Wed, 10 Jan 2024 11:25:26 +0800
+Subject: [PATCH 1/2] kernel: fix secctx mem leak
+
+---
+ kernel/selinux/selinux.c | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+
+diff --git a/kernel/selinux/selinux.c b/kernel/selinux/selinux.c
+index d53181a..40a9263 100644
+--- a/kernel/selinux/selinux.c
++++ b/kernel/selinux/selinux.c
+@@ -103,11 +103,14 @@ bool is_ksu_domain()
+ {
+ 	char *domain;
+ 	u32 seclen;
++	bool result;
+ 	int err = security_secid_to_secctx(current_sid(), &domain, &seclen);
+ 	if (err) {
+ 		return false;
+ 	}
+-	return strncmp(KERNEL_SU_DOMAIN, domain, seclen) == 0;
++	result = strncmp(KERNEL_SU_DOMAIN, domain, seclen) == 0;
++	security_release_secctx(domain, seclen);
++	return result;
+ }
+ 
+ bool is_zygote(void *sec)
+@@ -118,9 +121,12 @@ bool is_zygote(void *sec)
+ 	}
+ 	char *domain;
+ 	u32 seclen;
++	bool result;
+ 	int err = security_secid_to_secctx(tsec->sid, &domain, &seclen);
+ 	if (err) {
+ 		return false;
+ 	}
+-	return strncmp("u:r:zygote:s0", domain, seclen) == 0;
++	result = strncmp("u:r:zygote:s0", domain, seclen) == 0;
++	security_release_secctx(domain, seclen);
++	return result;
+ }
+\ No newline at end of file
+-- 
+2.39.2
+

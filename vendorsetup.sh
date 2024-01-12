@@ -17,6 +17,8 @@ if [ -d "kernel/modules/misc/KernelSU" ]; then
     git reset --hard
     git fetch origin
     git pull origin main
+    # Apply memleak patch from https://github.com/Ylarod/KernelSU/commit/6d9b880eb4932371f38346e0781a979fd6b9fb11
+    git apply ../../../../device/xiaomi/sweet/.patch/kernel-fix-secctx-mem-leak.patch
     cd ../../../../
 fi
 
