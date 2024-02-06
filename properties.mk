@@ -255,6 +255,7 @@ debug.hwui.renderer=skiagl \
 debug.renderengine.backend=skiaglthreaded \
 renderthread.skia.reduceopstasksplitting=true \
 debug.sf.disable_backpressure=1 \
+debug.sf.enable_gl_backpressure=0 \
 debug.sf.enable_hwc_vds=1 \
 debug.sf.enable_transaction_tracing=false \
 debug.sf.auto_latch_unsignaled=1 \
