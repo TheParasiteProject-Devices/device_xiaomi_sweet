@@ -347,7 +347,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 persist.vendor.data.iwlan.enable=true
 
 # Perf
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
 ro.vendor.extension_library=libqti-perfd-client.so
 
 # Phantom process monitoring
