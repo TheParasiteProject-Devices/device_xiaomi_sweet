@@ -402,7 +402,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/xiaomi
+    hardware/xiaomi \
+    hardware/nxp
 
 # Properties
 include $(LOCAL_PATH)/properties.mk
