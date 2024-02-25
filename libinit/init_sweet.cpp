@@ -156,6 +156,8 @@ void vendor_load_properties() {
         for (int i = 0; build_keys_props[i]; ++i) {
             property_override(build_keys_props[i], "release-keys");
         }
+
+        property_override("ro.product.first_api_level", "21");
     }
 
     // Enable UI blur
