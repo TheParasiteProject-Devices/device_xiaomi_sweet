@@ -148,13 +148,15 @@ void vendor_load_properties() {
         property_override("ro.boot.product.hardware.sku", "nfc");
     }
 
-    /* Workaround CTS */
-    workaround_cts_properties();
+    if (access("/system/bin/recovery", F_OK) != 0) {
+        /* Workaround CTS */
+        workaround_cts_properties();
 
-    /* Spoof Build keys */
-	for (int i = 0; build_keys_props[i]; ++i) {
-		property_override(build_keys_props[i], "release-keys");
-	}
+        /* Spoof Build keys */
+        for (int i = 0; build_keys_props[i]; ++i) {
+            property_override(build_keys_props[i], "release-keys");
+        }
+    }
 
     // Enable UI blur
     property_override("ro.launcher.blur.appLaunch", "1");
