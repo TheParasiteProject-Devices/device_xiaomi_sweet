@@ -342,6 +342,9 @@ ro.media.recorder-max-base-layer-fps=60
 PRODUCT_SYSTEM_PROPERTIES += \
 ro.netflix.bsp_rev=Q6150-17263-1
 
+PRODUCT_SYSTEM_PROPERTIES += \
+persist.sys.pihooks.netflix_model=M2101K6G
+
 # Netmgr
 PRODUCT_VENDOR_PROPERTIES += \
 persist.vendor.data.iwlan.enable=true
