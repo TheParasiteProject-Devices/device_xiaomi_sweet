@@ -1,0 +1,2 @@
+# QTI Telephony Service
+type hal_telephony_service, hwservice_manager_type;
