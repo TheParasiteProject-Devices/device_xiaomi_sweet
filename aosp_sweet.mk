@@ -11,23 +11,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from sweet device
 $(call inherit-product, device/xiaomi/sweet/device.mk)
 
-# Inherit some common PixelExperience stuff
+# Inherit some common TheParasiteProject stuff
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORTS_CALL_RECORDING := true
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-
-# Additional Pixel stuffs
 TARGET_INCLUDE_CARRIER_SETTINGS := true
 TARGET_INCLUDE_CAMERA_GO := true
 TARGET_SUPPORTS_LILY_EXPERIENCE := true
 TARGET_NOT_SUPPORTS_GOOGLE_BATTERY := true
-TARGET_FLATTEN_APEX := false
 MAINLINE_INCLUDE_VIRT_MODULE := false
 TARGET_GBOARD_KEY_HEIGHT := 1.2
-$(call inherit-product-if-exists, vendor/pixel-additional/config.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1080
 
