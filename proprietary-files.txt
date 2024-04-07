@@ -75,16 +75,16 @@ system_ext/etc/permissions/audiosphere.xml
 system_ext/framework/audiosphere.jar
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libmisoundfx.so
-vendor/lib/soundfx/libshoebox.so
 vendor/lib/soundfx/libqcbassboost.so
 vendor/lib/soundfx/libqcreverb.so
 vendor/lib/soundfx/libqcvirt.so
+vendor/lib/soundfx/libshoebox.so
 
 # Audio (Hardware)
 vendor/lib/hw/audio.primary.sm6150.so
-vendor/lib/vndk/libxlog.so
 vendor/lib/libaudio_log_utils.so
 vendor/lib/libaudioroute_ext.so
+vendor/lib/vndk/libxlog.so
 
 # Audio (ACDB)
 vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb
@@ -275,11 +275,6 @@ vendor/lib64/libarcsoft_preview_deflicker.so
 vendor/lib64/libarcsoft_super_night_raw.so
 
 # Camera Components
-vendor/lib64/camera/components/etc/morpho_lowlight4.0.xml
-vendor/lib64/camera/components/etc/morpho_lowlight4.0_3hdr.xml
-vendor/lib64/camera/components/etc/morpho_lowlight4.0_adrc_high.xml
-vendor/lib64/camera/components/etc/morpho_lowlight4.0_adrc_high_1.xml
-vendor/lib64/camera/components/etc/visidon_clearshot_params.xml
 vendor/lib64/camera/components/com.altek.node.depurple.so
 vendor/lib64/camera/components/com.altek.node.distortioncorrection.so
 vendor/lib64/camera/components/com.arcsoft.node.capturebokeh.so
@@ -334,6 +329,11 @@ vendor/lib64/camera/components/com.xiaomi.node.mifilter.so
 vendor/lib64/camera/components/com.xiaomi.node.mifragment.so
 vendor/lib64/camera/components/com.xiaomi.node.mimovie.so
 vendor/lib64/camera/components/com.xiaomi.node.misegment.so
+vendor/lib64/camera/components/etc/morpho_lowlight4.0.xml
+vendor/lib64/camera/components/etc/morpho_lowlight4.0_3hdr.xml
+vendor/lib64/camera/components/etc/morpho_lowlight4.0_adrc_high.xml
+vendor/lib64/camera/components/etc/morpho_lowlight4.0_adrc_high_1.xml
+vendor/lib64/camera/components/etc/visidon_clearshot_params.xml
 vendor/lib64/camera/components/libdepthmapwrapper.so
 vendor/lib64/camera/components/libmmcamera_cac3.so
 
@@ -406,8 +406,8 @@ vendor/firmware/CAMERA_ICP.elf
 # Charger
 vendor/bin/hvdcp_opti
 vendor/bin/init.qti.chg_policy.sh
-vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 vendor/etc/charger_fstab.qti
+vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 
 # Configstore
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
@@ -420,8 +420,8 @@ vendor/lib64/hw/consumerir.default.so
 
 # DRM
 vendor/bin/qseecomd
-vendor/etc/init/qseecomd.rc
 vendor/etc/gpfspath_oem_config.xml
+vendor/etc/init/qseecomd.rc
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
 vendor/lib64/libQSEEComAPI.so
@@ -449,8 +449,8 @@ vendor/lib64/libtrustedapploader.so
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
 vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml
-vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/libwvhidl.so
+vendor/lib64/mediadrm/libwvdrmengine.so
 
 # DSP
 vendor/bin/dspservice
@@ -511,15 +511,6 @@ vendor/lib64/vendor.sw.swfingerprint@2.0.so
 vendor/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so
 
 # Firmware
-vendor/firmware/awinic/aw882xx_pid_1852_acf.bin
-vendor/firmware/awinic/aw882xx_pid_1852_monitor.bin
-vendor/firmware/awinic/aw882xx_pid_2032_acf.bin
-vendor/firmware/awinic/aw882xx_pid_2032_monitor.bin
-vendor/firmware/awinic/aw882xx_rcv_reg_l.bin
-vendor/firmware/awinic/aw882xx_rcv_reg_r.bin
-vendor/firmware/awinic/aw882xx_spk_reg_l.bin
-vendor/firmware/awinic/aw882xx_spk_reg_r.bin
-vendor/firmware/wigig/wigig.ini
 vendor/firmware/AcousticGuitar_RTP.bin
 vendor/firmware/Atlantis_RTP.bin
 vendor/firmware/Bottle_RTP.bin
@@ -589,6 +580,14 @@ vendor/firmware/Vigor_RTP.bin
 vendor/firmware/WindChime_RTP.bin
 vendor/firmware/aw8624_haptic.bin
 vendor/firmware/aw8624_rtp.bin
+vendor/firmware/awinic/aw882xx_pid_1852_acf.bin
+vendor/firmware/awinic/aw882xx_pid_1852_monitor.bin
+vendor/firmware/awinic/aw882xx_pid_2032_acf.bin
+vendor/firmware/awinic/aw882xx_pid_2032_monitor.bin
+vendor/firmware/awinic/aw882xx_rcv_reg_l.bin
+vendor/firmware/awinic/aw882xx_rcv_reg_r.bin
+vendor/firmware/awinic/aw882xx_spk_reg_l.bin
+vendor/firmware/awinic/aw882xx_spk_reg_r.bin
 vendor/firmware/bandage_RTP.bin
 vendor/firmware/crawl_RTP.bin
 vendor/firmware/door_open_RTP.bin
@@ -635,6 +634,7 @@ vendor/firmware/vehicle_collision_RTP.bin
 vendor/firmware/vehicle_dacia_RTP.bin
 vendor/firmware/vehicle_moto_RTP.bin
 vendor/firmware/vehicle_plane_RTP.bin
+vendor/firmware/wigig/wigig.ini
 
 # Firmware (Graphic)
 vendor/firmware/a612_rgmu.bin
@@ -934,8 +934,8 @@ vendor/bin/cnss-daemon
 # Xiaomi MAC
 vendor/bin/nv_mac
 
-# Pinned section
 # Audio (FX modules) - from cheetah-user 14 UP1A.231005.007.A1 10762838 release-keys
+# Pinned section
 vendor/lib/soundfx/libspatialaudio.so|c84a1098a775401344d97d3c7638498d9207ccad
 
 # Camera Components - from sweetin-user 13 TKQ1.221013.002 V14.0.1.0.TKFINXM release-keys
@@ -952,6 +952,8 @@ vendor/lib64/vendor.qti.hardware.cacert@1.0.so|1633c31212d1ea9338b79ebfc2476f834
 vendor/app/CneApp/CneApp.apk|345dc6c677e9bd7a7d36033b8955e90d2a1594d5
 vendor/app/IWlanService/IWlanService.apk|9ea57bfbf58799a564fcf498de9f5fe3506f7342
 vendor/bin/cnd|d33924372818ad112e5ddeec719aadbf33fd4ef2
+vendor/etc/cne/mwqem.conf|c42ad47b34b511075e5dfb9047d32f881fe0c159
+vendor/etc/cne/profileMwqem.xml|947917691684584b7e2ddf3588cd6f8e99f3804f
 vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml|578f3f8f56059bfdbef926bcc68d01c15e06951f
 vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml|1fb42c672a12b6660bdce3ea94e0c43719dd9de8
 vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml|f88e13f1dd7b82388c90358f71813026370c9ed8
@@ -979,8 +981,6 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml|9b123d81c9b8991499cda33b0706810e0c
 vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml|ff91feb5060a6df07e3e4d9bc99ae58bccad7649
 vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml|f76c894f3c6d5b6ed35113a088dc3174c900501b
 vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml|14d136e7fcc682311757d3edc0b9d3eaeba11815
-vendor/etc/cne/mwqem.conf|c42ad47b34b511075e5dfb9047d32f881fe0c159
-vendor/etc/cne/profileMwqem.xml|947917691684584b7e2ddf3588cd6f8e99f3804f
 vendor/etc/default-permissions/com.qualcomm.qti.cne.xml|c63c37d067e3009735fbc54d4603d43d7d6623e1
 vendor/etc/init/cnd.rc|3a5183df3479500fb729493bc56c71166fc10bce
 vendor/lib64/libcne.so|29b01f953c70ab3caa70056abdfc6732b6e1e01a
@@ -1038,12 +1038,12 @@ vendor/bin/loc_launcher|85abf50f8cd227017ea084a9a2175c9f0fb39413
 vendor/bin/lowi-server|6a78b8e8ff3267277a49f78a7ba11498229ed2fb
 vendor/bin/xtra-daemon|a832090f030ac09937d0e47dc55758b4710f6c6e
 vendor/etc/init/android.hardware.gnss@2.1-service-qti.rc|d3844699c845ce5de4c8b50548a2095f92dd0235
-vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml|1c344aacaa6d17a1585ba58b2e6d438dcfe31fad
-vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml|6514b13f55abc0acc28e004c35ff93fb972d61a9
 vendor/etc/seccomp_policy/gnss@2.0-base.policy|abafcf09068ec6fa62f8fc11ce6a7f51fe4cfb81
 vendor/etc/seccomp_policy/gnss@2.0-xtra-daemon.policy|3f8e3466eaeb966e57c5b79b688a618295eb4b17
 vendor/etc/seccomp_policy/gnss@2.0-xtwifi-client.policy|45b44cf547358961841aeba728851e32dc0a5230
 vendor/etc/seccomp_policy/gnss@2.0-xtwifi-inet-agent.policy|9c0419bf0a0b4ef129527a9d4c024a624ff34d6e
+vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml|1c344aacaa6d17a1585ba58b2e6d438dcfe31fad
+vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml|6514b13f55abc0acc28e004c35ff93fb972d61a9
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-qti.so|81eed711640c1e68b6e95032fc98c7a41c727388
 vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so|5bd76bdb98c6ee96c498967f808dd0c79b5f76cd
 vendor/lib64/libbatching.so|da85149f1a0c672a14d6cae4ade1b25ca210104a
@@ -1144,10 +1144,10 @@ vendor/lib64/hw/vulkan.adreno.so|645840e711a880303bdea638ad664b349022cd2a
 # Media-C2 - from sunfish-user-13-TQ2A.230405.003.B2-9760227-release-keys
 vendor/bin/hw/vendor.qti.media.c2@1.0-service|af91cb2facd9f86db88b328358ad504cc2d9b6f1
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc|11209316ba8aae64b689217bc13b0804f6620678
-vendor/lib/libqcodec2.so|c61060e03b769e21d4c36f679c5ac7ae7865e4e0
-vendor/lib64/libqcodec2.so|cc57edb1047ea6850321fe4038e9cab8dd410924
 vendor/lib/libmedia_ecoservice.so|5ffba5d7fc21686155246c9f390e1426b5a46044
+vendor/lib/libqcodec2.so|c61060e03b769e21d4c36f679c5ac7ae7865e4e0
 vendor/lib64/libmedia_ecoservice.so|ecf56b4ca217d12fb29abea7b7873427b6979c7f
+vendor/lib64/libqcodec2.so|cc57edb1047ea6850321fe4038e9cab8dd410924
 
 # QMI - from LA.QSSI.14.0.r1-11100-qssi.0
 system_ext/etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
@@ -1196,8 +1196,8 @@ system_ext/framework/qcrilhook.jar|d9778a3f8da09bf25c4905fb4e5d0fd7310f1f42
 system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|0683bd5ee5b9d34da4a55fefa515d676c7f8f9a4
 
 # Radio - from LA.UM.9.1.r1-12900-SMxxx0.0
-vendor/bin/hw/qcrild|77d0168fbad7db01eec8abd9df25f19c05411eb4
 vendor/bin/adpl|7a0f18e1762bb972e87c4a21a787f56f15ebeb1b
+vendor/bin/hw/qcrild|77d0168fbad7db01eec8abd9df25f19c05411eb4
 vendor/bin/netmgrd|9827c715565263148c71fd8f15d153d834de6337
 vendor/bin/port-bridge|157facd409756b20bd9eb850c30b8d009efc71f4
 vendor/bin/qti|415d66b2cf1a7bf8fd3a5b471a6f52b02643f0bb
@@ -1221,12 +1221,12 @@ vendor/lib/libnetmgr_common.so|fcedcfd9b890fd03f45b32b8b1f46d80e43bf05f
 vendor/lib/libnetmgr_nr_fusion.so|4d5e49c053409d2432c35dac11ff05ec77fdda79
 vendor/lib/libnetmgr_rmnet_ext.so|6d8417f9bc775e56f776f790347443b4387704de
 vendor/lib/libpdnotifier.so|6d6b4584006634ed15efef09c95b3ae3eb05cbfb
-vendor/lib/libqmi_legacy.so|7805ed3a940405d88d4b7dd29516c68ee19c5b08
 vendor/lib/libqcci_legacy.so|be14a3ba29cf4dc9fce1f7a51fb02cb775b16f1c
 vendor/lib/libqcmaputils.so|3e7eed66d16443749fd8eb15b6dbb194e7000805
 vendor/lib/libqcrilFramework.so|0c15e9e2175b04ce1371420a0b29552109008979
 vendor/lib/libqdi.so|3b3532c94f3447457467523d1147ddc6973b1bae
 vendor/lib/libqdp.so|c3d8caefdb7f78fee95b571a827f14613de59155
+vendor/lib/libqmi_legacy.so|7805ed3a940405d88d4b7dd29516c68ee19c5b08
 vendor/lib/libril-qc-logger.so|2a7e271c7e71143dabf5125ca8f866189eed05e9
 vendor/lib/libril-qc-ltedirectdisc.so|8d9c234066dadaca5e3e8a6125bca0b4f86de534
 vendor/lib/libril-qc-radioconfig.so|8281b0fbc75eb0803c1f3d24d9b8e3ceceb1c1e7
@@ -1246,12 +1246,12 @@ vendor/lib64/libnetmgr_rmnet_ext.so|1000e8b6d18fcce18f8f13b39e3a9207a93a991f
 vendor/lib64/libnlnetmgr.so|230fdf3b3246fec6e9a31c44bbf39ef267603cdd
 vendor/lib64/libpdnotifier.so|f7921455da0719e073a7bcc5ce851ff9e43e79d4
 vendor/lib64/libqcci_legacy.so|0e78c75ce59453a09cc1d6bcba0507cab9ae663a
-vendor/lib64/libqmi_legacy.so|f324c6701ecf78ff50975c0bc7f99aea09cb3539
 vendor/lib64/libqcmaputils.so|4271e28543306040ec22fa9e2f42f09a513457a4
 vendor/lib64/libqcrilFramework.so|7d3a2dc8b2f010bfa887deb79f4a05f4473a6951
 vendor/lib64/libqcrildatactl.so|6f7c9bce8fc62fd00c9bf527895089332500fd92
 vendor/lib64/libqdi.so|08eaf3c7640ff06f06827f4e89a110f71f126eae
 vendor/lib64/libqdp.so|55cabaf9021a8f8f22b76ba7f8dca7299c0b21ab
+vendor/lib64/libqmi_legacy.so|f324c6701ecf78ff50975c0bc7f99aea09cb3539
 vendor/lib64/libril-qc-hal-qmi.so|f6b18fbbc2cc16834b34aa7a18f4ff0b21826bdf
 vendor/lib64/libril-qc-logger.so|c3a3d02b10de4da0358ae497d3dbd2ce9c7e2a8e
 vendor/lib64/libril-qc-ltedirectdisc.so|6deb30e7d00bdde840dad2df382d4c7489567c79
@@ -1286,7 +1286,10 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so|5ec80005a20a2ef6
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so|663b65448ec8f5972337e1bbdc08ef5d4b08e8fa
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so|3ffb7301b6c185b114157c5423de604e5ba93ade
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so|75a58827c0b4e06e2ca8163b6a904dab2af3be6a
+vendor/radio/qcril_database/qcril.db|5256b3d5cce46578507abc978c4be1febcf513b9
 vendor/radio/qcril_database/upgrade/0_initial.sql|d13b13043c0c9f4ced2ab19de3684b6a9883a10f
+vendor/radio/qcril_database/upgrade/10_version_update_ecc_table.sql|1ca05b047116cbc776f71d3bdba4952b18b04229
+vendor/radio/qcril_database/upgrade/11_version_update_ecc_table.sql|ab2580e3e25fb02936eb760cba85f3b6139b8d34
 vendor/radio/qcril_database/upgrade/1_version_intro.sql|67b96cb3e94737bfe271b2519b9eb5fae17373a2
 vendor/radio/qcril_database/upgrade/2_version_add_wps_config.sql|b4a825ba20fea3e2f20c7f02c8bd64596c24a75e
 vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql|0571aacaf9fc0868c48bba2f7542f5b4e68c9022
@@ -1296,9 +1299,6 @@ vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql|0fdf4b6ccb489
 vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql|9a76d5747da2876b87b214579c9d74ae92d218d7
 vendor/radio/qcril_database/upgrade/8_version_update_ecc_table.sql|a0603a5c46e8e67f78bdb42f2b246ecc6a37cecd
 vendor/radio/qcril_database/upgrade/9_version_update_ecc_table.sql|4701219a79190995eda651e5c45e11c9b111a478
-vendor/radio/qcril_database/upgrade/10_version_update_ecc_table.sql|1ca05b047116cbc776f71d3bdba4952b18b04229
-vendor/radio/qcril_database/upgrade/11_version_update_ecc_table.sql|ab2580e3e25fb02936eb760cba85f3b6139b8d34
-vendor/radio/qcril_database/qcril.db|5256b3d5cce46578507abc978c4be1febcf513b9
 
 # Radio (diag) - from LA.QSSI.14.0.r1-11100-qssi.0
 system_ext/lib64/libdiag_system.so|9fed14b887c838eb1cfeab0c33cf019adadac622
@@ -1310,7 +1310,6 @@ vendor/lib64/libdiag.so|3007e1709a4713b0ab6abd76b10c3a822c436c61
 
 # Radio (IMS) - from LA.QSSI.14.0.r1-11100-qssi.0
 system_ext/app/ImsRcsService/ImsRcsService.apk|57e4275cf15544a350617605d4a556534ada041c
-system_ext/priv-app/ims/ims.apk|64452f34f2ebb19bea791ae02eb24347cd86d4b3
 system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml|4bde619dc1436503a0a4555a7a11b8eabcfb449d
 system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar|6130a65df09261017cd83ea857517e365b84be7c
 system_ext/framework/vendor.qti.ims.factory-V1.1-java.jar|b29c69abe5c3b4fc9ceb7fe98e28295efb775922
@@ -1325,6 +1324,7 @@ system_ext/lib64/libimscamera_jni.so|ca67ceb33d74db1f2d84d06a827c1c7d06bd3256
 system_ext/lib64/libimsmedia_jni.so|19889926ad7e21124b32bcd56139a9343be5e768
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|919c4398097c8b818a415efccc57e989c7c24e10
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so|d1b6a6eabf17e43e98dcc4372fdabea4890f7cd8
+system_ext/priv-app/ims/ims.apk|64452f34f2ebb19bea791ae02eb24347cd86d4b3
 
 # Radio (IMS) - from LA.UM.9.1.r1-12900-SMxxx0.0
 vendor/bin/ims_rtp_daemon|7cd0297294c08becd429698defc6c4a603a3e0e3
