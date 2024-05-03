@@ -69,4 +69,5 @@ def OTA_InstallEnd(info):
   AddImageRadio(info, "km41.mbn", "/dev/block/bootdevice/by-name/keymaster")
   AddImageRadio(info, "xbl.elf", "/dev/block/bootdevice/by-name/xbl")
   AddImageRadio(info, "ffu.img", "/dev/block/bootdevice/by-name/ffu")
+  AddImageRadio(info, "logo.img", "/dev/block/bootdevice/by-name/logo")
   return
