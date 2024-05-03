@@ -8,7 +8,9 @@
 $(call inherit-product, device/xiaomi/sm6150-common/common.mk)
 
 # API level, the device has been commercially launched on
-PRODUCT_SHIPPING_API_LEVEL := 30
+BOARD_API_LEVEL := 30
+BOARD_SHIPPING_API_LEVEL := $(BOARD_API_LEVEL)
+PRODUCT_SHIPPING_API_LEVEL := $(BOARD_API_LEVEL)
 
 # Audio
 PRODUCT_PACKAGES += \
