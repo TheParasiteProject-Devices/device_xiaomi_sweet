@@ -110,3 +110,9 @@ PRODUCT_PACKAGES += \
 
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/sweet/sweet-vendor.mk)
+
+# Firmware
+$(call inherit-product-if-exists, vendor/xiaomi/firmware/sweet/Android.mk)
+
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/xiaomi/firmware/sweet
