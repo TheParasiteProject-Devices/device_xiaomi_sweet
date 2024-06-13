@@ -91,7 +91,8 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.6:64 \
     android.hardware.camera.provider@2.4-impl:64 \
     android.hardware.camera.provider@2.4-service_64 \
-    android.hardware.camera.provider@2.6:64
+    android.hardware.camera.provider@2.6:64 \
+    libpng.vendor
 
 PRODUCT_PACKAGES += \
     libdng_sdk.vendor:64 \
@@ -447,6 +448,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libjson \
+    libjsoncpp.vendor \
     librmnetctl
 
 # Sensors
@@ -463,6 +465,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.proximity.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml
+
+# SQLite
+PRODUCT_PACKAGES += \
+    libsqlite.vendor
 
 # SystemUI plugins
 PRODUCT_PACKAGES += \
