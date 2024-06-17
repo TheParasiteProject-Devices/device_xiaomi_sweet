@@ -116,11 +116,6 @@ void vendor_load_properties() {
         property_override("ro.boot.product.hardware.sku", "nfc");
     }
 
-    // Enable UI blur
-    property_override("ro.launcher.blur.appLaunch", "1");
-    property_override("ro.surface_flinger.supports_background_blur", "1");
-    property_override("ro.sf.blurs_are_expensive", "1");
-
     // Set dalvik heap configuration
     std::string heapstartsize, heapgrowthlimit, heapsize, heapminfree,
 			heapmaxfree, heaptargetutilization;
