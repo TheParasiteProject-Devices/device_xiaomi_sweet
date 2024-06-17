@@ -37,9 +37,6 @@ genfscon sysfs /kernel/boot_slpi/boot u:object_r:vendor_sysfs_msm_boot:s0
 genfscon sysfs /devices/virtual/npu/msm_npu/boot u:object_r:vendor_sysfs_msm_boot:s0
 genfscon sysfs /devices/virtual/cvp/cvp/boot u:object_r:vendor_sysfs_msm_boot:s0
 
-# Power
-genfscon proc /sys/kernel/sched_energy_aware                                       u:object_r:proc_sched_energy_aware:s0
-
 # Proximity
 genfscon sysfs /bus/iio/devices                                                    u:object_r:sysfs_iio_devices:s0
 genfscon sysfs /devices/platform/us_prox.0/iio:device2                             u:object_r:sysfs_iio_devices:s0
