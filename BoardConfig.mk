@@ -53,9 +53,6 @@ TARGET_USES_HWC2 := true
 TARGET_USES_ION := true
 TARGET_USES_VULKAN := true
 
-# SurfaceFlinger
-TARGET_USE_AOSP_SURFACEFLINGER := true
-
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
