@@ -11,6 +11,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from sweet device
 $(call inherit-product, device/xiaomi/sweet/device.mk)
 
+TARGET_INCLUDE_MICROG := true
+
 # Inherit some common PixelExperience stuff
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_INCLUDE_STOCK_ARCORE := true
