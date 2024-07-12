@@ -72,18 +72,6 @@ static const char *device_prop_val[] =
         { "Redmi", "sweet", "M2101K6G", "M2101K6G", "sweet_eea",
           "Redmi Note 10 Pro", "Xiaomi", "sweet_eea_global", nullptr };
 
-
-static const char *build_keys_props[] =
-{
-    "ro.build.tags",
-    "ro.odm.build.tags",
-    "ro.product.build.tags",
-    "ro.system.build.tags",
-    "ro.system_ext.build.tags",
-    "ro.vendor.build.tags",
-    nullptr
-};
-
 void vendor_load_properties() {
     const char *fingerprint = "Redmi/sweet_eea/sweet:13/RKQ1.210614.002/V14.0.9.0.TKFEUXM:user/release-keys";
     const char *description = "sweet_eea-user 13 RKQ1.210614.002 V14.0.9.0.TKFEUXM release-keys";
