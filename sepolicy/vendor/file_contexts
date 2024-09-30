@@ -51,9 +51,6 @@
 /sys/devices/virtual/misc/(msm_[a-z0-9]+)/wakeup[0-9]+(/.*)?                                    u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/misc/msm_multi_aac/wakeup[0-9]+(/.*)?                                      u:object_r:sysfs_wakeup:s0
 
-# Vibrator
-/vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.xiaomi                                  u:object_r:hal_vibrator_default_exec:s0
-
 # WiFi
 /vendor/bin/nv_mac                                                                              u:object_r:vendor_wcnss_service_exec:s0
 
