@@ -82,13 +82,4 @@ void vendor_load_properties() {
         full_property_override(device_prop_key[i], device_prop_val[i], true);
     }
     full_property_override("build.product", "sweet_global", false);
-
-    // Set hardware revision
-    property_override("ro.boot.hardware.revision", GetProperty("ro.boot.hwversion", "").c_str());
-    
-    // Set product name to show when connect through usb
-    property_override("vendor.usb.product_string", GetProperty("ro.product.marketname", "").c_str());
-
-    // Set product name to show when connect through bluetooth
-    property_override("bluetooth.device.default_name", GetProperty("ro.product.marketname", "").c_str());
 }
